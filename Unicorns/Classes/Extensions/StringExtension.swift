@@ -10,11 +10,11 @@ import Foundation
 
 extension String {
   
-  var localized: String {
+  public var localized: String {
     return NSLocalizedString(self, comment: "")
   }
   
-  var composedCharacterCount: Int {
+  public var composedCharacterCount: Int {
     var count = 0
     enumerateSubstrings(in: startIndex..<endIndex, options: .byComposedCharacterSequences) { (_, _, _, _) in
       count += 1

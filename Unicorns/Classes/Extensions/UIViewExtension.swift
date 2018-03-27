@@ -10,21 +10,21 @@ import UIKit
 
 extension UIView {
   
-  func fadeIn(withDuration duration: Double = 0.2) {
+  public func fadeIn(withDuration duration: Double = 0.2) {
     guard alpha == 0 else { return }
     UIView.animate(withDuration: TimeInterval(duration)) {
       self.alpha = 1
     }
   }
   
-  func fadeOut(withDuration duration: Double = 0.2) {
+  public func fadeOut(withDuration duration: Double = 0.2) {
     guard alpha == 1 else { return }
     UIView.animate(withDuration: TimeInterval(duration)) {
       self.alpha = 0
     }
   }
   
-  @IBInspectable var cornerRadius: CGFloat {
+  @IBInspectable public var cornerRadius: CGFloat {
     get {
       return layer.cornerRadius
     } set {
@@ -33,7 +33,7 @@ extension UIView {
     }
   }
   
-  @IBInspectable var borderColor: UIColor? {
+  @IBInspectable public var borderColor: UIColor? {
     get {
       if let borderColor = layer.borderColor {
         return UIColor(cgColor: borderColor)
@@ -44,7 +44,7 @@ extension UIView {
     }
   }
   
-  @IBInspectable var borderWidth: CGFloat {
+  @IBInspectable public var borderWidth: CGFloat {
     get {
       return layer.borderWidth
     } set {

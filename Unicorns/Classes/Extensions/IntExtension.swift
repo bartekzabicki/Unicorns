@@ -9,9 +9,9 @@
 import UIKit
 
 extension Int {
-    
-    func asRadian() -> CGFloat {
-        return (CGFloat(self - 90) * CGFloat(Double.pi) / 180.0)
-    }
-    
+  
+  public func asRadian() -> CGFloat {
+    return (CGFloat(self - 90) * CGFloat(Double.pi) / 180.0)
+  }
+  
 }

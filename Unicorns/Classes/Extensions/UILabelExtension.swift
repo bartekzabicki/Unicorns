@@ -10,7 +10,7 @@ import UIKit
 
 extension UILabel: XIBLocalizable {
   
-  @IBInspectable var localizableKey: String? {
+  @IBInspectable public var localizableKey: String? {
     get {
       return nil
     } set {

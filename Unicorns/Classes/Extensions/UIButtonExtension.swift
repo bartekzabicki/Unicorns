@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol XIBLocalizable {
+public protocol XIBLocalizable {
   var localizableKey: String? { get set }
 }
 
 extension UIButton: XIBLocalizable {
   
-  @IBInspectable var localizableKey: String? {
+  @IBInspectable public var localizableKey: String? {
     get {
       return nil
     } set {
