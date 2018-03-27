@@ -1,0 +1,6 @@
+use_frameworks!
+target 'Unicorns_Tests' do
+  pod 'Unicorns', :path => '../'
+  
+  
+end
