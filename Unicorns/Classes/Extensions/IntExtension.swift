@@ -1,0 +1,17 @@
+//
+//  IntExtension.swift
+//  CompanyManager
+//
+//  Created by Bartek on 09.04.2017.
+//  Copyright © 2017 zabicki. All rights reserved.
+//
+
+import UIKit
+
+extension Int {
+    
+    func asRadian() -> CGFloat {
+        return (CGFloat(self - 90) * CGFloat(Double.pi) / 180.0)
+    }
+    
+}
