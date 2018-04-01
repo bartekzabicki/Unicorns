@@ -235,6 +235,7 @@ import UIKit
     markLayer?.lineWidth = 1
     markLayer?.frame = deleteMark.bounds
     markLayer?.frame.origin = CGPoint.zero
+    hideDeleteMark()
     deleteMark.layer.addSublayer(markLayer!)
   }
   

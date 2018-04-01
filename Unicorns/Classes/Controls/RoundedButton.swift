@@ -37,19 +37,19 @@ import UIKit
   @IBInspectable var shouldLoadAfterSelected: Bool = true
   override var cornerRadius: CGFloat {
     get {
-      return 0
+      return layer.cornerRadius
     }
     set {
       layer.cornerRadius = newValue
     }
   }
+  private var _borderColor: UIColor? = #colorLiteral(red: 0.4040000141, green: 0.4199999869, blue: 0.5839999914, alpha: 1)
   override var borderColor: UIColor? {
     get {
-      return #colorLiteral(red: 0.4040000141, green: 0.4199999869, blue: 0.5839999914, alpha: 1)
+      return _borderColor
     } set {
-      maskLayer?.strokeColor = borderColor?.cgColor
-      setTitleColor(borderColor, for: .normal)
-      setTitleColor(borderColor, for: .selected)
+      maskLayer?.strokeColor = newValue?.cgColor
+      setTitleColor(newValue, for: .normal)
     }
   }
   
@@ -169,8 +169,11 @@ import UIKit
   // MARK: - Private Functions
   
   private func setup() {
-    setTitleColor(UIColor.white, for: .highlighted)
+    cornerRadius = frame.height/2
+    tintColor = .clear
+    setTitleColor(.white, for: .highlighted)
     setTitleColor(borderColor, for: .normal)
+    setTitleColor(.clear, for: .selected)
     addTarget(self, action: #selector(touchUpInside), for: .touchUpInside)
     addBorderLayer()
   }
@@ -192,7 +195,7 @@ import UIKit
   ///Add border around the button with the color, which depends on that if button is highlighted or not
   private func addBorderLayer() {
     let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: .allCorners,
-                            cornerRadii: CGSize(width: 18, height: 18))
+                            cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
     
     maskLayer = CAShapeLayer()
     guard let maskLayer = maskLayer else { return }
@@ -230,7 +233,7 @@ import UIKit
    */
   private func animateBorder() {
     let path = createPath(withOrigin: CGPoint(x: bounds.width/2, y: 0),
-                          size: CGSize(width: bounds.width, height: bounds.height), cornerRadius: 18)
+                          size: CGSize(width: bounds.width, height: bounds.height), cornerRadius: cornerRadius)
     
     borderLayer = CAShapeLayer()
     guard let borderLayer = borderLayer else {
