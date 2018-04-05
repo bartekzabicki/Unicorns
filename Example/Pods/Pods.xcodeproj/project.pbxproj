@@ -22,6 +22,7 @@
 		530DA942206AB263004559FC /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530DA940206AB263004559FC /* Log.swift */; };
 		530DA944206AB27F004559FC /* ReuseIdentifying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530DA943206AB27F004559FC /* ReuseIdentifying.swift */; };
 		530DA946206AB2AA004559FC /* FeatureDisabledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530DA945206AB2AA004559FC /* FeatureDisabledViewController.swift */; };
+		5379B2F320757073006CDF83 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379B2F220757073006CDF83 /* KeychainService.swift */; };
 		A42171589196ADA94C8C2CA3DE4100B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		ABEEF78DB5AE1CBA6CE84EBB11854D29 /* Unicorns-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8578AC1B75BF3B2C1DB23EA236A07 /* Unicorns-dummy.m */; };
 		D6D1806891BC3282E458FB271889C004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -58,6 +59,7 @@
 		530DA940206AB263004559FC /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Unicorns/Classes/Helpers/Log.swift; sourceTree = "<group>"; };
 		530DA943206AB27F004559FC /* ReuseIdentifying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReuseIdentifying.swift; path = Unicorns/Classes/Protocols/ReuseIdentifying.swift; sourceTree = "<group>"; };
 		530DA945206AB2AA004559FC /* FeatureDisabledViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeatureDisabledViewController.swift; path = Unicorns/Classes/FeatureDisabledViewController.swift; sourceTree = "<group>"; };
+		5379B2F220757073006CDF83 /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeychainService.swift; path = Unicorns/Classes/Services/KeychainService.swift; sourceTree = "<group>"; };
 		5BFA95D2F3DEC2C9F600DA3028ABFB2F /* Unicorns.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = Unicorns.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6232FCC63CDAC53C654912FC0BCE38A6 /* Unicorns.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicorns.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -108,6 +110,7 @@
 		0C4A7F2A3D5A4F1314D7DB88629537F2 /* Unicorns */ = {
 			isa = PBXGroup;
 			children = (
+				5379B2F120757059006CDF83 /* Services */,
 				530DA945206AB2AA004559FC /* FeatureDisabledViewController.swift */,
 				530DA93E206AB23C004559FC /* Protocols */,
 				530DA93D206AB22E004559FC /* Helpers */,
@@ -203,6 +206,14 @@
 				530DA943206AB27F004559FC /* ReuseIdentifying.swift */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		5379B2F120757059006CDF83 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5379B2F220757073006CDF83 /* KeychainService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -356,6 +367,7 @@
 				530DA935206AB1BE004559FC /* UITextFieldExtension.swift in Sources */,
 				530DA92A206AB1A9004559FC /* RoundedButton.swift in Sources */,
 				530DA934206AB1BE004559FC /* UILabelExtension.swift in Sources */,
+				5379B2F320757073006CDF83 /* KeychainService.swift in Sources */,
 				530DA937206AB1BE004559FC /* StringExtension.swift in Sources */,
 				530DA946206AB2AA004559FC /* FeatureDisabledViewController.swift in Sources */,
 				530DA938206AB1BE004559FC /* IntExtension.swift in Sources */,

@@ -14,11 +14,11 @@ import UIKit
  - Designable
  - Inspectable
  */
-@IBDesignable class RoundedButton: UIButton {
+@IBDesignable public class RoundedButton: UIButton {
   
   // MARK: - Enums
   
-  enum Response {
+  public enum Response {
     case success
     case failure
   }
@@ -26,16 +26,16 @@ import UIKit
   // MARK: - Properties
   
   
-  override var borderWidth: CGFloat {
+  override public var borderWidth: CGFloat {
     get {
       return 1
     } set {}
   }
-  @IBInspectable var innerBackgroundColor: UIColor = #colorLiteral(red: 0.976000011, green: 0.9800000191, blue: 0.9879999757, alpha: 1)
-  @IBInspectable var successColor: UIColor = #colorLiteral(red: 0.2899999917, green: 0.949000001, blue: 0.6309999824, alpha: 1)
-  @IBInspectable var failureColor: UIColor = #colorLiteral(red: 1, green: 0.200000003, blue: 0.4709999859, alpha: 1)
-  @IBInspectable var shouldLoadAfterSelected: Bool = true
-  override var cornerRadius: CGFloat {
+  @IBInspectable public var innerBackgroundColor: UIColor = #colorLiteral(red: 0.976000011, green: 0.9800000191, blue: 0.9879999757, alpha: 1)
+  @IBInspectable public var successColor: UIColor = #colorLiteral(red: 0.2899999917, green: 0.949000001, blue: 0.6309999824, alpha: 1)
+  @IBInspectable public var failureColor: UIColor = #colorLiteral(red: 1, green: 0.200000003, blue: 0.4709999859, alpha: 1)
+  @IBInspectable public var shouldLoadAfterSelected: Bool = true
+  override public var cornerRadius: CGFloat {
     get {
       return layer.cornerRadius
     }
@@ -44,22 +44,23 @@ import UIKit
     }
   }
   private var _borderColor: UIColor? = #colorLiteral(red: 0.4040000141, green: 0.4199999869, blue: 0.5839999914, alpha: 1)
-  override var borderColor: UIColor? {
+  override public var borderColor: UIColor? {
     get {
       return _borderColor
     } set {
       maskLayer?.strokeColor = newValue?.cgColor
       setTitleColor(newValue, for: .normal)
+      _borderColor = newValue
     }
   }
   
-  override var isHighlighted: Bool {
+  override public var isHighlighted: Bool {
     didSet {
       backgroundColor = isHighlighted ? borderColor : innerBackgroundColor
     }
   }
   
-  override var intrinsicContentSize: CGSize {
+  override public var intrinsicContentSize: CGSize {
     return CGSize(width: 120, height: 40)
   }
   
@@ -86,12 +87,12 @@ import UIKit
     setup()
   }
   
-  required init?(coder aDecoder: NSCoder) {
+  required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     setup()
   }
   
-  override func prepareForInterfaceBuilder() {
+  override public func prepareForInterfaceBuilder() {
     super.prepareForInterfaceBuilder()
     setup()
     layoutSubviews()
@@ -112,7 +113,7 @@ import UIKit
   // MARK: - Public function
   
   ///Handle response and draw mark in the middle
-  func handleResponse(with response: Response, completion: (() -> Void)? = nil) {
+  public func handleResponse(with response: Response, completion: (() -> Void)? = nil) {
     guard let animatedCircleLayer = animatedCircleLayer, let staticArcLayer = staticArcLayer else {
       self.response = response
       responseCompletion = completion
@@ -162,7 +163,7 @@ import UIKit
     })
   }
   
-  func animate() {
+  public func animate() {
     touchUpInside(sender: self)
   }
   

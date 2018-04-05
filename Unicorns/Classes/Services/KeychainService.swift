@@ -1,0 +1,67 @@
+//
+//  KeychainService.swift
+//  Pods-Unicorns_Tests
+//
+//  Created by Bartek Żabicki on 04.04.2018.
+//
+
+import Foundation
+
+public class KeychainService {
+  
+  public enum KeychainError: Error {
+    case couldNotSave
+    case noSuchValue
+    case unexpectedValueData
+    case unhandledError(status: OSStatus)
+  }
+  
+  // MARK: - Properties
+  
+  private let serviceName = "com.Unicorn.target"
+  public static var shared = KeychainService()
+  
+  // MARK: - Initialization
+  
+  private init() {}
+  
+  // MARK: - Private functions
+  
+  public func save(value: String?, as key: String) throws {
+    guard let valueData = value?.data(using: .utf8) else {
+      throw KeychainError.couldNotSave
+    }
+    let saveQuery: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
+                                    kSecAttrAccount as String: key,
+                                    kSecValueData as String: valueData]
+    let status = SecItemAdd(saveQuery as CFDictionary, nil)
+    guard status == errSecSuccess else {
+      throw KeychainError.unhandledError(status: status)
+    }
+  }
+  
+  public func retrive(item key: String) throws -> String {
+    let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
+                                kSecAttrAccount as String: key,
+                                kSecMatchLimit as String: kSecMatchLimitOne,
+                                kSecReturnAttributes as String: true,
+                                kSecReturnData as String: true]
+    var item: CFTypeRef?
+    let status = SecItemCopyMatching(query as CFDictionary, &item)
+    guard status != errSecItemNotFound else {
+      throw KeychainError.noSuchValue
+    }
+    guard status == errSecSuccess else {
+      throw KeychainError.unhandledError(status: status)
+      
+    }
+    guard let existingItem = item as? [String: Any],
+      let passwordData = existingItem[kSecValueData as String] as? Data,
+      let password = String(data: passwordData, encoding: String.Encoding.utf8)
+      else {
+        throw KeychainError.unexpectedValueData
+    }
+    return password
+  }
+  
+}

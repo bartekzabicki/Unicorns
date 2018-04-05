@@ -14,7 +14,7 @@ import UIKit
  - Designable
  - Inspectable
  */
-@IBDesignable class FloatTextField: UITextField {
+@IBDesignable public class FloatTextField: UITextField {
   
   // MARK: - Properties
   
@@ -43,26 +43,26 @@ import UIKit
     setup()
   }
   
-  required init?(coder aDecoder: NSCoder) {
+  required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     setup()
   }
   
-  override func prepareForInterfaceBuilder() {
+  override public func prepareForInterfaceBuilder() {
     super.prepareForInterfaceBuilder()
     setup()
   }
   
   // MARK: - Overrides
   
-  override func textRect(forBounds bounds: CGRect) -> CGRect {
+  override public func textRect(forBounds bounds: CGRect) -> CGRect {
     return UIEdgeInsetsInsetRect(bounds,
                                  UIEdgeInsets(top: UIFont.systemFont(ofSize: titleFontSize).lineHeight + 4, left: 0,
                                               bottom: UIFont.systemFont(ofSize: titleFontSize).lineHeight + 3,
                                               right: isDeleteMarkEnabled ? 20 : 0))
   }
   
-  override func editingRect(forBounds bounds: CGRect) -> CGRect {
+  override public func editingRect(forBounds bounds: CGRect) -> CGRect {
     return UIEdgeInsetsInsetRect(bounds,
                                  UIEdgeInsets(top: UIFont.systemFont(ofSize: titleFontSize).lineHeight + 4, left: 0,
                                               bottom: UIFont.systemFont(ofSize: titleFontSize).lineHeight + 3,
@@ -91,12 +91,12 @@ import UIKit
   
   // MARK: - Functions
   
-  func success() {
+  public func success() {
     bottomBorderView?.backgroundColor = successColor.withAlphaComponent(0.5)
     hideErrorLabel()
   }
   
-  func failure(error: String) {
+  public func failure(error: String) {
     bottomBorderView?.backgroundColor = errorColor.withAlphaComponent(0.5)
     showErrorLabel(with: error)
   }
