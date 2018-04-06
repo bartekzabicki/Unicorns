@@ -16,6 +16,20 @@ public class KeychainService {
     case unhandledError(status: OSStatus)
   }
   
+  public struct Key : RawRepresentable, Equatable, Hashable {
+    
+    public var rawValue: String
+
+    public init(_ rawValue: String) {
+      self.rawValue = rawValue
+    }
+    
+    public init(rawValue: String) {
+      self.rawValue = rawValue
+    }
+    
+  }
+  
   // MARK: - Properties
   
   private let serviceName = "com.Unicorn.target"
@@ -27,7 +41,7 @@ public class KeychainService {
   
   // MARK: - Private functions
   
-  public func save(value: String?, as key: String) throws {
+  public func save(value: String?, as key: Key) throws {
     guard let valueData = value?.data(using: .utf8) else {
       throw KeychainError.couldNotSave
     }
