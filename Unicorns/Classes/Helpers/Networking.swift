@@ -8,9 +8,9 @@
 
 import UIKit
 
-typealias JSON = [String: Any]
-typealias NetworkingError = Networking.NetworkError
-typealias DataTaskResult = (Data?, URLResponse?, Error?) -> Void
+public typealias JSON = [String: Any]
+public typealias NetworkingError = Networking.NetworkError
+public typealias DataTaskResult = (Data?, URLResponse?, Error?) -> Void
 
 // MARK: - Protocols
 
@@ -38,7 +38,7 @@ extension URLSessionDataTask: URLSessionDataTaskProtocol {}
 
 // MARK: - Networking
 
-class Networking {
+public class Networking {
   
   // MARK: - Properties
   
@@ -50,7 +50,7 @@ class Networking {
   
   // MARK: - Enums
   
-  enum NetworkMethod: String {
+  public enum NetworkMethod: String {
     case post = "POST"
     case get = "GET"
     case delete = "DELETE"
@@ -61,8 +61,8 @@ class Networking {
   
   public struct NetworkError: Error {
     
-    let code: Int
-    let description: String
+    public let code: Int
+    public let description: String
     
     init(code: Int, description: String) {
       self.description = description

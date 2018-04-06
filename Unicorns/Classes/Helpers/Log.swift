@@ -7,16 +7,21 @@
 
 import Foundation
 
-final class Log {
+public final class Log {
   
-  static let isLoggerEnabled = true
+  public static let isLoggerEnabled = true
   
-  static func e(_ message: String) {
+  public static func e(_ message: String) {
     guard isLoggerEnabled else { return }
     print("❗️[Error]: \(message)")
   }
   
-  static func i(_ message: String) {
+  public static func e(_ error: Error) {
+    guard isLoggerEnabled else { return }
+    print("❗️[Error]: \(error.localizedDescription)")
+  }
+  
+  public static func i(_ message: String) {
     guard isLoggerEnabled else { return }
     print("❔[Debug]: \(message)")
   }
