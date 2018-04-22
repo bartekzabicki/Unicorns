@@ -14,7 +14,7 @@ protocol ReuseIdentifying {
 
 extension ReuseIdentifying {
   
-  static var reuseIdentifier: String {
+  public static var reuseIdentifier: String {
     return String(describing: Self.self)
   }
   
@@ -25,3 +25,5 @@ extension ReuseIdentifying {
 extension UICollectionViewCell: ReuseIdentifying {}
 
 extension UITableViewCell: ReuseIdentifying {}
+
+extension UIViewController: ReuseIdentifying {}
