@@ -34,7 +34,11 @@ import UIKit
   @IBInspectable public var innerBackgroundColor: UIColor = #colorLiteral(red: 0.976000011, green: 0.9800000191, blue: 0.9879999757, alpha: 1)
   @IBInspectable public var successColor: UIColor = #colorLiteral(red: 0.2899999917, green: 0.949000001, blue: 0.6309999824, alpha: 1)
   @IBInspectable public var failureColor: UIColor = #colorLiteral(red: 1, green: 0.200000003, blue: 0.4709999859, alpha: 1)
-  @IBInspectable public var shouldLoadAfterSelected: Bool = true
+  @IBInspectable public var shouldLoadAfterSelected: Bool = true {
+    didSet {
+      setTitleColor(titleColor(for: .normal), for: .selected)
+    }
+  }
   override public var cornerRadius: CGFloat {
     get {
       return layer.cornerRadius
@@ -153,6 +157,7 @@ import UIKit
         markLayer.removeFromSuperlayer()
         self.borderLayer?.strokeColor = self.borderLayer?.strokeColor?.copy(alpha: 0)
         self.titleLabel?.alpha = 1
+        self.isSelected = false
       }, completion: { _ in
         self.borderLayer?.removeFromSuperlayer()
         self.borderLayer = nil
@@ -174,7 +179,9 @@ import UIKit
     tintColor = .clear
     setTitleColor(.white, for: .highlighted)
     setTitleColor(borderColor, for: .normal)
-    setTitleColor(.clear, for: .selected)
+    if shouldLoadAfterSelected {
+      setTitleColor(.clear, for: .selected)
+    }
     addTarget(self, action: #selector(touchUpInside), for: .touchUpInside)
     addBorderLayer()
   }
