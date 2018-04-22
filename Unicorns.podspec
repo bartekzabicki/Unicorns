@@ -5,6 +5,8 @@
 # Any lines starting with a # are optional, but their use is encouraged
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
 #
+# Updating pod: pod trunk push Unicorns.podspec --swift-version="4.0"
+# Validating pod: pod lib lint Unicorns.podspec --swift-version="4.0"
 
 Pod::Spec.new do |s|
   s.name             = 'Unicorns'
