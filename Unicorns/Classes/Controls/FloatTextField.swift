@@ -23,6 +23,11 @@ import UIKit
   @IBInspectable var titleColor: UIColor = #colorLiteral(red: 0.4040000141, green: 0.4199999869, blue: 0.5839999914, alpha: 1)
   @IBInspectable var errorColor: UIColor = #colorLiteral(red: 1, green: 0.200000003, blue: 0.4709999859, alpha: 1)
   @IBInspectable var successColor: UIColor = #colorLiteral(red: 0.2899999917, green: 0.949000001, blue: 0.6309999824, alpha: 1)
+  @IBInspectable var underlineColor: UIColor = UIColor.lightGray.withAlphaComponent(0.5) {
+    didSet {
+      bottomBorderView?.backgroundColor = underlineColor
+    }
+  }
   
   private var bottomBorderView: UIView?
   private var titleLabel: UILabel?
@@ -106,7 +111,7 @@ import UIKit
   private func setup() {
     borderStyle = .none
     bottomBorderView = UIView()
-    bottomBorderView!.backgroundColor = UIColor.lightGray.withAlphaComponent(0.5)
+    bottomBorderView!.backgroundColor = underlineColor
     addSubview(bottomBorderView!)
     bottomBorderView?.translatesAutoresizingMaskIntoConstraints = false
     bottomBorderView?.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
