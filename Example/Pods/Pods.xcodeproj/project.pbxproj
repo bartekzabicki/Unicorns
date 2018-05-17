@@ -21,8 +21,10 @@
 		530DA941206AB263004559FC /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530DA93F206AB263004559FC /* Networking.swift */; };
 		530DA942206AB263004559FC /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530DA940206AB263004559FC /* Log.swift */; };
 		530DA944206AB27F004559FC /* ReuseIdentifying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530DA943206AB27F004559FC /* ReuseIdentifying.swift */; };
-		530DA946206AB2AA004559FC /* FeatureDisabledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530DA945206AB2AA004559FC /* FeatureDisabledViewController.swift */; };
 		5379B2F320757073006CDF83 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379B2F220757073006CDF83 /* KeychainService.swift */; };
+		53AF563220AB1A6C00FCF7E8 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AF563120AB1A6C00FCF7E8 /* CGSizeExtension.swift */; };
+		53FA2006209473DC00C7D3C7 /* ImageCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FA2004209473DC00C7D3C7 /* ImageCropViewController.swift */; };
+		53FA2008209473F100C7D3C7 /* FeatureDisabledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FA2007209473F100C7D3C7 /* FeatureDisabledViewController.swift */; };
 		A42171589196ADA94C8C2CA3DE4100B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		ABEEF78DB5AE1CBA6CE84EBB11854D29 /* Unicorns-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8578AC1B75BF3B2C1DB23EA236A07 /* Unicorns-dummy.m */; };
 		D6D1806891BC3282E458FB271889C004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -58,8 +60,11 @@
 		530DA93F206AB263004559FC /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Networking.swift; path = Unicorns/Classes/Helpers/Networking.swift; sourceTree = "<group>"; };
 		530DA940206AB263004559FC /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Unicorns/Classes/Helpers/Log.swift; sourceTree = "<group>"; };
 		530DA943206AB27F004559FC /* ReuseIdentifying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReuseIdentifying.swift; path = Unicorns/Classes/Protocols/ReuseIdentifying.swift; sourceTree = "<group>"; };
-		530DA945206AB2AA004559FC /* FeatureDisabledViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeatureDisabledViewController.swift; path = Unicorns/Classes/FeatureDisabledViewController.swift; sourceTree = "<group>"; };
 		5379B2F220757073006CDF83 /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeychainService.swift; path = Unicorns/Classes/Services/KeychainService.swift; sourceTree = "<group>"; };
+		53AF563120AB1A6C00FCF7E8 /* CGSizeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGSizeExtension.swift; path = Unicorns/Classes/Extensions/CGSizeExtension.swift; sourceTree = "<group>"; };
+		53FA2004209473DC00C7D3C7 /* ImageCropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCropViewController.swift; path = Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift; sourceTree = "<group>"; };
+		53FA2005209473DC00C7D3C7 /* ImageCropViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageCropViewController.xib; path = Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.xib; sourceTree = "<group>"; };
+		53FA2007209473F100C7D3C7 /* FeatureDisabledViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeatureDisabledViewController.swift; path = Unicorns/Classes/Controllers/FeatureDisabledViewController.swift; sourceTree = "<group>"; };
 		5BFA95D2F3DEC2C9F600DA3028ABFB2F /* Unicorns.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = Unicorns.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6232FCC63CDAC53C654912FC0BCE38A6 /* Unicorns.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicorns.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -110,8 +115,8 @@
 		0C4A7F2A3D5A4F1314D7DB88629537F2 /* Unicorns */ = {
 			isa = PBXGroup;
 			children = (
+				53FA2003209473C000C7D3C7 /* Controllers */,
 				5379B2F120757059006CDF83 /* Services */,
-				530DA945206AB2AA004559FC /* FeatureDisabledViewController.swift */,
 				530DA93E206AB23C004559FC /* Protocols */,
 				530DA93D206AB22E004559FC /* Helpers */,
 				530DA927206AB196004559FC /* Controls */,
@@ -171,6 +176,7 @@
 		530DA925206AB188004559FC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				53AF563120AB1A6C00FCF7E8 /* CGSizeExtension.swift */,
 				530DA931206AB1BE004559FC /* IntExtension.swift */,
 				530DA930206AB1BE004559FC /* StringExtension.swift */,
 				530DA932206AB1BE004559FC /* UIButtonExtension.swift */,
@@ -214,6 +220,24 @@
 				5379B2F220757073006CDF83 /* KeychainService.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		53FA2003209473C000C7D3C7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				53FA2009209473F300C7D3C7 /* ImageCropViewcontroller */,
+				53FA2007209473F100C7D3C7 /* FeatureDisabledViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		53FA2009209473F300C7D3C7 /* ImageCropViewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				53FA2004209473DC00C7D3C7 /* ImageCropViewController.swift */,
+				53FA2005209473DC00C7D3C7 /* ImageCropViewController.xib */,
+			);
+			name = ImageCropViewcontroller;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -363,13 +387,15 @@
 				530DA941206AB263004559FC /* Networking.swift in Sources */,
 				530DA942206AB263004559FC /* Log.swift in Sources */,
 				530DA944206AB27F004559FC /* ReuseIdentifying.swift in Sources */,
+				53AF563220AB1A6C00FCF7E8 /* CGSizeExtension.swift in Sources */,
 				530DA939206AB1BE004559FC /* UIButtonExtension.swift in Sources */,
 				530DA935206AB1BE004559FC /* UITextFieldExtension.swift in Sources */,
 				530DA92A206AB1A9004559FC /* RoundedButton.swift in Sources */,
 				530DA934206AB1BE004559FC /* UILabelExtension.swift in Sources */,
 				5379B2F320757073006CDF83 /* KeychainService.swift in Sources */,
+				53FA2008209473F100C7D3C7 /* FeatureDisabledViewController.swift in Sources */,
+				53FA2006209473DC00C7D3C7 /* ImageCropViewController.swift in Sources */,
 				530DA937206AB1BE004559FC /* StringExtension.swift in Sources */,
-				530DA946206AB2AA004559FC /* FeatureDisabledViewController.swift in Sources */,
 				530DA938206AB1BE004559FC /* IntExtension.swift in Sources */,
 				530DA933206AB1BE004559FC /* UIViewExtension.swift in Sources */,
 				530DA936206AB1BE004559FC /* UIViewControllerExtension.swift in Sources */,
