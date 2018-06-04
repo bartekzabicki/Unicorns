@@ -16,10 +16,6 @@
                 <outlet property="cancelButton" destination="J4h-v7-lRc" id="DQW-ev-eBa"/>
                 <outlet property="cropView" destination="hyO-fc-uyI" id="eRQ-bx-7xE"/>
                 <outlet property="imageView" destination="ysR-Dg-p2o" id="Z1J-xK-sco"/>
-                <outlet property="imageViewBottomConstraint" destination="Kxg-Jg-xdZ" id="sXv-Qa-02E"/>
-                <outlet property="imageViewLeadingConstraint" destination="e2G-ZQ-k2Q" id="6jJ-wz-gE6"/>
-                <outlet property="imageViewTopConstraint" destination="c4U-vq-uq6" id="HzO-ge-8qn"/>
-                <outlet property="imageViewTrailingConstraint" destination="T9n-py-2CY" id="u7Q-gt-yvc"/>
                 <outlet property="scrollView" destination="GT1-l7-oZv" id="mmP-8z-ePZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -38,9 +34,9 @@
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="ysR-Dg-p2o" secondAttribute="bottom" id="Kxg-Jg-xdZ"/>
-                        <constraint firstItem="ysR-Dg-p2o" firstAttribute="centerX" secondItem="GT1-l7-oZv" secondAttribute="centerX" placeholder="YES" id="P8R-x6-thd"/>
+                        <constraint firstItem="ysR-Dg-p2o" firstAttribute="centerX" secondItem="GT1-l7-oZv" secondAttribute="centerX" priority="998" id="P8R-x6-thd"/>
                         <constraint firstAttribute="trailing" secondItem="ysR-Dg-p2o" secondAttribute="trailing" id="T9n-py-2CY"/>
-                        <constraint firstItem="ysR-Dg-p2o" firstAttribute="centerY" secondItem="GT1-l7-oZv" secondAttribute="centerY" placeholder="YES" id="ahs-3k-2nX"/>
+                        <constraint firstItem="ysR-Dg-p2o" firstAttribute="centerY" secondItem="GT1-l7-oZv" secondAttribute="centerY" priority="998" id="ahs-3k-2nX"/>
                         <constraint firstItem="ysR-Dg-p2o" firstAttribute="top" secondItem="GT1-l7-oZv" secondAttribute="top" id="c4U-vq-uq6"/>
                         <constraint firstItem="ysR-Dg-p2o" firstAttribute="leading" secondItem="GT1-l7-oZv" secondAttribute="leading" id="e2G-ZQ-k2Q"/>
                     </constraints>

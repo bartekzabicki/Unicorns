@@ -52,11 +52,6 @@ public final class ImageCropViewController: UIViewController {
   @IBOutlet weak var cancelButton: UIButton!
   @IBOutlet weak var acceptButton: UIButton!
   
-  @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
-  @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
-  @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
-  @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
-  
   // MARK: - Properties
   
   private var viewModel: ViewModel?
@@ -206,6 +201,24 @@ extension ImageCropViewController: UIScrollViewDelegate {
   
   public func scrollViewDidZoom(_ scrollView: UIScrollView) {}
   
+  public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+    checkIfCircleIsOnImage()
+  }
+  
+  public func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
+    checkIfCircleIsOnImage()
+  }
+  
+  private func checkIfCircleIsOnImage() -> Bool {
+    guard let shapePath = shapePath else {
+      Log.e("Shape path cannot be nil")
+      return false
+    }
+    Log.e("\(imageView.imageFrame().contains(shapePath.boundingBox))")
+    Log.i("\(shapePath.boundingBox)")
+    return true
+  }
+  
 }
 
 // MARK: - Shapes extension
@@ -227,8 +240,8 @@ extension ImageCropViewController {
       case .round:
         mutalbePath.addArc(center: view.center,
                            radius: availableWidth/2,
-                           startAngle: 0.asRadian(),
-                           endAngle: 360.asRadian(),
+                           startAngle: 270.asRadian(),
+                           endAngle: 270.asRadian(),
                            clockwise: true,
                            transform: .identity)
       case .square:
