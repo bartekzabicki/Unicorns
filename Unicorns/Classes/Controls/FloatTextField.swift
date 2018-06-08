@@ -281,12 +281,12 @@ extension FloatTextField {
     UIGraphicsBeginImageContext(deleteMark.frame.size)
     UIGraphicsGetCurrentContext()
     let line = UIBezierPath()
+    line.move(to: CGPoint(x: center.x  + radius * cos(225.asRadian()), y: center.y + radius * sin(225.asRadian())))
+    line.addLine(to: CGPoint(x: center.x  + radius * cos(45.asRadian()),
+                             y: center.y + radius * sin(45.asRadian())))
     line.move(to: CGPoint(x: center.x  + radius * cos(315.asRadian()), y: center.y + radius * sin(315.asRadian())))
     line.addLine(to: CGPoint(x: center.x  + radius * cos(135.asRadian()),
                              y: center.y + radius * sin(135.asRadian())))
-    line.move(to: CGPoint(x: center.x  + radius * cos(45.asRadian()), y: center.y + radius * sin(45.asRadian())))
-    line.addLine(to: CGPoint(x: center.x  + radius * cos(225.asRadian()),
-                             y: center.y + radius * sin(225.asRadian())))
     line.stroke()
     line.fill()
     UIGraphicsEndImageContext()

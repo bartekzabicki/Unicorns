@@ -221,16 +221,16 @@ import UIKit
     path.move(to: origin)
     path.addLine(to: CGPoint(x: size.width - cornerRadius, y: 0))
     path.addArc(withCenter: CGPoint(x: size.width - cornerRadius, y: cornerRadius),
-                radius: cornerRadius, startAngle: 0.asRadian(), endAngle: 90.asRadian(), clockwise: true)
+                radius: cornerRadius, startAngle: 270.asRadian(), endAngle: 0.asRadian(), clockwise: true)
     path.addLine(to: CGPoint(x: size.width, y: cornerRadius))
     path.addArc(withCenter: CGPoint(x: size.width - cornerRadius, y: size.height - cornerRadius),
-                radius: cornerRadius, startAngle: 90.asRadian(), endAngle: 180.asRadian(), clockwise: true)
+                radius: cornerRadius, startAngle: 0.asRadian(), endAngle: 90.asRadian(), clockwise: true)
     path.addLine(to: CGPoint(x: cornerRadius, y: size.height))
     path.addArc(withCenter: CGPoint(x: cornerRadius, y: size.height - cornerRadius),
-                radius: cornerRadius, startAngle: 180.asRadian(), endAngle: 270.asRadian(), clockwise: true)
+                radius: cornerRadius, startAngle: 90.asRadian(), endAngle: 180.asRadian(), clockwise: true)
     path.addLine(to: CGPoint(x: 0, y: cornerRadius))
     path.addArc(withCenter: CGPoint(x: cornerRadius, y: cornerRadius),
-                radius: cornerRadius, startAngle: 270.asRadian(), endAngle: 360.asRadian(), clockwise: true)
+                radius: cornerRadius, startAngle: 180.asRadian(), endAngle: 270.asRadian(), clockwise: true)
     path.addLine(to: origin)
     return path
   }
@@ -267,7 +267,7 @@ import UIKit
   private func drawCircle(withDuration duration: Double) {
     
     let path = UIBezierPath()
-    let arcAngles = [0, 90, 180, 270, 360]
+    let arcAngles = [270, 0, 90, 180, 270]
     for index in 0...3 {
       path.addArc(withCenter: arcCenter, radius: arcRadius, startAngle: arcAngles[index].asRadian(),
                   endAngle: arcAngles[index + 1].asRadian(), clockwise: true)
@@ -284,7 +284,7 @@ import UIKit
     //Static arc of 30 angle create illusion of not ending circle
     let staticArcPath = UIBezierPath()
     staticArcPath.addArc(withCenter: arcCenter, radius: arcRadius,
-                         startAngle: 345.asRadian(), endAngle: 365.asRadian(), clockwise: true)
+                         startAngle: 255.asRadian(), endAngle: 275.asRadian(), clockwise: true)
     
     staticArcLayer = CAShapeLayer()
     guard let staticArcLayer = staticArcLayer else { return }
@@ -349,11 +349,11 @@ extension RoundedButton {
     center.x -= arcRadius/9
     
     let line = UIBezierPath()
-    line.move(to: CGPoint(x: center.x  + arcRadius/3 * cos(315.asRadian()),
-                          y: center.y + arcRadius/3 * sin(315.asRadian())))
+    line.move(to: CGPoint(x: center.x  + arcRadius/3 * cos(225.asRadian()),
+                          y: center.y + arcRadius/3 * sin(225.asRadian())))
     line.addLine(to: center)
-    line.addLine(to: CGPoint(x: center.x  + arcRadius/3*2 * cos(40.asRadian()),
-                             y: center.y + arcRadius/3*2 * sin(40.asRadian())))
+    line.addLine(to: CGPoint(x: center.x  + arcRadius/3*2 * cos(310.asRadian()),
+                             y: center.y + arcRadius/3*2 * sin(310.asRadian())))
     line.stroke()
     line.fill()
     UIGraphicsEndImageContext()
@@ -364,14 +364,14 @@ extension RoundedButton {
     UIGraphicsBeginImageContext(frame.size)
     UIGraphicsGetCurrentContext()
     let line = UIBezierPath()
+    line.move(to: CGPoint(x: arcCenter.x  + arcRadius/3 * cos(225.asRadian()),
+                          y: arcCenter.y + arcRadius/3 * sin(225.asRadian())))
+    line.addLine(to: CGPoint(x: arcCenter.x  + arcRadius/3 * cos(45.asRadian()),
+                             y: arcCenter.y + arcRadius/3 * sin(45.asRadian())))
     line.move(to: CGPoint(x: arcCenter.x  + arcRadius/3 * cos(315.asRadian()),
                           y: arcCenter.y + arcRadius/3 * sin(315.asRadian())))
     line.addLine(to: CGPoint(x: arcCenter.x  + arcRadius/3 * cos(135.asRadian()),
                              y: arcCenter.y + arcRadius/3 * sin(135.asRadian())))
-    line.move(to: CGPoint(x: arcCenter.x  + arcRadius/3 * cos(45.asRadian()),
-                          y: arcCenter.y + arcRadius/3 * sin(45.asRadian())))
-    line.addLine(to: CGPoint(x: arcCenter.x  + arcRadius/3 * cos(225.asRadian()),
-                             y: arcCenter.y + arcRadius/3 * sin(225.asRadian())))
     line.stroke()
     line.fill()
     UIGraphicsEndImageContext()

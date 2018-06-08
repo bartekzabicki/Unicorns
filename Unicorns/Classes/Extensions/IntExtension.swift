@@ -11,7 +11,7 @@ import UIKit
 extension Int {
   
   public func asRadian() -> CGFloat {
-    return (CGFloat(self - 90) * CGFloat(Double.pi) / 180.0)
+    return (CGFloat(self) * CGFloat(Double.pi) / 180.0)
   }
   
 }
