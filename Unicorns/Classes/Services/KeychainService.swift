@@ -46,7 +46,7 @@ public class KeychainService {
       throw KeychainError.couldNotSave
     }
     let saveQuery: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
-                                    kSecAttrAccount as String: key,
+                                    kSecAttrAccount as String: key.rawValue,
                                     kSecValueData as String: valueData]
     let status = SecItemAdd(saveQuery as CFDictionary, nil)
     guard status == errSecSuccess else {
@@ -54,9 +54,9 @@ public class KeychainService {
     }
   }
   
-  public func retrive(item key: String) throws -> String {
+  public func retrive(item key: Key) throws -> String {
     let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
-                                kSecAttrAccount as String: key,
+                                kSecAttrAccount as String: key.rawValue,
                                 kSecMatchLimit as String: kSecMatchLimitOne,
                                 kSecReturnAttributes as String: true,
                                 kSecReturnData as String: true]
@@ -76,6 +76,16 @@ public class KeychainService {
         throw KeychainError.unexpectedValueData
     }
     return password
+  }
+  
+  public func delete(item key: Key) throws {
+    let deleteQuery: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
+                                      kSecAttrAccount as String: key.rawValue]
+    
+    let status = SecItemDelete(deleteQuery as CFDictionary)
+    guard status == errSecSuccess || status == errSecItemNotFound else {
+      throw KeychainError.unhandledError(status: status)
+    }
   }
   
 }

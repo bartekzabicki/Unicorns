@@ -9,26 +9,27 @@
 import UIKit
 
 public typealias JSON = [String: Any]
+public typealias Headers = [String: String]
 public typealias NetworkingError = Networking.NetworkError
 public typealias DataTaskResult = (Data?, URLResponse?, Error?) -> Void
 
 // MARK: - Protocols
 
-protocol URLSessionProtocol {
+public protocol URLSessionProtocol {
   func dataTask(with url: URL, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol
   func dataTask(with request: URLRequest, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol
 }
 
-protocol URLSessionDataTaskProtocol {
+public protocol URLSessionDataTaskProtocol {
   func resume()
 }
 
 extension URLSession: URLSessionProtocol {
-  func dataTask(with url: URL, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol {
+  public func dataTask(with url: URL, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol {
     return (dataTask(with: url, completionHandler: completionHandler) as URLSessionDataTask) as URLSessionDataTaskProtocol
   }
   
-  func dataTask(with request: URLRequest, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol {
+  public func dataTask(with request: URLRequest, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol {
     return (dataTask(with: request, completionHandler: completionHandler) as URLSessionDataTask) as URLSessionDataTaskProtocol
   }
   
@@ -38,13 +39,13 @@ extension URLSessionDataTask: URLSessionDataTaskProtocol {}
 
 // MARK: - Networking
 
-public class Networking {
+final public class Networking {
   
   // MARK: - Properties
   
   private let timeoutIntervalForRequest = 15.0
-  static var session: URLSessionProtocol = Networking.shared.defaultSession()
-  static var shared = Networking()
+  public static var session: URLSessionProtocol = Networking.shared.defaultSession()
+  public static var shared = Networking()
   
   private init(){}
   
@@ -86,10 +87,35 @@ public class Networking {
     
   }
   
+  // MARK: - Endpoint
+  
+  public enum Result {
+    case success(Data)
+    case failure(Error)
+  }
+  
+  public struct RequestEndpoint: RawRepresentable {
+    public var rawValue: String
+    var method: NetworkMethod?
+    var parameters: JSON?
+    var headers: [String: String]?
+    public init(rawValue: String) {
+      self.rawValue = rawValue
+    }
+
+    public init(rawValue: String, method: NetworkMethod, parameters: JSON?, headers: Headers?) {
+      self.rawValue = rawValue
+      self.method = method
+      self.parameters = parameters
+      self.headers = headers
+    }
+
+  }
+  
   // MARK: - Static functions
   
-  func request(with url: URL?, method: NetworkMethod, parameters: JSON? = nil,
-               headers: [String: String]? = nil, onSuccess: @escaping ((Data) -> Void),
+  public func request(with url: URL?, method: NetworkMethod, parameters: JSON? = nil,
+               headers: JSON? = nil, onSuccess: @escaping ((Data) -> Void),
                onError: @escaping ((NetworkError) -> Void)) {
     guard let url = url else {
       print("Cannot run request without url")
@@ -98,7 +124,9 @@ public class Networking {
     var request = URLRequest(url: url)
     request.httpMethod = method.rawValue
     headers?.forEach { element in
-      request.addValue(element.value, forHTTPHeaderField: element.key)
+      if let value = element.value as? String {
+        request.addValue(value, forHTTPHeaderField: element.key)
+      }
     }
     switch method {
     case .post, .put:
@@ -131,8 +159,8 @@ public class Networking {
       }.resume()
   }
   
-  func request(with urlString: String, method: NetworkMethod, parameters: JSON? = nil,
-               headers: [String: String]? = nil, onSuccess: @escaping ((Data) -> Void),
+  public func request(with urlString: String, method: NetworkMethod, parameters: JSON? = nil,
+               headers: JSON? = nil, onSuccess: @escaping ((Data) -> Void),
                onError: @escaping ((NetworkError) -> Void)) {
     guard let url = URL(string: urlString) else {
       print("Cannot get URL from \(urlString)")
@@ -155,7 +183,7 @@ public class Networking {
     return session
   }
   
-  private func setupRequestWith(request: URLRequest, parameters: JSON? = nil, headers: [String: String]?) -> URLRequest? {
+  private func setupRequestWith(request: URLRequest, parameters: JSON? = nil, headers: JSON?) -> URLRequest? {
     var request = request
     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
     request.addValue("application/json", forHTTPHeaderField: "Accept")

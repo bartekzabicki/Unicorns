@@ -8,7 +8,7 @@ import UIKit
 
 // MARK: - Protocols
 
-protocol ReuseIdentifying {
+public protocol ReuseIdentifying {
   static var reuseIdentifier: String { get }
 }
 
