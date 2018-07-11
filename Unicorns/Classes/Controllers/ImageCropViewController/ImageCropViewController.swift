@@ -209,6 +209,7 @@ extension ImageCropViewController: UIScrollViewDelegate {
     checkIfCircleIsOnImage()
   }
   
+  @discardableResult
   private func checkIfCircleIsOnImage() -> Bool {
     guard let shapePath = shapePath else {
       Log.e("Shape path cannot be nil")

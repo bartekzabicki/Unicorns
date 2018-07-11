@@ -14,7 +14,7 @@ import UIKit
  - Designable
  - Inspectable
  */
-@IBDesignable public class FloatTextField: UITextField {
+@IBDesignable open class FloatTextField: UITextField {
   
   // MARK: - Properties
   
@@ -28,10 +28,25 @@ import UIKit
       bottomBorderView?.backgroundColor = underlineColor
     }
   }
+  @IBInspectable open var contentInsets: UIEdgeInsets = .zero {
+    didSet {
+      adjustInsets()
+    }
+  }
+  @IBInspectable var titleFontSize: CGFloat = 12 {
+    didSet {
+      adjustFontSizes()
+    }
+  }
+  
+  open override var placeholder: String? {
+    didSet {
+      titleLabel?.text = placeholder
+    }
+  }
   
   private var bottomBorderView: UIView?
   private var titleLabel: UILabel?
-  private var titleFontSize: CGFloat = 12
   private var errorLabel: UILabel?
   private let kFadeDuration = 0.2
   private let kDrawDuration = 0.1
@@ -43,7 +58,7 @@ import UIKit
   
   // MARK: - Initialization
   
-  override init(frame: CGRect) {
+  override public init(frame: CGRect) {
     super.init(frame: frame)
     setup()
   }
@@ -53,21 +68,21 @@ import UIKit
     setup()
   }
   
-  override public func prepareForInterfaceBuilder() {
+  override open func prepareForInterfaceBuilder() {
     super.prepareForInterfaceBuilder()
     setup()
   }
   
   // MARK: - Overrides
   
-  override public func textRect(forBounds bounds: CGRect) -> CGRect {
+  override open func textRect(forBounds bounds: CGRect) -> CGRect {
     return UIEdgeInsetsInsetRect(bounds,
                                  UIEdgeInsets(top: UIFont.systemFont(ofSize: titleFontSize).lineHeight + 4, left: 0,
                                               bottom: UIFont.systemFont(ofSize: titleFontSize).lineHeight + 3,
                                               right: isDeleteMarkEnabled ? 20 : 0))
   }
   
-  override public func editingRect(forBounds bounds: CGRect) -> CGRect {
+  override open func editingRect(forBounds bounds: CGRect) -> CGRect {
     return UIEdgeInsetsInsetRect(bounds,
                                  UIEdgeInsets(top: UIFont.systemFont(ofSize: titleFontSize).lineHeight + 4, left: 0,
                                               bottom: UIFont.systemFont(ofSize: titleFontSize).lineHeight + 3,
@@ -108,19 +123,19 @@ import UIKit
   
   // MARK: - Private Functions
   
-  private func setup() {
+  open func setup() {
     borderStyle = .none
     bottomBorderView = UIView()
     bottomBorderView!.backgroundColor = underlineColor
     addSubview(bottomBorderView!)
     bottomBorderView?.translatesAutoresizingMaskIntoConstraints = false
-    bottomBorderView?.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-    bottomBorderView?.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+    bottomBorderView?.leadingAnchor.constraint(equalTo: leadingAnchor, constant: contentInsets.left).isActive = true
+    bottomBorderView?.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -contentInsets.right).isActive = true
     bottomBorderView?.bottomAnchor.constraint(equalTo: bottomAnchor, constant:
       -UIFont.systemFont(ofSize: titleFontSize).lineHeight).isActive = true
     bottomBorderView?.heightAnchor.constraint(equalToConstant: 2).isActive = true
-    createDeleteMark()
     createTitle()
+    createDeleteMark()
     createErrorLabel()
     addObservers()
   }
@@ -149,6 +164,7 @@ import UIKit
     }
     guard title.alpha == 1 else { return }
     hideDeleteMark()
+    hideErrorLabel()
     if (text ?? "").isEmpty {
       bottomBorderView?.backgroundColor = UIColor.lightGray.withAlphaComponent(0.5)
     }
@@ -171,9 +187,9 @@ import UIKit
     titleLabel?.frame.size.width = frame.width
     addSubview(titleLabel!)
     titleLabel?.translatesAutoresizingMaskIntoConstraints = false
-    titleLabel?.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-    titleLabel?.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-    titleLabel?.topAnchor.constraint(equalTo: topAnchor).isActive = true
+    titleLabel?.leadingAnchor.constraint(equalTo: leadingAnchor, constant: contentInsets.left).isActive = true
+    titleLabel?.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -contentInsets.right).isActive = true
+    titleLabel?.topAnchor.constraint(equalTo: topAnchor, constant: contentInsets.top).isActive = true
     if !(text ?? "").isEmpty {
       showTitle()
     }
@@ -193,9 +209,9 @@ import UIKit
     errorLabel?.frame.origin.y = frame.height - errorLabel!.font.lineHeight
     addSubview(errorLabel!)
     errorLabel?.translatesAutoresizingMaskIntoConstraints = false
-    errorLabel?.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-    errorLabel?.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-    errorLabel?.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+    errorLabel?.leadingAnchor.constraint(equalTo: leadingAnchor, constant: contentInsets.left).isActive = true
+    errorLabel?.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -contentInsets.right).isActive = true
+    errorLabel?.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -contentInsets.bottom).isActive = true
   }
   
   private func showErrorLabel(with error: String) {
@@ -228,7 +244,7 @@ import UIKit
     deleteMark.addTarget(self, action: #selector(clearText), for: .touchUpInside)
     addSubview(deleteMark)
     deleteMark.translatesAutoresizingMaskIntoConstraints = false
-    deleteMark.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+    deleteMark.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -contentInsets.right).isActive = true
     deleteMark.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     deleteMark.heightAnchor.constraint(equalToConstant: 20).isActive = true
     deleteMark.widthAnchor.constraint(equalToConstant: 20).isActive = true
@@ -242,6 +258,31 @@ import UIKit
     markLayer?.frame.origin = CGPoint.zero
     hideDeleteMark()
     deleteMark.layer.addSublayer(markLayer!)
+  }
+  
+  private func adjustInsets() {
+    if let deleteMark = deleteMark {
+      deleteMark.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -contentInsets.right).isActive = true
+    }
+    if let titleLabel = titleLabel {
+      titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: contentInsets.left).isActive = true
+      titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -contentInsets.right).isActive = true
+      titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: contentInsets.top).isActive = true
+    }
+    if let errorLabel = errorLabel {
+      errorLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: contentInsets.left).isActive = true
+      errorLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -contentInsets.right).isActive = true
+      errorLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -contentInsets.bottom).isActive = true
+    }
+    if let bottomBorderView = bottomBorderView {
+      bottomBorderView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: contentInsets.left).isActive = true
+      bottomBorderView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -contentInsets.right).isActive = true
+    }
+  }
+  
+  private func adjustFontSizes() {
+    titleLabel?.font = titleLabel?.font.withSize(titleFontSize)
+    errorLabel?.font = errorLabel?.font.withSize(titleFontSize)
   }
   
 }
