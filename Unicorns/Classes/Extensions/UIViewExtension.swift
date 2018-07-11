@@ -52,4 +52,12 @@ extension UIView {
     }
   }
   
+  @IBInspectable open var isFaded: Bool {
+    get {
+      return alpha == 0
+    } set {
+      alpha = newValue ? 0 : 1
+    }
+  }
+  
 }
