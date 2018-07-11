@@ -18,8 +18,8 @@ extension UIViewController {
     navigationController?.setNavigationBarHidden(false, animated: true)
   }
   
-  public func setupBackArrow(with title: String? = nil, color: UIColor = #colorLiteral(red: 0.4040000141, green: 0.4199999869, blue: 0.5839999914, alpha: 1)) {
-    navigationController?.navigationBar.backItem?.title = ""
+  public func setupBackArrow(with title: String = "", color: UIColor = #colorLiteral(red: 0.4040000141, green: 0.4199999869, blue: 0.5839999914, alpha: 1)) {
+    navigationItem.backBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: nil, action: nil)
     navigationController?.navigationBar.tintColor = color
   }
   
