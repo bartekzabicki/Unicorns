@@ -190,7 +190,7 @@ import UIKit
   private func basicAnimation(withKeyPath keyPath: String, delay: Double, duration: Double,
                               startValue: Double, endValue: Double,
                               timing: CAMediaTimingFunction =
-    CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)) -> CABasicAnimation {
+    CAMediaTimingFunction(name: .easeInEaseOut)) -> CABasicAnimation {
     let animation = CABasicAnimation(keyPath: keyPath)
     animation.beginTime = delay
     animation.duration = duration
@@ -212,7 +212,7 @@ import UIKit
     maskLayer.strokeColor = borderColor?.cgColor
     maskLayer.fillColor = nil
     maskLayer.lineWidth = 1.0
-    maskLayer.lineJoin = kCALineJoinBevel
+    maskLayer.lineJoin = .bevel
     layer.addSublayer(maskLayer)
   }
   
@@ -252,7 +252,7 @@ import UIKit
     borderLayer.strokeColor = innerBackgroundColor.cgColor
     borderLayer.fillColor = nil
     borderLayer.lineWidth = 3
-    borderLayer.lineJoin = kCALineJoinBevel
+    borderLayer.lineJoin = .bevel
     layer.addSublayer(borderLayer)
     
     CATransaction.begin()
@@ -311,7 +311,7 @@ import UIKit
 extension RoundedButton {
   
   private func addSpinningCircleAnimation(withDuration duration: Double) {
-    let timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+    let timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
     
     let headAnimation = basicAnimation(withKeyPath: "strokeStart", delay: 0,
                                        duration: duration / 1.5, startValue: 0, endValue: 0.25)
@@ -327,7 +327,7 @@ extension RoundedButton {
     spinningAnimation.animations = [headAnimation, tailAnimation, endHeadAnimation, endTailAnimation]
     spinningAnimation.repeatCount = Float.infinity
     spinningAnimation.isRemovedOnCompletion = false
-    spinningAnimation.fillMode = kCAFillModeForwards
+    spinningAnimation.fillMode = .forwards
     animatedCircleLayer?.add(spinningAnimation, forKey: kSpinningAnimationKey)
     
     let rotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")

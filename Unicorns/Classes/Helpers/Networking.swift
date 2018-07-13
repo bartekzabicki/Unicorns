@@ -202,7 +202,7 @@ final public class Networking {
     let body = body
     body.appendString(boundaryPrefix)
     var fileExtension = "jpg"
-    if let image = UIImage(data: touple.value), let _ = UIImagePNGRepresentation(image) {
+    if let image = UIImage(data: touple.value), let _ = image.pngData() {
       fileExtension = "png"
     }
     body.appendString("""

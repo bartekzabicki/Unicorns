@@ -76,15 +76,13 @@ import UIKit
   // MARK: - Overrides
   
   override open func textRect(forBounds bounds: CGRect) -> CGRect {
-    return UIEdgeInsetsInsetRect(bounds,
-                                 UIEdgeInsets(top: UIFont.systemFont(ofSize: titleFontSize).lineHeight + 4, left: 0,
-                                              bottom: UIFont.systemFont(ofSize: titleFontSize).lineHeight + 3,
-                                              right: isDeleteMarkEnabled ? 20 : 0))
+    return bounds.inset(by: UIEdgeInsets(top: UIFont.systemFont(ofSize: titleFontSize).lineHeight + 4, left: 0,
+                                         bottom: UIFont.systemFont(ofSize: titleFontSize).lineHeight + 3,
+                                         right: isDeleteMarkEnabled ? 20 : 0))
   }
   
   override open func editingRect(forBounds bounds: CGRect) -> CGRect {
-    return UIEdgeInsetsInsetRect(bounds,
-                                 UIEdgeInsets(top: UIFont.systemFont(ofSize: titleFontSize).lineHeight + 4, left: 0,
+    return bounds.inset(by: UIEdgeInsets(top: UIFont.systemFont(ofSize: titleFontSize).lineHeight + 4, left: 0,
                                               bottom: UIFont.systemFont(ofSize: titleFontSize).lineHeight + 3,
                                               right: isDeleteMarkEnabled ? 20 : 0))
   }
@@ -142,7 +140,7 @@ import UIKit
   
   private func addObservers() {
     NotificationCenter.default.addObserver(self, selector: #selector(didChangeText),
-                                           name: NSNotification.Name.UITextFieldTextDidChange, object: nil)
+                                           name: UITextField.textDidChangeNotification, object: nil)
   }
   
   private func showTitle() {
@@ -297,7 +295,7 @@ extension FloatTextField {
     animation.duration = kDrawDuration
     animation.fromValue = markLayer!.presentation()?.strokeEnd
     animation.toValue = 1
-    animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+    animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
     markLayer?.strokeEnd = 1
     markLayer?.removeAllAnimations()
     markLayer?.add(animation, forKey: "showMarkAnimation")
@@ -309,7 +307,7 @@ extension FloatTextField {
     animation.duration = kDrawDuration
     animation.fromValue = markLayer!.presentation()?.strokeEnd
     animation.toValue = 0
-    animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+    animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
     markLayer?.strokeEnd = 0
     markLayer?.removeAllAnimations()
     markLayer?.add(animation, forKey: "hideMarkAnimation")

@@ -114,7 +114,7 @@ public final class ImageCropViewController: UIViewController {
     let path = shapePath?.mutableCopy()
     path?.addRect(CGRect(x: 0, y: 0, width: cropView.bounds.width, height: cropView.bounds.height+50))
     layer.path = path
-    layer.fillRule = kCAFillRuleEvenOdd
+    layer.fillRule = .evenOdd
     layer.backgroundColor = UIColor.black.cgColor
     return layer
   }
