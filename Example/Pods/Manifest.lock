@@ -1,0 +1,16 @@
+PODS:
+  - Unicorns (0.1.0)
+
+DEPENDENCIES:
+  - Unicorns (from `../`)
+
+EXTERNAL SOURCES:
+  Unicorns:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Unicorns: 99218fbbd1553dd09006a730e92e8ff3e754f4e5
+
+PODFILE CHECKSUM: 13ae1a688f8b5ae105eca4ce5b943357551032f9
+
+COCOAPODS: 1.5.3

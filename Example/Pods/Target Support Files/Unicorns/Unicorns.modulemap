@@ -1,0 +1,6 @@
+framework module Unicorns {
+  umbrella header "Unicorns-umbrella.h"
+
+  export *
+  module * { export * }
+}
