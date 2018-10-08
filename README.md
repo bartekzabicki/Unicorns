@@ -11,6 +11,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+At least iOS 10
+
 ## Installation
 
 Unicorns is available through [CocoaPods](http://cocoapods.org). To install
@@ -27,17 +29,6 @@ post_install do |installer|
     config.build_settings.delete('CODE_SIGNING_ALLOWED')
     config.build_settings.delete('CODE_SIGNING_REQUIRED')
     end
-end
-```
-
-To fully enjoy @IBDesignable classes you should also add folowing lines at the end of your Podfile:
-
-```ruby
-post_install do |installer|
-  installer.pods_project.build_configurations.each do |config|
-    config.build_settings.delete('CODE_SIGNING_ALLOWED')
-    config.build_settings.delete('CODE_SIGNING_REQUIRED')
-  end
 end
 ```
 
