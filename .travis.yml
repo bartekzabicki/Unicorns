@@ -12,3 +12,4 @@ language: objective-c
 script:
 - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/Unicorns.xcworkspace -scheme Unicorns-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
+osx_image: xcode10
