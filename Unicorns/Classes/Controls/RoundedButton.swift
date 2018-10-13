@@ -31,6 +31,7 @@ import UIKit
       return 1
     } set {}
   }
+  ///The color inside button
   @IBInspectable public var innerBackgroundColor: UIColor = #colorLiteral(red: 0.976000011, green: 0.9800000191, blue: 0.9879999757, alpha: 1)
   @IBInspectable public var successColor: UIColor = #colorLiteral(red: 0.2899999917, green: 0.949000001, blue: 0.6309999824, alpha: 1)
   @IBInspectable public var failureColor: UIColor = #colorLiteral(red: 1, green: 0.200000003, blue: 0.4709999859, alpha: 1)
@@ -109,9 +110,7 @@ import UIKit
     guard shouldLoadAfterSelected else {
       return
     }
-    isUserInteractionEnabled = false
-    animateBorder()
-    titleLabel?.alpha = 0
+    animate()
   }
   
   // MARK: - Public function
@@ -168,8 +167,11 @@ import UIKit
     })
   }
   
+  /// Starts animation, hides the title
   public func animate() {
-    touchUpInside(sender: self)
+    isUserInteractionEnabled = false
+    animateBorder()
+    titleLabel?.alpha = 0
   }
   
   // MARK: - Private Functions

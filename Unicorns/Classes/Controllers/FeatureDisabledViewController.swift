@@ -7,6 +7,8 @@
 
 import UIKit
 
+/// A controller with message that this feature is not yet available
+
 class FeatureDisabledViewController: UIViewController {
   
   override func viewDidLoad() {

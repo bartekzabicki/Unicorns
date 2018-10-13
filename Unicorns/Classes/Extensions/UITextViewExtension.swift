@@ -24,6 +24,7 @@ extension UITextView: UITextViewDelegate {
     return viewWithTag(UITextView.placeholderTag) as? UILabel
   }
   
+  ///A key that is use to localize `placeholder`
   @IBInspectable open var localizableKey: String? {
     get {
       return nil
@@ -53,6 +54,7 @@ extension UITextView: UITextViewDelegate {
     placeholderLabel?.isHidden = !textView.text.isEmpty
   }
   
+  ///Adjusts placeholderLabel's frame to current frame of UITextView
   public func resizePlaceholder() {
     if let placeholderLabel = placeholderLabel {
       let labelX = textContainerInset.left

@@ -7,8 +7,12 @@
 
 import Foundation
 
+/*
+ The service that offer easy save to Keychain with handling errors
+*/
 public class KeychainService {
   
+  ///Default errors
   public enum KeychainError: Error {
     case couldNotSave
     case noSuchValue
@@ -16,6 +20,7 @@ public class KeychainService {
     case unhandledError(status: OSStatus)
   }
   
+  ///Structure which functioning as a Key of value to KeychainService
   public struct Key : RawRepresentable, Equatable, Hashable {
     
     public var rawValue: String

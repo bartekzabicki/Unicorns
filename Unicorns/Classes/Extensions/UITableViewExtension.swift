@@ -8,10 +8,11 @@
 import Foundation
 
 extension UITableView {
-    
-    public func register<T:ReuseIdentifying>(reuseIdentifying: T.Type) {
-        let nibName = UINib(nibName: T.reuseIdentifier, bundle: nil)
-        register(nibName, forCellReuseIdentifier: T.reuseIdentifier)
-    }
+  
+  ///Register given cell with reuseIdentifier and nibName equal to cell's name
+  public func register<T:ReuseIdentifying>(reuseIdentifying: T.Type) {
+    let nibName = UINib(nibName: T.reuseIdentifier, bundle: nil)
+    register(nibName, forCellReuseIdentifier: T.reuseIdentifier)
+  }
     
 }

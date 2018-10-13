@@ -10,10 +10,12 @@ import Foundation
 
 extension String {
   
+  ///Localizing string value
   public var localized: String {
     return NSLocalizedString(self, comment: "")
   }
   
+  ///Count of characters in text with joined emojis
   public var composedCharacterCount: Int {
     var count = 0
     enumerateSubstrings(in: startIndex..<endIndex, options: .byComposedCharacterSequences) { (_, _, _, _) in

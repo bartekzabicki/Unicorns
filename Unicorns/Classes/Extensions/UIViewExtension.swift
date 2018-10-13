@@ -10,6 +10,10 @@ import UIKit
 
 extension UIView {
   
+  /**
+  Shows view with duration
+  - Parameter duration: The duration of fading, default value is 0.2
+ */
   public func fadeIn(withDuration duration: Double = 0.2) {
     guard alpha == 0 else { return }
     UIView.animate(withDuration: TimeInterval(duration)) {
@@ -17,6 +21,10 @@ extension UIView {
     }
   }
   
+  /**
+   Hides view with duration
+   - Parameter duration: The duration of fading, default value is 0.2
+   */
   public func fadeOut(withDuration duration: Double = 0.2) {
     guard alpha == 1 else { return }
     UIView.animate(withDuration: TimeInterval(duration)) {
@@ -24,6 +32,7 @@ extension UIView {
     }
   }
   
+  ///Corner radius of the view, sets values and maskToBounds on layer
   @IBInspectable open var cornerRadius: CGFloat {
     get {
       return layer.cornerRadius
@@ -33,6 +42,7 @@ extension UIView {
     }
   }
   
+  ///Border color of the view, sets color on layer
   @IBInspectable open var borderColor: UIColor? {
     get {
       if let borderColor = layer.borderColor {
@@ -44,6 +54,7 @@ extension UIView {
     }
   }
   
+  ///Border width color of the view, sets width on layer
   @IBInspectable open var borderWidth: CGFloat {
     get {
       return layer.borderWidth
@@ -52,6 +63,7 @@ extension UIView {
     }
   }
   
+  ///Convenience property, sets view's alpha to 0 or 1, depending on Bool value
   @IBInspectable open var isFaded: Bool {
     get {
       return alpha == 0

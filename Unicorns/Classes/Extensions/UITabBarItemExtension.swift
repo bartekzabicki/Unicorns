@@ -9,6 +9,7 @@ import UIKit
 
 extension UITabBarItem: XIBLocalizable {
   
+  ///A key that is use to localize `title`
   @IBInspectable public var localizableKey: String? {
     get {
       return nil

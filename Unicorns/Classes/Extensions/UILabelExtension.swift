@@ -10,6 +10,7 @@ import UIKit
 
 extension UILabel: XIBLocalizable {
   
+  ///A key that is use to localize `text`
   @IBInspectable public var localizableKey: String? {
     get {
       return nil

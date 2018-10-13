@@ -28,6 +28,8 @@ import UIKit
       bottomBorderView?.backgroundColor = underlineColor
     }
   }
+  
+  ///Insets of the content, **it's value of padding on delete mark, title, error, underscore**
   @IBInspectable open var contentInsets: UIEdgeInsets = .zero {
     didSet {
       adjustInsets()
@@ -109,11 +111,22 @@ import UIKit
   
   // MARK: - Functions
   
+  /**
+   Marking textField as success
+   - Changes underscore color
+   - Hide error
+ */
   public func success() {
     bottomBorderView?.backgroundColor = successColor.withAlphaComponent(0.5)
     hideErrorLabel()
   }
   
+  /**
+   Marking textField as failure
+   - Parameter error: message that should appear as an error
+   - Changes underscore color
+   - Show error
+   */
   public func failure(error: String) {
     bottomBorderView?.backgroundColor = errorColor.withAlphaComponent(0.5)
     showErrorLabel(with: error)
@@ -121,6 +134,15 @@ import UIKit
   
   // MARK: - Private Functions
   
+  /**
+   Setup neccesarry views on init and prepareForInterfaceBuilder
+   - Set borderStyle to .none
+   - Create underscore
+   - Create title label
+   - Create optional delete mark
+   - Create error label
+   - Add .textDiDChangeNotification to self
+   */
   open func setup() {
     borderStyle = .none
     bottomBorderView = UIView()

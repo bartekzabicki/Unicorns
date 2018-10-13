@@ -9,6 +9,7 @@ import UIKit
 
 extension CGSize {
   
+  ///Compare two CGSize's
   static func > (lhs: CGSize, rhs: CGSize) -> Bool {
     return lhs.width > rhs.width || lhs.height > rhs.height
   }

@@ -9,6 +9,10 @@ import UIKit
 
 extension UIColor {
   
+  /**
+   Function generate red, green, blue and alpha values from UIColor
+   - Returns: A tuple with (`red`, `green`, `blue`, `alpha`) values
+ */
   public func rgb() -> (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)? {
     var fractionRed: CGFloat = 0
     var fractionGreen: CGFloat = 0
@@ -27,6 +31,7 @@ extension UIColor {
     }
   }
   
+  ///Function generate hex string from UIColor
   public func toHexString() -> String {
     var r: CGFloat = 0
     var g: CGFloat = 0
@@ -40,6 +45,10 @@ extension UIColor {
     return NSString(format:"#%06x", rgb) as String
   }
   
+  /**
+   Convenience constructor which from hex value of color generates UIColor
+   - Parameter hexString: The hex value of color
+ */
   public convenience init(hexString:String) {
     let hexString: NSString = hexString.trimmingCharacters(in: .whitespacesAndNewlines) as NSString
     let scanner = Scanner(string: hexString as String)
@@ -63,6 +72,10 @@ extension UIColor {
     self.init(red:red, green:green, blue:blue, alpha:1)
   }
   
+  /**
+   Generates random color
+   - Parameter from: The optional sourceColor which is treated like a 'mask', e.g. if you put here white with alpha 0.8, then every generated color will be pastel
+ */
   public static func generateRandomColor(from sourceColor: UIColor?) -> UIColor {
     var red = CGFloat.random(in: 0...256)
     var green = CGFloat.random(in: 0...256)

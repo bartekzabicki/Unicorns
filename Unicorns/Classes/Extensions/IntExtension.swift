@@ -10,6 +10,7 @@ import UIKit
 
 extension Int {
   
+  ///Converts Int value to radians as CGFloat
   public func asRadian() -> CGFloat {
     return (CGFloat(self) * CGFloat(Double.pi) / 180.0)
   }
