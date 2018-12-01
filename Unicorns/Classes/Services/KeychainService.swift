@@ -37,7 +37,7 @@ public class KeychainService {
   
   // MARK: - Properties
   
-  private let serviceName = "com.Unicorn.target"
+  private let serviceName = "com.Unicorn.\(Bundle.main.infoDictionary?["CFBundleName"] as? String ?? "targetName")"
   public static var shared = KeychainService()
   
   // MARK: - Initialization
