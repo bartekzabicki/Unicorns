@@ -32,6 +32,11 @@ post_install do |installer|
 end
 ```
 
+To use Logger globaly add in appDelegate.swift, outside class :
+```swift
+public typealias Log = Unicorns.Log
+```
+
 ## Author
 
 bartekzabicki, bartekzabicki@gmail.com
