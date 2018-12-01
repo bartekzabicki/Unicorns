@@ -10,6 +10,14 @@ import UIKit
 
 extension UIView {
   
+  ///Initialize view from nib with given name
+  static func loadFromNib<T: ReuseIdentifying>(view: T.Type) -> T {
+    guard let view = UINib(nibName: T.reuseIdentifier, bundle: nil).instantiate(withOwner: self, options: nil).first as? T else {
+      fatalError("Cannot initialize view with nibName \(T.reuseIdentifier)")
+    }
+    return view
+  }
+  
   /**
   Shows view with duration
   - Parameter duration: The duration of fading, default value is 0.2

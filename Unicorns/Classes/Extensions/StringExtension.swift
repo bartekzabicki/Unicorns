@@ -14,6 +14,10 @@ extension String {
   public var localized: String {
     return NSLocalizedString(self, comment: "")
   }
+  ///Localizing string value with given parameters
+  public func localizedWith(_ variables: CVarArg) -> String {
+    return String(format: self.localized, variables)
+  }
   
   ///Count of characters in text with joined emojis
   public var composedCharacterCount: Int {
