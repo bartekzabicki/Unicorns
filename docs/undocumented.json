@@ -1,0 +1,642 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": null,
+      "symbol": "ImageCropRouter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": null,
+      "symbol": "ImageCropViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": null,
+      "symbol": "ImageCropViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 10,
+      "symbol": "ImageCropRouter",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 11,
+      "symbol": "ImageCropRouter.routeToCropImage(viewModel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 16,
+      "symbol": "ImageCropRouter.routeToCropImage(viewModel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 26,
+      "symbol": "ImageCropDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 27,
+      "symbol": "ImageCropDelegate.didCancelCrop(image:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 28,
+      "symbol": "ImageCropDelegate.didCropImage(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 31,
+      "symbol": "ImageCropViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 35,
+      "symbol": "ImageCropViewController.ViewModel",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 40,
+      "symbol": "ImageCropViewController.ViewModel.init(image:rectType:delegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 62,
+      "symbol": "ImageCropViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 72,
+      "symbol": "ImageCropViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 196,
+      "symbol": "ImageCropViewController.viewForZooming(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 200,
+      "symbol": "ImageCropViewController.scrollViewDidScroll(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 202,
+      "symbol": "ImageCropViewController.scrollViewDidZoom(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 204,
+      "symbol": "ImageCropViewController.scrollViewDidEndScrollingAnimation(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 208,
+      "symbol": "ImageCropViewController.scrollViewDidEndZooming(_:with:atScale:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 229,
+      "symbol": "ImageCropViewController.RectType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 230,
+      "symbol": "ImageCropViewController.RectType.round",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 231,
+      "symbol": "ImageCropViewController.RectType.square",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 232,
+      "symbol": "ImageCropViewController.RectType.roundedCornersSquare",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controllers/ImageCropViewController/ImageCropViewController.swift",
+      "line": 233,
+      "symbol": "ImageCropViewController.RectType.custom(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controls/FloatTextField.swift",
+      "line": 44,
+      "symbol": "FloatTextField.placeholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controls/FloatTextField.swift",
+      "line": 63,
+      "symbol": "FloatTextField.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controls/FloatTextField.swift",
+      "line": 68,
+      "symbol": "FloatTextField.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controls/FloatTextField.swift",
+      "line": 73,
+      "symbol": "FloatTextField.prepareForInterfaceBuilder()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controls/FloatTextField.swift",
+      "line": 80,
+      "symbol": "FloatTextField.textRect(forBounds:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controls/FloatTextField.swift",
+      "line": 86,
+      "symbol": "FloatTextField.editingRect(forBounds:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controls/RoundedButton.swift",
+      "line": 21,
+      "symbol": "RoundedButton.Response",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controls/RoundedButton.swift",
+      "line": 22,
+      "symbol": "RoundedButton.Response.success",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controls/RoundedButton.swift",
+      "line": 23,
+      "symbol": "RoundedButton.Response.failure",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controls/RoundedButton.swift",
+      "line": 36,
+      "symbol": "RoundedButton.successColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controls/RoundedButton.swift",
+      "line": 37,
+      "symbol": "RoundedButton.failureColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controls/RoundedButton.swift",
+      "line": 38,
+      "symbol": "RoundedButton.shouldLoadAfterSelected",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controls/RoundedButton.swift",
+      "line": 62,
+      "symbol": "RoundedButton.isHighlighted",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controls/RoundedButton.swift",
+      "line": 68,
+      "symbol": "RoundedButton.intrinsicContentSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controls/RoundedButton.swift",
+      "line": 95,
+      "symbol": "RoundedButton.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Controls/RoundedButton.swift",
+      "line": 100,
+      "symbol": "RoundedButton.prepareForInterfaceBuilder()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Extensions/UIButtonExtension.swift",
+      "line": 11,
+      "symbol": "XIBLocalizable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Extensions/UIButtonExtension.swift",
+      "line": 12,
+      "symbol": "XIBLocalizable.localizableKey",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Extensions/UISegmentControlExtension.swift",
+      "line": 12,
+      "symbol": "UISegmentedControl.localizedTitle",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Extensions/UITextViewExtension.swift",
+      "line": 17,
+      "symbol": "UITextView.bounds",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Extensions/UITextViewExtension.swift",
+      "line": 36,
+      "symbol": "UITextView.placeholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Extensions/UIViewControllerExtension.swift",
+      "line": 14,
+      "symbol": "UIViewController.hideNavigationBar()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Extensions/UIViewControllerExtension.swift",
+      "line": 18,
+      "symbol": "UIViewController.showNavigationBar()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Log.swift",
+      "line": 10,
+      "symbol": "Log",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Log.swift",
+      "line": 12,
+      "symbol": "Log.isLoggerEnabled",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 11,
+      "symbol": "JSON",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 12,
+      "symbol": "Headers",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 13,
+      "symbol": "NetworkingError",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 14,
+      "symbol": "DataTaskResult",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 18,
+      "symbol": "URLSessionProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 19,
+      "symbol": "URLSessionProtocol.dataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 20,
+      "symbol": "URLSessionProtocol.dataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 23,
+      "symbol": "URLSessionDataTaskProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 24,
+      "symbol": "URLSessionDataTaskProtocol.resume()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 28,
+      "symbol": "URLSession.dataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 32,
+      "symbol": "URLSession.dataTask(with:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 42,
+      "symbol": "Networking",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 47,
+      "symbol": "Networking.session",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 48,
+      "symbol": "Networking.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 54,
+      "symbol": "Networking.NetworkMethod",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 55,
+      "symbol": "Networking.NetworkMethod.post",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 56,
+      "symbol": "Networking.NetworkMethod.get",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 57,
+      "symbol": "Networking.NetworkMethod.delete",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 58,
+      "symbol": "Networking.NetworkMethod.put",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 63,
+      "symbol": "Networking.NetworkError",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 65,
+      "symbol": "Networking.NetworkError.code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 66,
+      "symbol": "Networking.NetworkError.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 92,
+      "symbol": "Networking.Result",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 93,
+      "symbol": "Networking.Result.success(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 94,
+      "symbol": "Networking.Result.failure(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 97,
+      "symbol": "Networking.RequestEndpoint",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 106,
+      "symbol": "Networking.RequestEndpoint.init(rawValue:method:parameters:headers:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 117,
+      "symbol": "Networking.request(with:method:parameters:headers:onSuccess:onError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 162,
+      "symbol": "Networking.request(with:method:parameters:headers:onSuccess:onError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Helpers/Networking.swift",
+      "line": 248,
+      "symbol": "NSMutableData.appendString(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Protocols/ReuseIdentifying.swift",
+      "line": 13,
+      "symbol": "ReuseIdentifying.reuseIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Protocols/ReuseIdentifying.swift",
+      "line": 18,
+      "symbol": "ReuseIdentifying.reuseIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Services/KeychainService.swift",
+      "line": 13,
+      "symbol": "KeychainService",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Services/KeychainService.swift",
+      "line": 17,
+      "symbol": "KeychainService.KeychainError.couldNotSave",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Services/KeychainService.swift",
+      "line": 18,
+      "symbol": "KeychainService.KeychainError.noSuchValue",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Services/KeychainService.swift",
+      "line": 19,
+      "symbol": "KeychainService.KeychainError.unexpectedValueData",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Services/KeychainService.swift",
+      "line": 20,
+      "symbol": "KeychainService.KeychainError.unhandledError(status:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Services/KeychainService.swift",
+      "line": 28,
+      "symbol": "KeychainService.Key.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Services/KeychainService.swift",
+      "line": 41,
+      "symbol": "KeychainService.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Services/KeychainService.swift",
+      "line": 49,
+      "symbol": "KeychainService.save(value:as:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Services/KeychainService.swift",
+      "line": 62,
+      "symbol": "KeychainService.retrive(item:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bartekzabicki/Desktop/Developer/Unicorns/Unicorns/Classes/Services/KeychainService.swift",
+      "line": 86,
+      "symbol": "KeychainService.delete(item:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/bartekzabicki/Desktop/Developer/Unicorns"
+}

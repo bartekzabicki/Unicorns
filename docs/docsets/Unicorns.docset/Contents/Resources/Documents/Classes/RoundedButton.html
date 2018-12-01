@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RoundedButton Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/RoundedButton" class="dashAnchor"></a>
+    <a title="RoundedButton Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Unicorns Docs</a> (37% documented)</p>
+        <p class="header-right"><a href="https://github.com/bartekzabicki/Unicorns"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Unicorns Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        RoundedButton Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/FloatTextField.html">FloatTextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageCropViewController.html">ImageCropViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageCropViewController/ViewModel.html">– ViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageCropViewController/RectType.html">– RectType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeychainService.html">KeychainService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeychainService/KeychainError.html">– KeychainError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeychainService/Key.html">– Key</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Log.html">Log</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Networking.html">Networking</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Networking/NetworkMethod.html">– NetworkMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Networking/NetworkError.html">– NetworkError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Networking/Result.html">– Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Networking/RequestEndpoint.html">– RequestEndpoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RoundedButton.html">RoundedButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RoundedButton/Response.html">– Response</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/KeyedDecodingContainer.html">KeyedDecodingContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSMutableData.html">NSMutableData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIButton.html">UIButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UICollectionView.html">UICollectionView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UILabel.html">UILabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UISegmentedControl.html">UISegmentedControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITabBarItem.html">UITabBarItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITableView.html">UITableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITextField.html">UITextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITextView.html">UITextView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIViewController.html">UIViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URLSession.html">URLSession</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageCropDelegate.html">ImageCropDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageCropRouter.html">ImageCropRouter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ReuseIdentifying.html">ReuseIdentifying</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/URLSessionDataTaskProtocol.html">URLSessionDataTaskProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/URLSessionProtocol.html">URLSessionProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/XIBLocalizable.html">XIBLocalizable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:8Unicorns14DataTaskResulta">DataTaskResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:8Unicorns7Headersa">Headers</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:8Unicorns4JSONa">JSON</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:8Unicorns15NetworkingErrora">NetworkingError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>RoundedButton</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@IBDesignable</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">RoundedButton</span> <span class="p">:</span> <span class="kt">UIButton</span></code></pre>
+
+                </div>
+              </div>
+            <p>Creates rounded button with animatable borders and marks in the middle of it.
+It draw failure and success marks.</p>
+
+<ul>
+<li>Designable</li>
+<li>Inspectable</li>
+</ul>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Enums"></a>
+                <a name="//apple_ref/swift/Section/Enums" class="dashAnchor"></a>
+                <a href="#/Enums">
+                  <h3 class="section-name">Enums</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Unicorns13RoundedButtonC8ResponseO"></a>
+                    <a name="//apple_ref/swift/Enum/Response" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Unicorns13RoundedButtonC8ResponseO">Response</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Classes/RoundedButton/Response.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Response</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Unicorns@objc(cs)RoundedButton(py)borderWidth"></a>
+                    <a name="//apple_ref/swift/Property/borderWidth" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Unicorns@objc(cs)RoundedButton(py)borderWidth">borderWidth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">borderWidth</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Unicorns@objc(cs)RoundedButton(py)innerBackgroundColor"></a>
+                    <a name="//apple_ref/swift/Property/innerBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Unicorns@objc(cs)RoundedButton(py)innerBackgroundColor">innerBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color inside button</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBInspectable</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">innerBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Unicorns@objc(cs)RoundedButton(py)successColor"></a>
+                    <a name="//apple_ref/swift/Property/successColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Unicorns@objc(cs)RoundedButton(py)successColor">successColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBInspectable</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">successColor</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Unicorns@objc(cs)RoundedButton(py)failureColor"></a>
+                    <a name="//apple_ref/swift/Property/failureColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Unicorns@objc(cs)RoundedButton(py)failureColor">failureColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBInspectable</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">failureColor</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Unicorns@objc(cs)RoundedButton(py)shouldLoadAfterSelected"></a>
+                    <a name="//apple_ref/swift/Property/shouldLoadAfterSelected" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Unicorns@objc(cs)RoundedButton(py)shouldLoadAfterSelected">shouldLoadAfterSelected</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBInspectable</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">shouldLoadAfterSelected</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Unicorns@objc(cs)RoundedButton(py)cornerRadius"></a>
+                    <a name="//apple_ref/swift/Property/cornerRadius" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Unicorns@objc(cs)RoundedButton(py)cornerRadius">cornerRadius</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">cornerRadius</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Unicorns@objc(cs)RoundedButton(py)borderColor"></a>
+                    <a name="//apple_ref/swift/Property/borderColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Unicorns@objc(cs)RoundedButton(py)borderColor">borderColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">borderColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Unicorns@objc(cs)RoundedButton(py)highlighted"></a>
+                    <a name="//apple_ref/swift/Property/isHighlighted" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Unicorns@objc(cs)RoundedButton(py)highlighted">isHighlighted</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">isHighlighted</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Unicorns@objc(cs)RoundedButton(py)intrinsicContentSize"></a>
+                    <a name="//apple_ref/swift/Property/intrinsicContentSize" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Unicorns@objc(cs)RoundedButton(py)intrinsicContentSize">intrinsicContentSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">intrinsicContentSize</span><span class="p">:</span> <span class="kt">CGSize</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initialization"></a>
+                <a name="//apple_ref/swift/Section/Initialization" class="dashAnchor"></a>
+                <a href="#/Initialization">
+                  <h3 class="section-name">Initialization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Unicorns@objc(cs)RoundedButton(im)initWithCoder:"></a>
+                    <a name="//apple_ref/swift/Method/init(coder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Unicorns@objc(cs)RoundedButton(im)initWithCoder:">init(coder:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">required</span> <span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">coder</span> <span class="nv">aDecoder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Unicorns@objc(cs)RoundedButton(im)prepareForInterfaceBuilder"></a>
+                    <a name="//apple_ref/swift/Method/prepareForInterfaceBuilder()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Unicorns@objc(cs)RoundedButton(im)prepareForInterfaceBuilder">prepareForInterfaceBuilder()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">prepareForInterfaceBuilder</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20function"></a>
+                <a name="//apple_ref/swift/Section/Public function" class="dashAnchor"></a>
+                <a href="#/Public%20function">
+                  <h3 class="section-name">Public function</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Unicorns13RoundedButtonC14handleResponse4with10completionyAC0E0O_yycSgtF"></a>
+                    <a name="//apple_ref/swift/Method/handleResponse(with:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Unicorns13RoundedButtonC14handleResponse4with10completionyAC0E0O_yycSgtF">handleResponse(with:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Handle response and draw mark in the middle</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">handleResponse</span><span class="p">(</span><span class="n">with</span> <span class="nv">response</span><span class="p">:</span> <span class="kt"><a href="../Classes/RoundedButton/Response.html">Response</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Unicorns13RoundedButtonC7animateyyF"></a>
+                    <a name="//apple_ref/swift/Method/animate()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Unicorns13RoundedButtonC7animateyyF">animate()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts animation, hides the title</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">animate</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/bartekzabicki/Unicorns" target="_blank" rel="external">bartekzabicki</a>. All rights reserved. (Last updated: 2018-12-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
