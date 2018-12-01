@@ -13,6 +13,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 At least iOS 10
 
+## Documentation:
+
+https://bartekzabicki.github.io/Unicorns/
+
 ## Installation
 
 Unicorns is available through [CocoaPods](http://cocoapods.org). To install
