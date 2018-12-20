@@ -15,7 +15,19 @@ extension UITextField: XIBLocalizable {
     get {
       return nil
     } set {
-      placeholder = newValue?.localized
+      if let placeHolderColor = placeHolderColor {
+        attributedPlaceholder = NSAttributedString(string: placeholder != nil ? newValue!.localized : "", attributes:[NSAttributedString.Key.foregroundColor: placeHolderColor])
+      } else {
+        placeholder = newValue?.localized
+      }
+    }
+  }
+  
+  @IBInspectable var placeHolderColor: UIColor? {
+    get {
+      return nil
+    } set {
+      attributedPlaceholder = NSAttributedString(string: placeholder != nil ? placeholder!.localized : "", attributes:[NSAttributedString.Key.foregroundColor: newValue!])
     }
   }
   
