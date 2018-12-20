@@ -15,11 +15,7 @@ extension UITextField: XIBLocalizable {
     get {
       return nil
     } set {
-      if let placeHolderColor = placeHolderColor {
-        attributedPlaceholder = NSAttributedString(string: placeholder != nil ? newValue!.localized : "", attributes:[NSAttributedString.Key.foregroundColor: placeHolderColor])
-      } else {
-        placeholder = newValue?.localized
-      }
+      placeholder = newValue?.localized
     }
   }
   
@@ -28,6 +24,26 @@ extension UITextField: XIBLocalizable {
       return nil
     } set {
       attributedPlaceholder = NSAttributedString(string: placeholder != nil ? placeholder!.localized : "", attributes:[NSAttributedString.Key.foregroundColor: newValue!])
+    }
+  }
+  
+  @IBInspectable var isUppercased: Bool {
+    get {
+      return false
+    } set {
+      if newValue {
+        placeholder = placeholder?.uppercased()
+      } else {
+        placeholder = placeholder?.localized
+      }
+    }
+  }
+  
+  private func localizedWithColor(placeholder: String?) {
+    if let placeHolderColor = placeHolderColor {
+      attributedPlaceholder = NSAttributedString(string: placeholder != nil ? placeholder! : "", attributes:[NSAttributedString.Key.foregroundColor: placeHolderColor])
+    } else {
+      self.placeholder = placeholder
     }
   }
   
