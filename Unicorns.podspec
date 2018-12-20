@@ -10,7 +10,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Unicorns'
-  s.version          = '0.1.7'
+  s.version          = '0.1.8'
   s.summary          = 'Simple yet useful set of extensions/helpers/controls.'
 
 # This description is used to generate tags and improve search results.
