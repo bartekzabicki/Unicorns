@@ -48,14 +48,30 @@ public class KeychainService {
   
   public func save(value: String?, as key: Key) throws {
     guard let valueData = value?.data(using: .utf8) else {
-      throw KeychainError.couldNotSave
+      throw KeychainError.unexpectedValueData
     }
-    let saveQuery: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
-                                    kSecAttrAccount as String: key.rawValue,
-                                    kSecValueData as String: valueData]
-    let status = SecItemAdd(saveQuery as CFDictionary, nil)
-    guard status == errSecSuccess else {
-      throw KeychainError.unhandledError(status: status)
+    do {
+      let _ = try retrive(item: key)
+      
+      let updateQuery: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
+                                      kSecAttrAccount as String: key.rawValue,
+                                      kSecValueData as String: valueData]
+      
+      let attributesToUpdate: [String: Any] = [kSecValueData as String: valueData]
+      
+      let status = SecItemUpdate(updateQuery as CFDictionary, attributesToUpdate as CFDictionary)
+      guard status == errSecSuccess else {
+        throw KeychainError.unhandledError(status: status)
+      }
+      
+    } catch KeychainError.noSuchValue {
+      let saveQuery: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
+                                      kSecAttrAccount as String: key.rawValue,
+                                      kSecValueData as String: valueData]
+      let status = SecItemAdd(saveQuery as CFDictionary, nil)
+      guard status == errSecSuccess else {
+        throw KeychainError.unhandledError(status: status)
+      }
     }
   }
   

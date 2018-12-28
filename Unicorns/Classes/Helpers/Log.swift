@@ -32,7 +32,7 @@ public final class Log {
   ///Function that logs success
   public static func s(_ message: String) {
     guard isLoggerEnabled else { return }
-    print("🎉[Debug]: \(message)")
+    print("🎉[Success]: \(message)")
   }
   
 }

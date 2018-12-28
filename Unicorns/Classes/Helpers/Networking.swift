@@ -60,7 +60,7 @@ final public class Networking {
   
   // MARK: - Error
   
-  public struct NetworkError: Error {
+  public struct NetworkError: Error, LocalizedError {
     
     public let code: Int
     public let description: String
@@ -68,13 +68,13 @@ final public class Networking {
     init(code: Int, description: String) {
       self.description = description
       self.code = code
-      print("[Networking Error] 400 - \(description)")
+      Log.e("[Networking Error] 400 - \(description)")
     }
     
     init(code: Int, data: Data) {
       var message = "Expecting JSON as result"
       if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? JSON {
-        if let description = json?["message"] as? String {
+        if let description = json?["reason"] as? String {
           message = description
         } else if let key = json?.keys.first, let description = (json?[key] as? [String])?.first {
           message = description
