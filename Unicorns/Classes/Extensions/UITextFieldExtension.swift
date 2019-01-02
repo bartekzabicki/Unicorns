@@ -19,7 +19,7 @@ extension UITextField: XIBLocalizable {
     }
   }
   
-  @IBInspectable var placeHolderColor: UIColor? {
+  @IBInspectable public var placeHolderColor: UIColor? {
     get {
       return nil
     } set {
@@ -27,7 +27,7 @@ extension UITextField: XIBLocalizable {
     }
   }
   
-  @IBInspectable var isUppercased: Bool {
+  @IBInspectable public var isUppercased: Bool {
     get {
       return false
     } set {
