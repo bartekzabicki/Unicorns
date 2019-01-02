@@ -11,7 +11,7 @@ import UIKit
 extension UIView {
   
   ///Initialize view from nib with given name
-  static func loadFromNib<T: ReuseIdentifying>(view: T.Type) -> T {
+  static public func loadFromNib<T: ReuseIdentifying>(view: T.Type) -> T {
     guard let view = UINib(nibName: T.reuseIdentifier, bundle: nil).instantiate(withOwner: self, options: nil).first as? T else {
       fatalError("Cannot initialize view with nibName \(T.reuseIdentifier)")
     }
