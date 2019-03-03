@@ -47,6 +47,12 @@ import UIKit
     }
   }
   
+  open override var text: String? {
+    didSet {
+      didChangeText()
+    }
+  }
+  
   private var bottomBorderView: UIView?
   private var titleLabel: UILabel?
   private var errorLabel: UILabel?
@@ -91,22 +97,8 @@ import UIKit
   
   // MARK: - Actions
   
-  @objc private func didChangeText() {
-    guard let text = text else {
-      hideTitle()
-      return
-    }
-    text.isEmpty ? hideTitle() : showTitle()
-    guard maxCharactersCount != 0, text.composedCharacterCount > maxCharactersCount else {
-      return
-    }
-    let endIndex = text.index(before: text.endIndex)
-    self.text = String(text[..<endIndex])
-  }
-  
   @objc func clearText() {
     text = nil
-    didChangeText()
   }
   
   // MARK: - Functions
@@ -116,7 +108,7 @@ import UIKit
    - Changes underscore color
    - Hide error
  */
-  public func success() {
+  open func success() {
     bottomBorderView?.backgroundColor = successColor.withAlphaComponent(0.5)
     hideErrorLabel()
   }
@@ -127,7 +119,7 @@ import UIKit
    - Changes underscore color
    - Show error
    */
-  public func failure(error: String) {
+  open func failure(error: String) {
     bottomBorderView?.backgroundColor = errorColor.withAlphaComponent(0.5)
     showErrorLabel(with: error)
   }
@@ -141,7 +133,6 @@ import UIKit
    - Create title label
    - Create optional delete mark
    - Create error label
-   - Add .textDiDChangeNotification to self
    */
   open func setup() {
     borderStyle = .none
@@ -157,12 +148,19 @@ import UIKit
     createTitle()
     createDeleteMark()
     createErrorLabel()
-    addObservers()
   }
   
-  private func addObservers() {
-    NotificationCenter.default.addObserver(self, selector: #selector(didChangeText),
-                                           name: UITextField.textDidChangeNotification, object: nil)
+  private func didChangeText() {
+    guard let text = text else {
+      hideTitle()
+      return
+    }
+    text.isEmpty ? hideTitle() : showTitle()
+    guard maxCharactersCount != 0, text.composedCharacterCount > maxCharactersCount else {
+      return
+    }
+    let endIndex = text.index(before: text.endIndex)
+    self.text = String(text[..<endIndex])
   }
   
   private func showTitle() {
