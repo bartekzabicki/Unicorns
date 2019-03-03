@@ -100,7 +100,6 @@ import UIKit
   override public func prepareForInterfaceBuilder() {
     super.prepareForInterfaceBuilder()
     setup()
-    layoutSubviews()
   }
   
   // MARK: - Actions
@@ -184,7 +183,9 @@ import UIKit
     if shouldLoadAfterSelected {
       setTitleColor(.clear, for: .selected)
     }
+    #if !TARGET_INTERFACE_BUILDER
     addTarget(self, action: #selector(touchUpInside), for: .touchUpInside)
+    #endif
     addBorderLayer()
   }
   
