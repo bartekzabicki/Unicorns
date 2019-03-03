@@ -68,7 +68,7 @@ final public class Networking {
     init(code: Int, description: String) {
       self.description = description
       self.code = code
-      Log.e("[Networking Error] 400 - \(description)")
+      Log.e("[Networking Error] \(code) - \(description)")
     }
     
     init(code: Int, data: Data) {
