@@ -57,7 +57,7 @@ extension UITextView: UITextViewDelegate {
   ///Adjusts placeholderLabel's frame to current frame of UITextView
   public func resizePlaceholder() {
     if let placeholderLabel = placeholderLabel {
-      let labelX = textContainerInset.left
+      let labelX = textContainerInset.left + 4
       let labelY = textContainerInset.top - 2
       let labelWidth = frame.width - (labelX * 2)
       let labelHeight = placeholderLabel.frame.height
