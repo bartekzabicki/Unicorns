@@ -41,13 +41,16 @@ extension URLSessionDataTask: URLSessionDataTaskProtocol {}
 
 final public class Networking {
   
+  // MARK: - Singleton
+  
+  public static var shared = Networking()
+  private init(){}
+  
   // MARK: - Properties
   
-  private let timeoutIntervalForRequest = 15.0
   public static var session: URLSessionProtocol = Networking.shared.defaultSession()
-  public static var shared = Networking()
-  
-  private init(){}
+  public var timeoutIntervalForRequest = 15.0
+  public var shouldUseMultipartAutomatically = true
   
   // MARK: - Enums
   
@@ -56,6 +59,11 @@ final public class Networking {
     case get = "GET"
     case delete = "DELETE"
     case put = "PUT"
+  }
+  
+  public enum Encoding: String {
+    case json = "application/json"
+    case url = "application/x-www-form-urlencoded"
   }
   
   // MARK: - Error
@@ -87,36 +95,11 @@ final public class Networking {
     
   }
   
-  // MARK: - Endpoint
-  
-  public enum Result {
-    case success(Data)
-    case failure(Error)
-  }
-  
-  public struct RequestEndpoint: RawRepresentable {
-    public var rawValue: String
-    var method: NetworkMethod?
-    var parameters: JSON?
-    var headers: [String: String]?
-    public init(rawValue: String) {
-      self.rawValue = rawValue
-    }
-
-    public init(rawValue: String, method: NetworkMethod, parameters: JSON?, headers: Headers?) {
-      self.rawValue = rawValue
-      self.method = method
-      self.parameters = parameters
-      self.headers = headers
-    }
-
-  }
-  
   // MARK: - Static functions
   
   public func request(with url: URL?, method: NetworkMethod, parameters: JSON? = nil,
-               headers: JSON? = nil, onSuccess: @escaping ((Data) -> Void),
-               onError: @escaping ((NetworkError) -> Void)) {
+                      headers: JSON? = nil, encoding: Encoding = .json, onSuccess: @escaping ((Data) -> Void),
+                      onError: @escaping ((NetworkError) -> Void)) {
     guard let url = url else {
       print("Cannot run request without url")
       return
@@ -130,10 +113,12 @@ final public class Networking {
     }
     switch method {
     case .post, .put:
-      if let parameters = parameters, parameters.contains(where: {$0.value is Data}) {
+      if let parameters = parameters, parameters.contains(where: {$0.value is Data}), shouldUseMultipartAutomatically {
+        Log.i("Setup multipart")
         request = setupMultipart(request: request, with: parameters)
       } else {
-        if let setupedRequest = setupRequestWith(request: request, parameters: parameters, headers: headers) {
+        Log.i("Setup standard request")
+        if let setupedRequest = setupRequestWith(request: request, parameters: parameters, headers: headers, encoding: encoding) {
           request = setupedRequest
         }
       }
@@ -153,6 +138,7 @@ final public class Networking {
       case 200...299:
         onSuccess(data)
       case 400...600:
+        debugPrint(request)
         onError(NetworkError(code: statusCode, data: data))
       default: break
       }
@@ -160,7 +146,7 @@ final public class Networking {
   }
   
   public func request(with urlString: String, method: NetworkMethod, parameters: JSON? = nil,
-               headers: JSON? = nil, onSuccess: @escaping ((Data) -> Void),
+               headers: JSON? = nil, encoding: Encoding = .json, onSuccess: @escaping ((Data) -> Void),
                onError: @escaping ((NetworkError) -> Void)) {
     guard let url = URL(string: urlString) else {
       print("Cannot get URL from \(urlString)")
@@ -170,6 +156,7 @@ final public class Networking {
             method: method,
             parameters: parameters,
             headers: headers,
+            encoding: encoding,
             onSuccess: onSuccess,
             onError: onError)
   }
@@ -183,9 +170,9 @@ final public class Networking {
     return session
   }
   
-  private func setupRequestWith(request: URLRequest, parameters: JSON? = nil, headers: JSON?) -> URLRequest? {
+  private func setupRequestWith(request: URLRequest, parameters: JSON? = nil, headers: JSON?, encoding: Encoding) -> URLRequest? {
     var request = request
-    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+    request.addValue(encoding.rawValue, forHTTPHeaderField: "Content-Type")
     request.addValue("application/json", forHTTPHeaderField: "Accept")
     guard let parameters = parameters else { return request }
     do {
