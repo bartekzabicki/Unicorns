@@ -34,20 +34,28 @@ public final class Validation {
     private var fields: [Field] {
       return obligatoryFields + optionalFields
     }
-    internal var fieldsValidationStatus: [Field: Bool] = [:]
+    fileprivate(set) public var fieldsValidationStatus: [Field: ValidationStatus] = [:]
     
     public init(obligatoryFields: [Field], optionalFields: [Field] = []) {
       self.obligatoryFields = obligatoryFields
       self.optionalFields = optionalFields
-      fields.forEach({ fieldsValidationStatus[$0] = false })
-      optionalFields.forEach({ fieldsValidationStatus[$0] = false })
+      fields.forEach({ fieldsValidationStatus[$0] = .notValidated(.empty(fieldType: $0)) })
+      optionalFields.forEach({ fieldsValidationStatus[$0] = .notValidated(.empty(fieldType: $0)) })
     }
     
     public func isValid() -> Bool {
-      fieldsValidationStatus.forEach { row in
-        print(row)
-      }
-      return fieldsValidationStatus.first(where: { !$0.value })?.value ?? true
+      return fieldsValidationStatus.contains(where: { touple -> Bool in
+        switch touple.value {
+        case .validated:
+          return false
+        case .notValidated:
+          return true
+        }
+      })
+    }
+    
+    fileprivate mutating func clear() {
+      fieldsValidationStatus.removeAll()
     }
   }
   
@@ -55,6 +63,9 @@ public final class Validation {
     
     public let rawValue: String
     public let requirements: ValidationStructure?
+    public func hash(into hasher: inout Hasher) {
+      
+    }
     
     public init(_ rawValue: String, requirements: ValidationStructure) {
       self.rawValue = rawValue
@@ -113,39 +124,40 @@ public final class Validation {
   
   // MARK: - Properties
   
-  private var _configuration: Configuration
-  public var configuration: Configuration {
-    return _configuration
-  }
+  private(set) public var configuration: Configuration
   
   // MARK: - Initialization
   
   public init(configuration: Configuration) {
-    self._configuration = configuration
+    self.configuration = configuration
   }
   
   // MARK: - Functions
   
   public func validate(text: String?, as fieldType: Field) throws {
-    _configuration.fieldsValidationStatus[fieldType] = false
+    configuration.fieldsValidationStatus[fieldType] = .notValidated(.empty(fieldType: fieldType))
     guard let text = text else {
       guard configuration.optionalFields.contains(fieldType) else {
-        throw Error.empty(fieldType: fieldType)
+        let validationError = Error.empty(fieldType: fieldType)
+        configuration.fieldsValidationStatus[fieldType] = .notValidated(validationError)
+        throw validationError
       }
-      _configuration.fieldsValidationStatus[fieldType] = nil
+      configuration.fieldsValidationStatus[fieldType] = nil
       return
     }
     
     if text.isEmpty, configuration.optionalFields.contains(fieldType) {
-      _configuration.fieldsValidationStatus[fieldType] = nil
+      configuration.fieldsValidationStatus[fieldType] = nil
       return
     }
     
     guard let requirements = fieldType.requirements else {
-      _configuration.fieldsValidationStatus[fieldType] = !text.isEmpty
+      configuration.fieldsValidationStatus[fieldType] = .validated
       
       guard text.isEmpty else { return }
-      throw Error.empty(fieldType: fieldType)
+      let validationError = Error.empty(fieldType: fieldType)
+      configuration.fieldsValidationStatus[fieldType] = .notValidated(validationError)
+      throw validationError
       
     }
     
@@ -157,10 +169,12 @@ public final class Validation {
     
     let predicate = NSPredicate(format: "SELF MATCHES %@", requirements.regexp ?? "")
     let isValidated = predicate.evaluate(with: text)
-    _configuration.fieldsValidationStatus[fieldType] = isValidated
+    configuration.fieldsValidationStatus[fieldType] = .validated
     
     guard !isValidated else { return }
-    throw Error.regexError(fieldType: fieldType)
+    let validationError = Error.regexError(fieldType: fieldType)
+    configuration.fieldsValidationStatus[fieldType] = .notValidated(validationError)
+    throw validationError
   }
   
   public func `is`(text: String?, ofType fieldType: Field) -> Bool {
@@ -172,6 +186,10 @@ public final class Validation {
       return false
     }
     return NSPredicate(format: "SELF MATCHES %@", requirements.regexp ?? "").evaluate(with: text)
+  }
+  
+  public func clearConfiguration() {
+    configuration.clear()
   }
   
 }
