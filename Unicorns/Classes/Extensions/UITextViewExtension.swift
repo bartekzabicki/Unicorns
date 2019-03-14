@@ -51,7 +51,7 @@ extension UITextView: UITextViewDelegate {
   
   @objc private func textDidChange(_ sender: NSNotification) {
     guard let textView = sender.object as? UITextView else { return }
-    placeholderLabel?.isHidden = !textView.text.isEmpty
+    reloadPlaceholderStatus()
   }
   
   ///Adjusts placeholderLabel's frame to current frame of UITextView
@@ -85,6 +85,10 @@ extension UITextView: UITextViewDelegate {
                                            selector: #selector(textDidChange),
                                            name: UITextView.textDidChangeNotification,
                                            object: nil)
+  }
+  
+  public func reloadPlaceholderStatus() {
+    placeholderLabel?.isHidden = !text.isEmpty
   }
   
 }
