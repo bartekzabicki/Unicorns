@@ -1,5 +1,5 @@
 PODS:
-  - Unicorns (0.1.0)
+  - Unicorns (0.2.1)
 
 DEPENDENCIES:
   - Unicorns (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Unicorns: 99218fbbd1553dd09006a730e92e8ff3e754f4e5
+  Unicorns: 2bd89b068a1bec4f2bfa51b16ee5e253ad48da3b
 
 PODFILE CHECKSUM: 13ae1a688f8b5ae105eca4ce5b943357551032f9
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

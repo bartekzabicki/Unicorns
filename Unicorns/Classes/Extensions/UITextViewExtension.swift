@@ -50,7 +50,7 @@ extension UITextView: UITextViewDelegate {
   // MARK: - Functions
   
   @objc private func textDidChange(_ sender: NSNotification) {
-    guard let textView = sender.object as? UITextView else { return }
+    guard let _ = sender.object as? UITextView else { return }
     reloadPlaceholderStatus()
   }
   

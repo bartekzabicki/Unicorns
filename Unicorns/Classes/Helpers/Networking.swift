@@ -81,7 +81,7 @@ final public class Networking {
     
     init(code: Int, data: Data) {
       var message = "Expecting JSON as result"
-      if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? JSON {
+      if let json = ((try? JSONSerialization.jsonObject(with: data, options: []) as? JSON) as JSON??) {
         if let description = json?["reason"] as? String {
           message = description
         } else if let key = json?.keys.first, let description = (json?[key] as? [String])?.first {
