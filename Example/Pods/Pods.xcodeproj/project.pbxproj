@@ -39,7 +39,6 @@
 		EA00F7ACE06955F393DF6C416E8F7135 /* Pods-Unicorns_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD269B59837B927E4F53103BB165C801 /* Pods-Unicorns_Tests-dummy.m */; };
 		EA1F2127F81F49092E394986B8C44927 /* UISegmentControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D653FE55AB3ABD30A70BD9B10E4C97D /* UISegmentControlExtension.swift */; };
 		EC0A92C76AA9DEF64BC1DEDCF4C319E4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32426F22870D48A2221B8D7669C46BD4 /* UIViewExtension.swift */; };
-		F45AD25E183BEC2358162F3F8399F9BE /* ImageCropViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = DFFBA46E7E1B7CD1B4977CAEAE2D7776 /* ImageCropViewController.xib */; };
 		F6FB0D049E64CB045C0744E4711A1DC8 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E1210F937DEE2907E171AF360DB4B4 /* UICollectionViewExtension.swift */; };
 		FA5B8DF47243D9DA0D1735968C26096D /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D74C12A4097165F470CFB6D624B97 /* StoryboardExtension.swift */; };
 /* End PBXBuildFile section */
@@ -200,7 +199,6 @@
 		DABF25556B1ADA3C0FADC7D8BCAF7080 /* FloatTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FloatTextField.swift; sourceTree = "<group>"; };
 		DF07517119EED356E0F94031D1BD16CA /* NSMutableData.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = NSMutableData.html; path = docs/Extensions/NSMutableData.html; sourceTree = "<group>"; };
 		DFF9929A23C9813220643301184DD241 /* Unicorns-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Unicorns-umbrella.h"; sourceTree = "<group>"; };
-		DFFBA46E7E1B7CD1B4977CAEAE2D7776 /* ImageCropViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ImageCropViewController.xib; sourceTree = "<group>"; };
 		E0158F5F0920228ECB2E206E64E099AC /* RectType.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = RectType.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/ImageCropViewController/RectType.html; sourceTree = "<group>"; };
 		E01EDBB41F4A09E7C9E365D4AFFE5860 /* Pods-Unicorns_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Unicorns_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		E020E24E6FE997BBDFFDF3144F50C872 /* ImageCropRouter.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = ImageCropRouter.html; path = docs/Protocols/ImageCropRouter.html; sourceTree = "<group>"; };
@@ -377,7 +375,6 @@
 			isa = PBXGroup;
 			children = (
 				1EE54C7AD547A613DCD590AEE6E9B22E /* ImageCropViewController.swift */,
-				DFFBA46E7E1B7CD1B4977CAEAE2D7776 /* ImageCropViewController.xib */,
 			);
 			path = ImageCropViewController;
 			sourceTree = "<group>";
@@ -725,7 +722,6 @@
 				516C53B9331359B1DF5360BEE30BE008 /* FeatureDisabledViewController.swift in Sources */,
 				E4537FB5E64EF9840CF8468585194245 /* FloatTextField.swift in Sources */,
 				A21CE743D65A228D70CB7C20FC32E925 /* ImageCropViewController.swift in Sources */,
-				F45AD25E183BEC2358162F3F8399F9BE /* ImageCropViewController.xib in Sources */,
 				9422942C6DAD8688437E254DB6919DD9 /* IntExtension.swift in Sources */,
 				ABB70785F8BDA7470AB22030C6C4E738 /* KeychainService.swift in Sources */,
 				321A3BF8A7DA8B7641E1A4ADD623C236 /* KeyedDecodingContainerExtension.swift in Sources */,

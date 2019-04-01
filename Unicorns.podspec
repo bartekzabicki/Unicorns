@@ -5,8 +5,8 @@
 # Any lines starting with a # are optional, but their use is encouraged
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
 #
-# Updating pod: pod trunk push Unicorns.podspec --swift-version="4.2"
-# Validating pod: pod lib lint Unicorns.podspec --swift-version="4.2"
+# Updating pod: pod trunk push Unicorns.podspec --swift-version="5.0"
+# Validating pod: pod lib lint Unicorns.podspec --swift-version="5.0"
 
 Pod::Spec.new do |s|
   s.name             = 'Unicorns'
@@ -39,5 +39,5 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
 end
