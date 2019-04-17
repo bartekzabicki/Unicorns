@@ -51,6 +51,7 @@ final public class Networking {
   public static var session: URLSessionProtocol = Networking.shared.defaultSession()
   public var timeoutIntervalForRequest = 15.0
   public var shouldUseMultipartAutomatically = true
+  public var shouldPrintDebugErrors = true
   
   // MARK: - Enums
   
@@ -114,10 +115,8 @@ final public class Networking {
     switch method {
     case .post, .put:
       if let parameters = parameters, parameters.contains(where: {$0.value is Data}), shouldUseMultipartAutomatically {
-        Log.i("Setup multipart")
         request = setupMultipart(request: request, with: parameters)
       } else {
-        Log.i("Setup standard request")
         if let setupedRequest = setupRequestWith(request: request, parameters: parameters, headers: headers, encoding: encoding) {
           request = setupedRequest
         }
@@ -126,7 +125,8 @@ final public class Networking {
     }
     let session = Networking.session
     UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    _ = session.dataTask(with: request) { (data, response, error) in
+    _ = session.dataTask(with: request) { [weak self] (data, response, error) in
+      guard let self = self else { return }
       guard let data = data, let statusCode = (response as? HTTPURLResponse)?.statusCode else {
         let error = NetworkError(code: (response as? HTTPURLResponse)?.statusCode ?? 0,
                                  description: error?.localizedDescription ?? "No error")
@@ -138,7 +138,9 @@ final public class Networking {
       case 200...299:
         onSuccess(data)
       case 400...600:
-        debugPrint(request)
+        if self.shouldPrintDebugErrors {
+          debugPrint(request)
+        }
         onError(NetworkError(code: statusCode, data: data))
       default: break
       }

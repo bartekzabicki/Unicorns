@@ -35,11 +35,7 @@ import UIKit
   @IBInspectable public var innerBackgroundColor: UIColor = #colorLiteral(red: 0.976000011, green: 0.9800000191, blue: 0.9879999757, alpha: 1)
   @IBInspectable public var successColor: UIColor = #colorLiteral(red: 0.2899999917, green: 0.949000001, blue: 0.6309999824, alpha: 1)
   @IBInspectable public var failureColor: UIColor = #colorLiteral(red: 1, green: 0.200000003, blue: 0.4709999859, alpha: 1)
-  @IBInspectable public var shouldLoadAfterSelected: Bool = true {
-    didSet {
-      setTitleColor(titleColor(for: .normal), for: .selected)
-    }
-  }
+  @IBInspectable public var shouldLoadAfterSelected: Bool = true
   override public var cornerRadius: CGFloat {
     get {
       return layer.cornerRadius
@@ -76,6 +72,7 @@ import UIKit
   private var animatedCircleLayer: CAShapeLayer?
   private var staticArcLayer: CAShapeLayer?
   private var borderLayer: CAShapeLayer?
+  private var markLayer: CAShapeLayer?
   private var response: Response?
   private var responseCompletion: (() -> Void)?
   private var arcRadius: CGFloat {
@@ -105,7 +102,6 @@ import UIKit
   // MARK: - Actions
   
   @objc private func touchUpInside(sender: RoundedButton) {
-    isSelected = !isSelected
     guard shouldLoadAfterSelected else {
       return
     }
@@ -129,7 +125,8 @@ import UIKit
                                         startValue: 0, endValue: 1)
     animatedCircleLayer.add(apathAnimation, forKey: "animatedAnimation")
     
-    let markLayer = CAShapeLayer()
+    markLayer = CAShapeLayer()
+    guard let markLayer = markLayer else { return }
     markLayer.frame = bounds
     markLayer.path = response == .success ? succesMarkPath() : failureMarkPath()
     markLayer.strokeColor = response == .success ? successColor.cgColor : failureColor.cgColor
@@ -149,28 +146,34 @@ import UIKit
         completion?() ?? self.responseCompletion?()
         return
       }
-      UIView.animate(withDuration: 0.7, delay: 0, options: .allowAnimatedContent, animations: {
-        self.animatedCircleLayer?.removeFromSuperlayer()
-        self.staticArcLayer?.removeFromSuperlayer()
-        markLayer.removeFromSuperlayer()
-        self.borderLayer?.strokeColor = self.borderLayer?.strokeColor?.copy(alpha: 0)
-        self.titleLabel?.alpha = 1
-        self.isSelected = false
-      }, completion: { _ in
-        self.borderLayer?.removeFromSuperlayer()
-        self.borderLayer = nil
-        self.animatedCircleLayer = nil
-        self.staticArcLayer = nil
-        self.isUserInteractionEnabled = true
-      })
+      self.restoreStartState()
     })
   }
   
   /// Starts animation, hides the title
   public func animate() {
     isUserInteractionEnabled = false
+    isSelected = true
     animateBorder()
     titleLabel?.alpha = 0
+  }
+  
+  public func restoreStartState() {
+    UIView.animate(withDuration: 0.7, delay: 0, options: .allowAnimatedContent, animations: {
+      self.animatedCircleLayer?.removeAllAnimations()
+      self.animatedCircleLayer?.removeFromSuperlayer()
+      self.staticArcLayer?.removeFromSuperlayer()
+      self.markLayer?.removeFromSuperlayer()
+      self.borderLayer?.strokeColor = self.borderLayer?.strokeColor?.copy(alpha: 0)
+      self.titleLabel?.alpha = 1
+      self.isSelected = false
+    }, completion: { _ in
+      self.borderLayer?.removeFromSuperlayer()
+      self.borderLayer = nil
+      self.animatedCircleLayer = nil
+      self.staticArcLayer = nil
+      self.isUserInteractionEnabled = true
+    })
   }
   
   // MARK: - Private Functions
@@ -180,9 +183,7 @@ import UIKit
     tintColor = .clear
     setTitleColor(.white, for: .highlighted)
     setTitleColor(borderColor, for: .normal)
-    if shouldLoadAfterSelected {
-      setTitleColor(.clear, for: .selected)
-    }
+    setTitleColor(.clear, for: .selected)
     #if !TARGET_INTERFACE_BUILDER
     addTarget(self, action: #selector(touchUpInside), for: .touchUpInside)
     #endif
