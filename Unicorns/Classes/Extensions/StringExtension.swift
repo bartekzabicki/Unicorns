@@ -28,4 +28,9 @@ extension String {
     return count
   }
   
+  ///Trimming space on at the beginning and at the end of string
+  public var noEndSpace: String {
+    return trimmingCharacters(in: CharacterSet(charactersIn: " "))
+  }
+  
 }

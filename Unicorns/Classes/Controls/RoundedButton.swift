@@ -108,6 +108,11 @@ import UIKit
     animate()
   }
   
+  public override func layoutSubviews() {
+    super.layoutSubviews()
+    reloadBorderLayerPath()
+  }
+  
   // MARK: - Public function
   
   ///Handle response and draw mark in the middle
@@ -206,18 +211,22 @@ import UIKit
   
   ///Add border around the button with the color, which depends on that if button is highlighted or not
   private func addBorderLayer() {
-    let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: .allCorners,
-                            cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
     
     maskLayer = CAShapeLayer()
     guard let maskLayer = maskLayer else { return }
-    maskLayer.frame = bounds
-    maskLayer.path = path.cgPath
+    reloadBorderLayerPath()
     maskLayer.strokeColor = borderColor?.cgColor
     maskLayer.fillColor = nil
     maskLayer.lineWidth = 1.0
     maskLayer.lineJoin = .bevel
     layer.addSublayer(maskLayer)
+  }
+  
+  private func reloadBorderLayerPath() {
+    let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: .allCorners,
+                            cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
+    maskLayer?.frame = bounds
+    maskLayer?.path = path.cgPath
   }
   
   private func createPath(withOrigin origin: CGPoint, size: CGSize, cornerRadius: CGFloat) -> UIBezierPath {

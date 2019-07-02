@@ -25,8 +25,8 @@ extension UIViewController {
    - title: The title that should appear
    - color: The color of back arrow. By defaults it's purple
  */
-  public func setupBackArrow(with title: String = "", color: UIColor = #colorLiteral(red: 0.4040000141, green: 0.4199999869, blue: 0.5839999914, alpha: 1)) {
-    navigationItem.backBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: nil, action: nil)
+  public func setupBackArrow(with title: String = "", color: UIColor = #colorLiteral(red: 0.4040000141, green: 0.4199999869, blue: 0.5839999914, alpha: 1), target: Any? = nil, action: Selector? = nil) {
+    navigationItem.backBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: target, action: action)
     navigationController?.navigationBar.tintColor = color
   }
   
