@@ -32,7 +32,7 @@ import UIKit
     } set {}
   }
   ///The color inside button
-  @IBInspectable public var innerBackgroundColor: UIColor = #colorLiteral(red: 0.976000011, green: 0.9800000191, blue: 0.9879999757, alpha: 1)
+  @IBInspectable public var innerBackgroundColor: UIColor = .white
   @IBInspectable public var successColor: UIColor = #colorLiteral(red: 0.2899999917, green: 0.949000001, blue: 0.6309999824, alpha: 1)
   @IBInspectable public var failureColor: UIColor = #colorLiteral(red: 1, green: 0.200000003, blue: 0.4709999859, alpha: 1)
   @IBInspectable public var shouldLoadAfterSelected: Bool = true
