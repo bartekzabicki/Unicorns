@@ -7,376 +7,502 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		200A81E40E41203CB9577739BA5D542C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7717AA61B995F356889E6A4C71E52391 /* RoundedButton.swift */; };
-		25C38833935996676A7BDFB9C2EF7361 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149E5FCB9F95EC6938CB334F87C61F5 /* Log.swift */; };
-		27F31F948DB55581C6B226C496587FB2 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C80A57C29B8E4EAB00ED6BB0B22C1A /* UITableViewExtension.swift */; };
-		321A3BF8A7DA8B7641E1A4ADD623C236 /* KeyedDecodingContainerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30A3A5A219C85E82E56BC75C1A4B322 /* KeyedDecodingContainerExtension.swift */; };
-		361412B4CB5517C353D73E9B0FADA3D9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93496A623990707C3EB3BEA8957692C2 /* UIColorExtension.swift */; };
-		370B7F85C0B22E859B512FE3E787804A /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3682B1812A067E3AFDD6E6A109ED411A /* UITextViewExtension.swift */; };
-		3B9E9A536F35F2AF5C3ABB937614B449 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675AA63614E1FBA154EA98C050E745F8 /* UILabelExtension.swift */; };
-		516C53B9331359B1DF5360BEE30BE008 /* FeatureDisabledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81713182A68CA9B93E2E5E37BA6B8DD /* FeatureDisabledViewController.swift */; };
-		5995225DE17B859565776DAB770B62A2 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9991770E57A622C4B386E037B540F39F /* Validation.swift */; };
-		5AC7BC5EADDF2DDB389C238A72D84B8A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97862FEC432FD2C375DC6E4A69B86B95 /* StringExtension.swift */; };
-		607B3AB6EAF60B10CC8A45298ECC896E /* ReuseIdentifying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51435669195ADA2D73FB1F77CAABCC8F /* ReuseIdentifying.swift */; };
-		63377A52301FBC5844768E50597705FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		639985C39FEDB353FEB70B2AB7284473 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406C5AC9F9123F416C2170CCE1865FA /* CGSizeExtension.swift */; };
-		76995B729D644334050A8E7AEA302233 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53CCE3C5810CF88D9D6639E904EC1F /* UIButtonExtension.swift */; };
-		81169534DDE9D7A832703418D80D8629 /* Pods-Unicorns_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE82CD45D6AA24750818677F050E78E /* Pods-Unicorns_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8AD346F1D0272063E2E877B387CBA7A9 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F120BB34CFA71DB5974BC3FD16C24B25 /* UITextFieldExtension.swift */; };
-		9422942C6DAD8688437E254DB6919DD9 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466B28E8555622EA01662E2E46BEE5A /* IntExtension.swift */; };
-		96CB500AC56B917900F7D005746E3E81 /* Unicorns-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B03F07B1103FC695E4592981DB9593 /* Unicorns-dummy.m */; };
-		97D90BF93A292A293F951FE2EC8D3C19 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE371327E481ED089A97DCE9754293FF /* Networking.swift */; };
-		A21CE743D65A228D70CB7C20FC32E925 /* ImageCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE54C7AD547A613DCD590AEE6E9B22E /* ImageCropViewController.swift */; };
-		ABB70785F8BDA7470AB22030C6C4E738 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE9A964EB59A2D68545DCAD9644A334 /* KeychainService.swift */; };
-		ADBCF9DD08E8316AEFF5A56107AACD23 /* UITabBarItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BAA96805052D03F550E5B5711749DB /* UITabBarItemExtension.swift */; };
-		B632AB5AE4D9AC47A77E398DBC911193 /* Pods-Unicorns_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B5943B67916248FD23FA7717CF6F9686 /* Pods-Unicorns_Example-dummy.m */; };
-		B8F8E73CBA370A1049F83C5B0E3F2043 /* Unicorns-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DFF9929A23C9813220643301184DD241 /* Unicorns-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BBFA83909070185068569ACB25AB1294 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		D78C5B638C0361B6620CB7D2500957D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		D81EB1A05A32414B93293BB3FCAA2F32 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CEA792B76F25DC5B933BFACEBA8F0 /* UIViewControllerExtension.swift */; };
-		E4537FB5E64EF9840CF8468585194245 /* FloatTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF25556B1ADA3C0FADC7D8BCAF7080 /* FloatTextField.swift */; };
-		E898E6061FFB060A3F8882CF3178FD9C /* Pods-Unicorns_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE203D3891B070169E232EC4D5DB2505 /* Pods-Unicorns_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA00F7ACE06955F393DF6C416E8F7135 /* Pods-Unicorns_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD269B59837B927E4F53103BB165C801 /* Pods-Unicorns_Tests-dummy.m */; };
-		EA1F2127F81F49092E394986B8C44927 /* UISegmentControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D653FE55AB3ABD30A70BD9B10E4C97D /* UISegmentControlExtension.swift */; };
-		EC0A92C76AA9DEF64BC1DEDCF4C319E4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32426F22870D48A2221B8D7669C46BD4 /* UIViewExtension.swift */; };
-		F6FB0D049E64CB045C0744E4711A1DC8 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E1210F937DEE2907E171AF360DB4B4 /* UICollectionViewExtension.swift */; };
-		FA5B8DF47243D9DA0D1735968C26096D /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D74C12A4097165F470CFB6D624B97 /* StoryboardExtension.swift */; };
+		0B12E1B19FE72630E5AE13EAD580D6B6 /* UITabBarItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40478287923A1EEE2B3F123DFAD20FB6 /* UITabBarItemExtension.swift */; };
+		0EA6F4440267716A589C0F2ED7860F71 /* Pods-Unicorns_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC6BB0F5BE382EB4C0D0DA7DB7DC7C /* Pods-Unicorns_Tests-dummy.m */; };
+		15B0C69DD45C7BF17B4BA5ACF5B9387E /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB82C28A01544287DBFED491F0D990F1 /* KeychainService.swift */; };
+		170B930DAA4D83DF09AF7069790C0B9F /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3260A47D8ABCAF70D7EFA0DF3E2C47 /* UIButtonExtension.swift */; };
+		28A89ACA585056671A05AA1A25438B5F /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6676108C6A360A0179CEBEB36945D17F /* UITableViewExtension.swift */; };
+		2CF800671C29041D42F7C088D46E770B /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC4EE920077E06674075CF87C4511AD /* UITextFieldExtension.swift */; };
+		31BC2853B2A3D5C2BE2E2ED133823CE6 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EEFFB583A55EB7084F5FAD19A11122 /* Networking.swift */; };
+		37FDD5E0FF6DD03852EA6E2CB1EB5902 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE0BE3F91A0B9C6A305EC35E9BD21A /* Validation.swift */; };
+		3E90631D52083DE5C16642AAF51B5EAE /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FE0D11B209380E93CD29823433E0A /* RoundedButton.swift */; };
+		47F6B3B4CCE86B33AE2966A726D5E005 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6146F2CCE5D330334EC451DA12EFB64A /* IntExtension.swift */; };
+		47F9F1E878E678C4838B5030D39A54A7 /* FeatureDisabledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F3336BFFCA5932B343A8A73C367592 /* FeatureDisabledViewController.swift */; };
+		5AE007C5CC47942C2835514A04CA6922 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		5C0AEE55F771A618771DFFCABEBBC47E /* UISegmentControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18474928289517E134B3A378B48BE71 /* UISegmentControlExtension.swift */; };
+		6441AC1F96FD739AA8AAC0DC9226900A /* KeyedDecodingContainerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D12098A3DA8AE9D79B336E36B3CE88 /* KeyedDecodingContainerExtension.swift */; };
+		6DF050C6CBF3B50F772A01A1E1985E7B /* Unicorns-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C42268D71B1DBC0CECB212D773A2F10 /* Unicorns-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		799E3CFB7D55895F76B1C0A6B15997CE /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B6F8B32817FC67B1995222C57CFBF2 /* StringExtension.swift */; };
+		800B2BFEFFF86EA3032C9C055B50D669 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CC8B6AA968F4C64366F70694E49D7E /* UIViewControllerExtension.swift */; };
+		84FE75A19C67C00312CAF7DAED3A4764 /* Pods-Unicorns_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D1D2A37574F9A6D8DC3EF48596FE534 /* Pods-Unicorns_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9192CCE06D209E357CF7821A2334A4EC /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5695DE05A63649A99D9E39D11C72BF4 /* UILabelExtension.swift */; };
+		9F85F149867951EE7967D929BBE10D4A /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198937850C1C5CBA53AB4CF09076ECBE /* Log.swift */; };
+		A306AB06FF1EBA1E5E712CB341D37C61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		A9F58365C1A7C9C452D887DB941FDD37 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EA6DF5A6DFBCEBF50CEB32D690DFB /* UITextViewExtension.swift */; };
+		BA8A2B0453D9227BEDDB7DAB883A65FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		C2CE42537546ADB0C8980F2EBA96BC2B /* Unicorns-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0295DA93574CF73E983E9334D60DB95 /* Unicorns-dummy.m */; };
+		C4471DA18B965E15B63E8EEF05824DE5 /* Pods-Unicorns_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0877506C8389F519870A6359734710F3 /* Pods-Unicorns_Example-dummy.m */; };
+		C6CA061C3D264ACC0FC5353CD99ADB27 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4620BB134DA9F0EF34940E39ED3948 /* UICollectionViewExtension.swift */; };
+		CBAD2AD8246BE1D5DE80751BA2AFA5A0 /* ReuseIdentifying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26D0E5B7D9303859B229E223AFBA9B /* ReuseIdentifying.swift */; };
+		CD7A4A6C69F501FFB4A59F5BFC7644F3 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B6B1C340B501F88ECA6E71195A8EFD /* StoryboardExtension.swift */; };
+		D3282DBA5E2A3525C3D4E8C74C4DF69E /* ImageCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0760277AE38EC82446C0562739824DF2 /* ImageCropViewController.swift */; };
+		D473BAB49EB3CC2881E75C0CD478D3E2 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802AF9315E1EC6F0A975C26AD7841740 /* UIColorExtension.swift */; };
+		D8939EE821E4A7DF717B5FBD3AECD20B /* Pods-Unicorns_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E5FEE6D0E600117592E9E0C7702FC71 /* Pods-Unicorns_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE384FC1A04C986BE80180E398593FC9 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F099C3C6B8AAAB3E52D5873148F64B57 /* CGSizeExtension.swift */; };
+		F8F0B5C909AFA8BD62A3E05E5E03C1EB /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A143E78AFD462DC81836DABA7331FE /* UIViewExtension.swift */; };
+		FAA80B43CE36DE67A1EB4CF7DD2FE335 /* FloatTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC18D328269270CAA2F8BE1773F7C3 /* FloatTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BB0329E212D7818D28D635D67D31AB9C /* PBXContainerItemProxy */ = {
+		96C242E96F44B55152ADFE6E358A635E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1A827C9BA54E261BC7295C981101895E;
+			remoteGlobalIDString = C4F687B01BA3F584DA5D9FB84FA28717;
 			remoteInfo = Unicorns;
 		};
-		D188D07FF26BB37E63E97EDA45A59691 /* PBXContainerItemProxy */ = {
+		C4360EB94535526DE2E604620D58BC08 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BD52D3882AC0C74BF87408BAC46E6685;
+			remoteGlobalIDString = 83A01F885724D1A0FE261850E98AD48A;
 			remoteInfo = "Pods-Unicorns_Example";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05B39F3A1F1DDCBAB07AE45C31C22F85 /* UICollectionView.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = UICollectionView.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UICollectionView.html; sourceTree = "<group>"; };
-		09541DEE9FF791E2A138D03A6591DC31 /* UIButton.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = UIButton.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UIButton.html; sourceTree = "<group>"; };
-		0BC57A24F7E9F45973E7FEDC8679F20D /* Pods-Unicorns_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Unicorns_Example.release.xcconfig"; sourceTree = "<group>"; };
-		0D653FE55AB3ABD30A70BD9B10E4C97D /* UISegmentControlExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UISegmentControlExtension.swift; sourceTree = "<group>"; };
-		0EE33B853C8FE7F2573A38BAAAC17E64 /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = badge.svg; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/badge.svg; sourceTree = "<group>"; };
-		12EAECE6160519721EE00ED8E949A37E /* Unicorns-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Unicorns-Info.plist"; sourceTree = "<group>"; };
-		13A49289C3AC04DE71415DC55F3E9390 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/img/dash.png; sourceTree = "<group>"; };
-		141B9B2B11506413EBEDD988C4FC476F /* NetworkError.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = NetworkError.html; path = docs/Classes/Networking/NetworkError.html; sourceTree = "<group>"; };
-		161A30AD94916BE67031BB84CCD07252 /* Pods-Unicorns_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Unicorns_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		16864373BCD339F19C1FC2F65FB05D51 /* Typealiases.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Typealiases.html; path = docs/Typealiases.html; sourceTree = "<group>"; };
-		1899F902088ED7BF8C2BE30DCC488105 /* KeychainService.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = KeychainService.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/KeychainService.html; sourceTree = "<group>"; };
-		1A712EA720BC2039B76818AFBF1F3EB8 /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Protocols.html; path = docs/Protocols.html; sourceTree = "<group>"; };
-		1EE54C7AD547A613DCD590AEE6E9B22E /* ImageCropViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImageCropViewController.swift; sourceTree = "<group>"; };
-		1F2AFD72589A0FFFA27BBF8BBD205730 /* UITableView.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = UITableView.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UITableView.html; sourceTree = "<group>"; };
-		1F49B91C97880A4F9B265B0A3B9E2CFC /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = index.html; path = docs/index.html; sourceTree = "<group>"; };
-		201CEA792B76F25DC5B933BFACEBA8F0 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		21C80A57C29B8E4EAB00ED6BB0B22C1A /* UITableViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
-		271944DA9E256D63EE181B1FB6941117 /* Unicorns-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Unicorns-prefix.pch"; sourceTree = "<group>"; };
-		291362AD1BD99ADB2CCF1F79DC69786A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		3046C9534C3CDF0CD14590A9BE1C1DCF /* Networking.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Networking.html; path = docs/Classes/Networking.html; sourceTree = "<group>"; };
-		3092AB3B1BC4F668880BC1AFEA60C79E /* Pods-Unicorns_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Unicorns_Tests.modulemap"; sourceTree = "<group>"; };
-		32426F22870D48A2221B8D7669C46BD4 /* UIViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		333A2B17425A0AA689EC226BEA25E208 /* FloatTextField.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = FloatTextField.html; path = docs/Classes/FloatTextField.html; sourceTree = "<group>"; };
-		336FD6B17837521528285915B7483D80 /* UILabel.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = UILabel.html; path = docs/Extensions/UILabel.html; sourceTree = "<group>"; };
-		3406C5AC9F9123F416C2170CCE1865FA /* CGSizeExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CGSizeExtension.swift; sourceTree = "<group>"; };
-		34158FB57404B137277AF2016EC1B062 /* String.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = String.html; path = docs/Extensions/String.html; sourceTree = "<group>"; };
-		3608375EC132184C00ECB5B7023E09B8 /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = undocumented.json; path = docs/undocumented.json; sourceTree = "<group>"; };
-		366795F554F961DCE7669D0D663BCDA1 /* ImageCropViewController.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = ImageCropViewController.html; path = docs/Classes/ImageCropViewController.html; sourceTree = "<group>"; };
-		3682B1812A067E3AFDD6E6A109ED411A /* UITextViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
-		39B03F07B1103FC695E4592981DB9593 /* Unicorns-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Unicorns-dummy.m"; sourceTree = "<group>"; };
-		39E574847956BBAA661F5C325A03C441 /* String.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = String.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/String.html; sourceTree = "<group>"; };
-		3BF2A1AB9ADCCE583B78439073C2CB1B /* Extensions.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Extensions.html; path = docs/Extensions.html; sourceTree = "<group>"; };
-		3D2E68BB260E2D953035C04B545E8611 /* Pods-Unicorns_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Unicorns_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3EE9A964EB59A2D68545DCAD9644A334 /* KeychainService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
-		3F5DF62F8E0A16F9757322A161B2ABD0 /* UITextView.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = UITextView.html; path = docs/Extensions/UITextView.html; sourceTree = "<group>"; };
-		42DCC7F451A44A823DBB0E6CDD36E856 /* UITextView.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = UITextView.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UITextView.html; sourceTree = "<group>"; };
-		46C4497468FE897199A5833682D514E2 /* UITextField.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = UITextField.html; path = docs/Extensions/UITextField.html; sourceTree = "<group>"; };
-		46FD58BDBF46643358E488B94E620734 /* UICollectionView.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = UICollectionView.html; path = docs/Extensions/UICollectionView.html; sourceTree = "<group>"; };
-		47809138A8F7948086E548449C708C45 /* NetworkMethod.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = NetworkMethod.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/Networking/NetworkMethod.html; sourceTree = "<group>"; };
-		482FCB41632E8B3A79E0744ABDAEA7FE /* Response.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Response.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/RoundedButton/Response.html; sourceTree = "<group>"; };
-		498D74C12A4097165F470CFB6D624B97 /* StoryboardExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
-		4E3EC2C6245BFE5545E901337D7FA84D /* RequestEndpoint.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = RequestEndpoint.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/Networking/RequestEndpoint.html; sourceTree = "<group>"; };
-		51435669195ADA2D73FB1F77CAABCC8F /* ReuseIdentifying.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReuseIdentifying.swift; sourceTree = "<group>"; };
-		51BB565F6A2A1489A3ACEC6D2E3398F4 /* ReuseIdentifying.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = ReuseIdentifying.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Protocols/ReuseIdentifying.html; sourceTree = "<group>"; };
-		540FE17B1D8FF818C21789566F1641B5 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = search.json; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/search.json; sourceTree = "<group>"; };
-		54874EA8F44D4F7B2638FBD28E17709B /* URLSessionProtocol.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = URLSessionProtocol.html; path = docs/Protocols/URLSessionProtocol.html; sourceTree = "<group>"; };
-		55277BF8AE4FCD5AD8A7A8CA7FEA2145 /* Networking.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Networking.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/Networking.html; sourceTree = "<group>"; };
-		58E1210F937DEE2907E171AF360DB4B4 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
-		5916950F8D720EF47D170B9479D42AE6 /* Pods_Unicorns_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Unicorns_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		593D6FAE04562BA3F713CB35A6403DF9 /* Log.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Log.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/Log.html; sourceTree = "<group>"; };
-		5A67EF1AACBCA15C7E2BE6E7BA8823D7 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = jazzy.css; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/css/jazzy.css; sourceTree = "<group>"; };
-		5C4866821F828F6D0D2B2FC8DC64A036 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = highlight.css; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/css/highlight.css; sourceTree = "<group>"; };
-		60A48287ED0C74A6DB0994F42C1AFA58 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = index.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/index.html; sourceTree = "<group>"; };
-		6466B28E8555622EA01662E2E46BEE5A /* IntExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
-		649621894FC1FFB9AE6AF128DCB6AC4A /* Unicorns.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Unicorns.modulemap; sourceTree = "<group>"; };
-		657ED7C993E546FFC8E4809C4D7309F7 /* UIColor.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = UIColor.html; path = docs/Extensions/UIColor.html; sourceTree = "<group>"; };
-		65D1392D29A688FB9555B744F6E773BB /* URLSessionProtocol.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = URLSessionProtocol.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Protocols/URLSessionProtocol.html; sourceTree = "<group>"; };
-		675AA63614E1FBA154EA98C050E745F8 /* UILabelExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
-		6970D665D01DE4FD002FB6048802B01D /* UIView.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = UIView.html; path = docs/Extensions/UIView.html; sourceTree = "<group>"; };
-		6A4AFB90AE46508C36733B5F0345A842 /* XIBLocalizable.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = XIBLocalizable.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Protocols/XIBLocalizable.html; sourceTree = "<group>"; };
-		6CF0FD7B3F8B32038CE6813CE3BB8A6B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		6F16C07F1C57E45814D670002D636ACF /* UIColor.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = UIColor.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UIColor.html; sourceTree = "<group>"; };
-		6F8FB65352E03228504809604983697E /* UITabBarItem.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = UITabBarItem.html; path = docs/Extensions/UITabBarItem.html; sourceTree = "<group>"; };
-		6FDC8A6EBD63B65024DD5677506D7C10 /* Typealiases.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Typealiases.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Typealiases.html; sourceTree = "<group>"; };
-		72BBD051D5B476515D3ADB5B93314BC9 /* URLSessionDataTaskProtocol.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = URLSessionDataTaskProtocol.html; path = docs/Protocols/URLSessionDataTaskProtocol.html; sourceTree = "<group>"; };
-		72CEA6D0B692B4D4BB1549D327DCFF99 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = jazzy.css; path = docs/css/jazzy.css; sourceTree = "<group>"; };
-		73A3B62F06829BDB0E153567287F909E /* UITableView.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = UITableView.html; path = docs/Extensions/UITableView.html; sourceTree = "<group>"; };
-		7717AA61B995F356889E6A4C71E52391 /* RoundedButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
-		78766AAB96526AA5AF1E695C0C37A65A /* Unicorns.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Unicorns.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		79A3BCB0BC473698194457B3C3095BB7 /* KeyedDecodingContainer.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = KeyedDecodingContainer.html; path = docs/Extensions/KeyedDecodingContainer.html; sourceTree = "<group>"; };
-		7A212CE730DA0D5C4912BF048920076C /* Pods-Unicorns_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Unicorns_Example-frameworks.sh"; sourceTree = "<group>"; };
-		7B78917CC81D6C65BB2E8EDE02D97D49 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/img/dash.png; sourceTree = "<group>"; };
-		81C5E64470D6DD7F01BCE113B4821F44 /* UISegmentedControl.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = UISegmentedControl.html; path = docs/Extensions/UISegmentedControl.html; sourceTree = "<group>"; };
-		82F421E337194CBA350D8AF2E6DDBA85 /* Pods-Unicorns_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Unicorns_Tests-Info.plist"; sourceTree = "<group>"; };
-		84A5C3E54CF9EE019A76292627B47B35 /* RequestEndpoint.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = RequestEndpoint.html; path = docs/Classes/Networking/RequestEndpoint.html; sourceTree = "<group>"; };
-		860DFE8B50DC82E6FFA54A22C5C08A86 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = docs/docsets/Unicorns.docset/Contents/Info.plist; sourceTree = "<group>"; };
-		89A35B9F912A08F04757F9517F7A065E /* Unicorns.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unicorns.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		89B9A4A4D0909C5A82756208CF4F68C9 /* Pods-Unicorns_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Unicorns_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		8AF91BB7215154BF8DF3E64C924F57E4 /* ViewModel.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = ViewModel.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/ImageCropViewController/ViewModel.html; sourceTree = "<group>"; };
-		8C89783C8A5637BB0382F581E3875623 /* Pods-Unicorns_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Unicorns_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		8CCE571D7019CFF0FA61F9E1622FF311 /* RoundedButton.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = RoundedButton.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/RoundedButton.html; sourceTree = "<group>"; };
-		8E5A103ABE1E79FB2299586976909B5B /* Result.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Result.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/Networking/Result.html; sourceTree = "<group>"; };
-		8E6F00A67835A4FF32119F3CBD8950E3 /* RectType.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = RectType.html; path = docs/Classes/ImageCropViewController/RectType.html; sourceTree = "<group>"; };
-		92182A4135F0A237C8BBA11F8A1652B0 /* UIViewController.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = UIViewController.html; path = docs/Extensions/UIViewController.html; sourceTree = "<group>"; };
-		925EFBACDD26BEF5D5D0F219DC539806 /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Classes.html; path = docs/Classes.html; sourceTree = "<group>"; };
-		93496A623990707C3EB3BEA8957692C2 /* UIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		9681E5F2BA54A0751D547A6A9AFF8411 /* Int.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Int.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/Int.html; sourceTree = "<group>"; };
-		96D3604E4047D0556C594DD0E27DC996 /* Extensions.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Extensions.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions.html; sourceTree = "<group>"; };
-		97862FEC432FD2C375DC6E4A69B86B95 /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		9991770E57A622C4B386E037B540F39F /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DEB7BD581EF48673AAE0A6E172EB028 /* ReuseIdentifying.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = ReuseIdentifying.html; path = docs/Protocols/ReuseIdentifying.html; sourceTree = "<group>"; };
-		9F824DAE0753E326FFA72AD32D71857F /* Pods-Unicorns_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Unicorns_Example-Info.plist"; sourceTree = "<group>"; };
-		A1508727B71DC9078888AA612FA04063 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jquery.min.js; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/js/jquery.min.js; sourceTree = "<group>"; };
-		A4028D1EF4972D1AAD47048A5FB7A6AB /* Result.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Result.html; path = docs/Classes/Networking/Result.html; sourceTree = "<group>"; };
-		A4355E427205CD8963C93DAC0D10CD4B /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/img/gh.png; sourceTree = "<group>"; };
-		AA43E4C25EB600C3A58078601D76858B /* FloatTextField.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = FloatTextField.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/FloatTextField.html; sourceTree = "<group>"; };
-		AAC7D39CD80768F8958E3D7BDD1CDB21 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = highlight.css; path = docs/css/highlight.css; sourceTree = "<group>"; };
-		AC147B4F362A702C29664040C7B4FE8B /* Unicorns.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Unicorns.xcconfig; sourceTree = "<group>"; };
-		AD190727F42DF8949275D872FAC4E482 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = search.json; path = docs/search.json; sourceTree = "<group>"; };
-		ADD6DC0F7244E19E902314F886E45BD1 /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Protocols.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Protocols.html; sourceTree = "<group>"; };
-		AEEB8B3BA143FB7609424C2BBE391659 /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = badge.svg; path = docs/badge.svg; sourceTree = "<group>"; };
-		B149E5FCB9F95EC6938CB334F87C61F5 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		B3D0940B935F930F2B7C37C47FAEBB8F /* RoundedButton.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = RoundedButton.html; path = docs/Classes/RoundedButton.html; sourceTree = "<group>"; };
-		B5943B67916248FD23FA7717CF6F9686 /* Pods-Unicorns_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Unicorns_Example-dummy.m"; sourceTree = "<group>"; };
-		B702AAC49A30D212469910BF3F944ED3 /* Log.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Log.html; path = docs/Classes/Log.html; sourceTree = "<group>"; };
-		B982C5B02305E6BC4F1C47C687EB375E /* ViewModel.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = ViewModel.html; path = docs/Classes/ImageCropViewController/ViewModel.html; sourceTree = "<group>"; };
-		B9A1D9384840EC33C3E512DFFE43C600 /* URLSessionDataTaskProtocol.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = URLSessionDataTaskProtocol.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Protocols/URLSessionDataTaskProtocol.html; sourceTree = "<group>"; };
-		BB519DF38B28394D04E732462F3F1089 /* UIButton.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = UIButton.html; path = docs/Extensions/UIButton.html; sourceTree = "<group>"; };
-		BC53CCE3C5810CF88D9D6639E904EC1F /* UIButtonExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
-		BD269B59837B927E4F53103BB165C801 /* Pods-Unicorns_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Unicorns_Tests-dummy.m"; sourceTree = "<group>"; };
-		BDC9623F4FD32EA455687768E134D215 /* Key.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Key.html; path = docs/Classes/KeychainService/Key.html; sourceTree = "<group>"; };
-		BDD83A2E715160A1E300B8B4BCB0F912 /* URLSession.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = URLSession.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/URLSession.html; sourceTree = "<group>"; };
-		BE203D3891B070169E232EC4D5DB2505 /* Pods-Unicorns_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Unicorns_Tests-umbrella.h"; sourceTree = "<group>"; };
-		BE371327E481ED089A97DCE9754293FF /* Networking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		BF92D8FFF0708BAF805C57489AE88223 /* XIBLocalizable.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = XIBLocalizable.html; path = docs/Protocols/XIBLocalizable.html; sourceTree = "<group>"; };
-		C1610E81C072762C52E83F308B154D6C /* NetworkError.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = NetworkError.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/Networking/NetworkError.html; sourceTree = "<group>"; };
-		C2D924F243565DE61E0AF251F90EFBD6 /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/img/carat.png; sourceTree = "<group>"; };
-		C4096AFD90A1F465A6F8CD54B77A4059 /* KeychainService.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = KeychainService.html; path = docs/Classes/KeychainService.html; sourceTree = "<group>"; };
-		C66148139464C7111BA515376EA05547 /* UILabel.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = UILabel.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UILabel.html; sourceTree = "<group>"; };
-		C73DED9C9D4ED1015EA1ADF457B23A96 /* Response.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Response.html; path = docs/Classes/RoundedButton/Response.html; sourceTree = "<group>"; };
-		C760810DF6196863BA4DE4CEB923707C /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/img/gh.png; sourceTree = "<group>"; };
-		C81713182A68CA9B93E2E5E37BA6B8DD /* FeatureDisabledViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeatureDisabledViewController.swift; sourceTree = "<group>"; };
-		C9BAA96805052D03F550E5B5711749DB /* UITabBarItemExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITabBarItemExtension.swift; sourceTree = "<group>"; };
-		CA2116A7768CF03522773E0BD53AD385 /* UIViewController.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = UIViewController.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UIViewController.html; sourceTree = "<group>"; };
-		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CDFCE495B716DA4E9EDBBA57E4B12AD1 /* UITabBarItem.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = UITabBarItem.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UITabBarItem.html; sourceTree = "<group>"; };
-		CE3A5F4D09588C4E491276E40FDEA975 /* KeychainError.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = KeychainError.html; path = docs/Classes/KeychainService/KeychainError.html; sourceTree = "<group>"; };
-		D099F43C10B819D232D2BA71F8E4EEC5 /* NSMutableData.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = NSMutableData.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/NSMutableData.html; sourceTree = "<group>"; };
-		D1A8F9A5C2C8730F566D5D92F131AF15 /* Pods-Unicorns_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Unicorns_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D3C9366707A380655D44C88A0115058F /* Int.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Int.html; path = docs/Extensions/Int.html; sourceTree = "<group>"; };
-		D4D48B81D53AD0324A4011E3E8809728 /* ImageCropRouter.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = ImageCropRouter.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Protocols/ImageCropRouter.html; sourceTree = "<group>"; };
-		D7A113BA89763D943D8A34A9CBAC38A4 /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Classes.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes.html; sourceTree = "<group>"; };
-		D7C343384AF9805592DDBCF27DE9A856 /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/img/carat.png; sourceTree = "<group>"; };
-		D9CFD4FBA3CA85ADEF2707120C4B33C6 /* Pods_Unicorns_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Unicorns_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DABF25556B1ADA3C0FADC7D8BCAF7080 /* FloatTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FloatTextField.swift; sourceTree = "<group>"; };
-		DF07517119EED356E0F94031D1BD16CA /* NSMutableData.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = NSMutableData.html; path = docs/Extensions/NSMutableData.html; sourceTree = "<group>"; };
-		DFF9929A23C9813220643301184DD241 /* Unicorns-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Unicorns-umbrella.h"; sourceTree = "<group>"; };
-		E0158F5F0920228ECB2E206E64E099AC /* RectType.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = RectType.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/ImageCropViewController/RectType.html; sourceTree = "<group>"; };
-		E01EDBB41F4A09E7C9E365D4AFFE5860 /* Pods-Unicorns_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Unicorns_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		E020E24E6FE997BBDFFDF3144F50C872 /* ImageCropRouter.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = ImageCropRouter.html; path = docs/Protocols/ImageCropRouter.html; sourceTree = "<group>"; };
-		E0BC4F6E953AC11F711809B92DC1D272 /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jazzy.js; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/js/jazzy.js; sourceTree = "<group>"; };
-		E2DAF5D415B1DD2FF9DC787794C8E358 /* URLSession.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = URLSession.html; path = docs/Extensions/URLSession.html; sourceTree = "<group>"; };
-		E4EC5325D85888248E43B3AD300F7BF9 /* NetworkMethod.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = NetworkMethod.html; path = docs/Classes/Networking/NetworkMethod.html; sourceTree = "<group>"; };
-		E5B2247CB5A83692C66763754171AB87 /* docSet.dsidx */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = docSet.dsidx; path = docs/docsets/Unicorns.docset/Contents/Resources/docSet.dsidx; sourceTree = "<group>"; };
-		E818BE7638E4E71097155A45DF5B2802 /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jazzy.js; path = docs/js/jazzy.js; sourceTree = "<group>"; };
-		E93BA31A2C969019C655D091217240D7 /* UITextField.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = UITextField.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UITextField.html; sourceTree = "<group>"; };
-		EA94C38FA45C0EBA3CEE454D95DB7660 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jquery.min.js; path = docs/js/jquery.min.js; sourceTree = "<group>"; };
-		EAE82CD45D6AA24750818677F050E78E /* Pods-Unicorns_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Unicorns_Example-umbrella.h"; sourceTree = "<group>"; };
-		EBE00CCD8E94D0D9618D0209E56CCA19 /* Pods-Unicorns_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Unicorns_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EC633BAFE62351BED6E1D414296F0155 /* Unicorns.tgz */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = Unicorns.tgz; path = docs/docsets/Unicorns.tgz; sourceTree = "<group>"; };
-		ECADD88C6947CE0D5C6EC9951F67BD94 /* UISegmentedControl.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = UISegmentedControl.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UISegmentedControl.html; sourceTree = "<group>"; };
-		EF13B0AE9BF5AE26E100CECDEF19D58C /* KeyedDecodingContainer.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = KeyedDecodingContainer.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/KeyedDecodingContainer.html; sourceTree = "<group>"; };
-		F120BB34CFA71DB5974BC3FD16C24B25 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
-		F30A3A5A219C85E82E56BC75C1A4B322 /* KeyedDecodingContainerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyedDecodingContainerExtension.swift; sourceTree = "<group>"; };
-		F31388F522E4938F8C6F0DB5C86CADEE /* ImageCropViewController.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = ImageCropViewController.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/ImageCropViewController.html; sourceTree = "<group>"; };
-		F6421437C9554B28DB449B4493B23470 /* Key.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Key.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/KeychainService/Key.html; sourceTree = "<group>"; };
-		F7A7577F58281862FF6A6C1549AB6DA0 /* ImageCropDelegate.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = ImageCropDelegate.html; path = docs/Protocols/ImageCropDelegate.html; sourceTree = "<group>"; };
-		F8819C5EBFBC4A7BB54ADE9DBE961241 /* KeychainError.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = KeychainError.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/KeychainService/KeychainError.html; sourceTree = "<group>"; };
-		FB0CFFEB05B1F3A30A69102A3658C6FF /* Pods-Unicorns_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Unicorns_Example.modulemap"; sourceTree = "<group>"; };
-		FB3739C60CFF3D0F837914FF54B102FD /* ImageCropDelegate.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = ImageCropDelegate.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Protocols/ImageCropDelegate.html; sourceTree = "<group>"; };
-		FF1F8C30ACBECF41CAF5C97A90B379E0 /* UIView.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = UIView.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UIView.html; sourceTree = "<group>"; };
-		FF22A960548F019DF00CA9B2E89F4E53 /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = undocumented.json; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/undocumented.json; sourceTree = "<group>"; };
+		0016F19D8D3454BEAAF50FBC9CA2FCA5 /* RoundedButton.html */ = {isa = PBXFileReference; includeInIndex = 1; name = RoundedButton.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/RoundedButton.html; sourceTree = "<group>"; };
+		013B5E0F2428D3729D1C1731ED72A156 /* NetworkError.html */ = {isa = PBXFileReference; includeInIndex = 1; name = NetworkError.html; path = docs/Classes/Networking/NetworkError.html; sourceTree = "<group>"; };
+		01B5AB443E431857BD28E1EECAB46F87 /* ImageCropRouter.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ImageCropRouter.html; path = docs/Protocols/ImageCropRouter.html; sourceTree = "<group>"; };
+		0257ACBAFF941C5CDEEEB321A5E0E6CE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		04AA38AE3A1A780BB31F2E2F446CE080 /* Unicorns.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Unicorns.xcconfig; sourceTree = "<group>"; };
+		05F3AEBC256E8BBD1EFDFBE2856C761F /* NetworkError.html */ = {isa = PBXFileReference; includeInIndex = 1; name = NetworkError.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/Networking/NetworkError.html; sourceTree = "<group>"; };
+		0760277AE38EC82446C0562739824DF2 /* ImageCropViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImageCropViewController.swift; sourceTree = "<group>"; };
+		076F422A1CE1E7C7D3358B23CBC5F2A7 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/img/dash.png; sourceTree = "<group>"; };
+		0770870D4A226D1466CA9DC8A74EAC91 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/css/highlight.css; sourceTree = "<group>"; };
+		0877506C8389F519870A6359734710F3 /* Pods-Unicorns_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Unicorns_Example-dummy.m"; sourceTree = "<group>"; };
+		0A49023D8F1542B5976A98BF4B73598D /* Pods-Unicorns_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Unicorns_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		156A687F5FBF656F3B5D02F15E3C7591 /* NetworkMethod.html */ = {isa = PBXFileReference; includeInIndex = 1; name = NetworkMethod.html; path = docs/Classes/Networking/NetworkMethod.html; sourceTree = "<group>"; };
+		17B053C4F72679FA9FF59EC94C3145D6 /* URLSessionDataTaskProtocol.html */ = {isa = PBXFileReference; includeInIndex = 1; name = URLSessionDataTaskProtocol.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Protocols/URLSessionDataTaskProtocol.html; sourceTree = "<group>"; };
+		17D12098A3DA8AE9D79B336E36B3CE88 /* KeyedDecodingContainerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyedDecodingContainerExtension.swift; sourceTree = "<group>"; };
+		17EAA68D4D6320DFB55C018642136A7D /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/img/carat.png; sourceTree = "<group>"; };
+		198937850C1C5CBA53AB4CF09076ECBE /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		1B26D0E5B7D9303859B229E223AFBA9B /* ReuseIdentifying.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReuseIdentifying.swift; sourceTree = "<group>"; };
+		1CA3C964431BCB7AB492A3380FE48457 /* RequestEndpoint.html */ = {isa = PBXFileReference; includeInIndex = 1; name = RequestEndpoint.html; path = docs/Classes/Networking/RequestEndpoint.html; sourceTree = "<group>"; };
+		1CCC6BB0F5BE382EB4C0D0DA7DB7DC7C /* Pods-Unicorns_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Unicorns_Tests-dummy.m"; sourceTree = "<group>"; };
+		207C47378897F20B2C727B3F2D8527D9 /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/img/carat.png; sourceTree = "<group>"; };
+		21E600227778669BB8112E4D81065D56 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/css/highlight.css; sourceTree = "<group>"; };
+		22E6574E625D7630C1F68DB6DBB04B5F /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/js/jazzy.js; sourceTree = "<group>"; };
+		230C533EECA6A604700F36BCCE6A4C7F /* KeyedDecodingContainer.html */ = {isa = PBXFileReference; includeInIndex = 1; name = KeyedDecodingContainer.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/KeyedDecodingContainer.html; sourceTree = "<group>"; };
+		2356C51B970E6C3B79445DF29DC54951 /* Pods-Unicorns_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Unicorns_Tests.modulemap"; sourceTree = "<group>"; };
+		2429C18A8F044A89DE9C43B4F398CEAA /* UITableView.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UITableView.html; path = docs/Extensions/UITableView.html; sourceTree = "<group>"; };
+		243CBD21227C936ED3FBA80C07082AA7 /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Protocols.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Protocols.html; sourceTree = "<group>"; };
+		244EB2A3F534848EE58211FE18D17333 /* XIBLocalizable.html */ = {isa = PBXFileReference; includeInIndex = 1; name = XIBLocalizable.html; path = docs/Protocols/XIBLocalizable.html; sourceTree = "<group>"; };
+		246EA6DF5A6DFBCEBF50CEB32D690DFB /* UITextViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
+		2617086A97A231751F70B433748D307E /* UITextField.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UITextField.html; path = docs/Extensions/UITextField.html; sourceTree = "<group>"; };
+		26C4AECD2CA95DDF293C5E81472513E2 /* RoundedButton.html */ = {isa = PBXFileReference; includeInIndex = 1; name = RoundedButton.html; path = docs/Classes/RoundedButton.html; sourceTree = "<group>"; };
+		292025A3298A445329B3A283CF4C0411 /* Key.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Key.html; path = docs/Classes/KeychainService/Key.html; sourceTree = "<group>"; };
+		29867383573DB08D68664CE2237DBEE4 /* XIBLocalizable.html */ = {isa = PBXFileReference; includeInIndex = 1; name = XIBLocalizable.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Protocols/XIBLocalizable.html; sourceTree = "<group>"; };
+		2ADD9753AA0D4E21C7094B4E48C2F02A /* ReuseIdentifying.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ReuseIdentifying.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Protocols/ReuseIdentifying.html; sourceTree = "<group>"; };
+		2BEAC84C9105127C4B2239DD8EDA1B5B /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/img/gh.png; sourceTree = "<group>"; };
+		2E6D89D5FB2020F3748F9EB8C70C5FB7 /* Response.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Response.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/RoundedButton/Response.html; sourceTree = "<group>"; };
+		2F38E5746A643AD6C9BA88EA0F0C0157 /* URLSessionDataTaskProtocol.html */ = {isa = PBXFileReference; includeInIndex = 1; name = URLSessionDataTaskProtocol.html; path = docs/Protocols/URLSessionDataTaskProtocol.html; sourceTree = "<group>"; };
+		2F5F2E57FB28B21085054A6DF6B9FFA4 /* Response.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Response.html; path = docs/Classes/RoundedButton/Response.html; sourceTree = "<group>"; };
+		302D870ED9E723DA4CF5E06A99F3C2B5 /* UIView.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UIView.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UIView.html; sourceTree = "<group>"; };
+		30F8CF2BC13A903280BA7FCDFCB48EB9 /* Pods-Unicorns_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Unicorns_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		338D7C00A1A4001F27B81C8CAA06A436 /* UITextField.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UITextField.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UITextField.html; sourceTree = "<group>"; };
+		3A5DF9AC5669005152E1BA22A2BF1E47 /* Pods-Unicorns_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Unicorns_Tests-Info.plist"; sourceTree = "<group>"; };
+		3B3260A47D8ABCAF70D7EFA0DF3E2C47 /* UIButtonExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		3B6D0B0B9AF7194AB333A85D05091DF5 /* UIViewController.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UIViewController.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UIViewController.html; sourceTree = "<group>"; };
+		3E1F0C4DAD19434DA53CD62BE3178FCD /* String.html */ = {isa = PBXFileReference; includeInIndex = 1; name = String.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/String.html; sourceTree = "<group>"; };
+		3EEE11D4DF7002332067F0C6AC636C26 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/css/jazzy.css; sourceTree = "<group>"; };
+		404765DDAB5BFF3DB70E47EF4ACFFE41 /* NSMutableData.html */ = {isa = PBXFileReference; includeInIndex = 1; name = NSMutableData.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/NSMutableData.html; sourceTree = "<group>"; };
+		40478287923A1EEE2B3F123DFAD20FB6 /* UITabBarItemExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITabBarItemExtension.swift; sourceTree = "<group>"; };
+		41D38C0FC150C3F8DD7EEFFCDAF23EB2 /* Typealiases.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Typealiases.html; path = docs/Typealiases.html; sourceTree = "<group>"; };
+		43554F6E8CB4ABF0C0423567315D24CF /* Networking.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Networking.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/Networking.html; sourceTree = "<group>"; };
+		471BAD9722528E217D8AB33D6C8281A5 /* Pods-Unicorns_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Unicorns_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		47EC62D35E6B563EE3A38E507DDA5B03 /* UISegmentedControl.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UISegmentedControl.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UISegmentedControl.html; sourceTree = "<group>"; };
+		48025593DFB2E673CD018A481CA6856F /* String.html */ = {isa = PBXFileReference; includeInIndex = 1; name = String.html; path = docs/Extensions/String.html; sourceTree = "<group>"; };
+		48DB873C93692EA2F5E2D7A3EAE84B18 /* UILabel.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UILabel.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UILabel.html; sourceTree = "<group>"; };
+		49504CF57EAA15D48E3948B2CA7250BE /* UISegmentedControl.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UISegmentedControl.html; path = docs/Extensions/UISegmentedControl.html; sourceTree = "<group>"; };
+		4AEE56DA719F5D019F23FFA41C0A2D4B /* Pods-Unicorns_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Unicorns_Example-frameworks.sh"; sourceTree = "<group>"; };
+		4EA7EC9C3D7E5FA004AF1B536398763C /* Log.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Log.html; path = docs/Classes/Log.html; sourceTree = "<group>"; };
+		4F3D2189041006E505F7087703793FC0 /* NSMutableData.html */ = {isa = PBXFileReference; includeInIndex = 1; name = NSMutableData.html; path = docs/Extensions/NSMutableData.html; sourceTree = "<group>"; };
+		57D852602BCF064DC2DFCDA136305452 /* UIViewController.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UIViewController.html; path = docs/Extensions/UIViewController.html; sourceTree = "<group>"; };
+		582E2F40E8EE514BF4303E99F5F70B5B /* Networking.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Networking.html; path = docs/Classes/Networking.html; sourceTree = "<group>"; };
+		585C8D8B476226D246C6C4C00C666F8D /* Pods-Unicorns_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Unicorns_Example.modulemap"; sourceTree = "<group>"; };
+		59F3336BFFCA5932B343A8A73C367592 /* FeatureDisabledViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeatureDisabledViewController.swift; sourceTree = "<group>"; };
+		5C42268D71B1DBC0CECB212D773A2F10 /* Unicorns-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Unicorns-umbrella.h"; sourceTree = "<group>"; };
+		5EF2F9B0F3C1C9EBBCDC366C4A03D54F /* Extensions.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Extensions.html; path = docs/Extensions.html; sourceTree = "<group>"; };
+		60A143E78AFD462DC81836DABA7331FE /* UIViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		611EC5551E56EF23BA75BC6A0963C3AE /* Unicorns.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Unicorns.framework; path = Unicorns.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6146F2CCE5D330334EC451DA12EFB64A /* IntExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
+		62B6B1C340B501F88ECA6E71195A8EFD /* StoryboardExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
+		6338E86F2DD4F54F7C7176F9E76757FE /* URLSessionProtocol.html */ = {isa = PBXFileReference; includeInIndex = 1; name = URLSessionProtocol.html; path = docs/Protocols/URLSessionProtocol.html; sourceTree = "<group>"; };
+		6676108C6A360A0179CEBEB36945D17F /* UITableViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		66AB32D9FDDEA8479D53917E68919AF3 /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; name = badge.svg; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/badge.svg; sourceTree = "<group>"; };
+		67AAF4EF604A460580D1CDA1CB6E290A /* Unicorns.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Unicorns.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		686ED869D85843D6DA4FB5D85C0C3592 /* Pods-Unicorns_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Unicorns_Example-Info.plist"; sourceTree = "<group>"; };
+		68CC8B6AA968F4C64366F70694E49D7E /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		6C0BB052FAB9E8069252DC41A6F89E3A /* RectType.html */ = {isa = PBXFileReference; includeInIndex = 1; name = RectType.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/ImageCropViewController/RectType.html; sourceTree = "<group>"; };
+		6C4839E86E3E61034D7B6CA8F112D563 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = docs/docsets/Unicorns.docset/Contents/Info.plist; sourceTree = "<group>"; };
+		6EE10AA7470B7613BE8C925D67133563 /* ImageCropViewController.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ImageCropViewController.html; path = docs/Classes/ImageCropViewController.html; sourceTree = "<group>"; };
+		6F6072AA5C0A4AF0FC41A03A7848AE06 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/js/jquery.min.js; sourceTree = "<group>"; };
+		6FB24C19D5A9F77861FE7FFB99AB8207 /* UIButton.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UIButton.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UIButton.html; sourceTree = "<group>"; };
+		704C266E2F93385EF1C7721474A8EFCB /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; name = undocumented.json; path = docs/undocumented.json; sourceTree = "<group>"; };
+		7643266B162D2333250FBA0783363E0F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		7922875CAC76EBFE2EB8E9C74ACAB4A4 /* KeychainError.html */ = {isa = PBXFileReference; includeInIndex = 1; name = KeychainError.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/KeychainService/KeychainError.html; sourceTree = "<group>"; };
+		795813BBBD2C75A3D0F6F875A3CBEEF4 /* docSet.dsidx */ = {isa = PBXFileReference; includeInIndex = 1; name = docSet.dsidx; path = docs/docsets/Unicorns.docset/Contents/Resources/docSet.dsidx; sourceTree = "<group>"; };
+		7CE210381705FD16CC6E799B5D00F427 /* FloatTextField.html */ = {isa = PBXFileReference; includeInIndex = 1; name = FloatTextField.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/FloatTextField.html; sourceTree = "<group>"; };
+		7DD4008B01796C8A178F23A13A99DEE0 /* Unicorns-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Unicorns-Info.plist"; sourceTree = "<group>"; };
+		7EED1ED2A4150C7D966AFC052C9D9217 /* Pods_Unicorns_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Unicorns_Tests.framework; path = "Pods-Unicorns_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		802AF9315E1EC6F0A975C26AD7841740 /* UIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		80C31DE268B7C917881610F25E159D59 /* ImageCropDelegate.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ImageCropDelegate.html; path = docs/Protocols/ImageCropDelegate.html; sourceTree = "<group>"; };
+		838787F30856776C6C7F911AD4B3637D /* Typealiases.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Typealiases.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Typealiases.html; sourceTree = "<group>"; };
+		83A1E2FF75C89747C1CDB622972C7130 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/js/jquery.min.js; sourceTree = "<group>"; };
+		8683ED069E6DDBF706BD653C37A1BEEB /* Pods-Unicorns_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Unicorns_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		872773738F4ABF31195F268511A2BDEF /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes.html; path = docs/Classes.html; sourceTree = "<group>"; };
+		8B03BA1330DA7EFBA0BC07B4C8208F04 /* Result.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Result.html; path = docs/Classes/Networking/Result.html; sourceTree = "<group>"; };
+		8C2139F7E6399EFFE98C2BE0DE724D14 /* Extensions.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Extensions.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions.html; sourceTree = "<group>"; };
+		8C2FE0D11B209380E93CD29823433E0A /* RoundedButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		8D1D2A37574F9A6D8DC3EF48596FE534 /* Pods-Unicorns_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Unicorns_Example-umbrella.h"; sourceTree = "<group>"; };
+		8D551DDC810525B3414D514D5E42CEEB /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/img/dash.png; sourceTree = "<group>"; };
+		8E5FEE6D0E600117592E9E0C7702FC71 /* Pods-Unicorns_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Unicorns_Tests-umbrella.h"; sourceTree = "<group>"; };
+		8EFA651C4E27C1CF13124038B04AE573 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/css/jazzy.css; sourceTree = "<group>"; };
+		9277D5DD07CE5A4FD98BEEDF91FBFBFA /* FloatTextField.html */ = {isa = PBXFileReference; includeInIndex = 1; name = FloatTextField.html; path = docs/Classes/FloatTextField.html; sourceTree = "<group>"; };
+		9C3A49364946E40D498880A3BCCF33CF /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; name = undocumented.json; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/undocumented.json; sourceTree = "<group>"; };
+		9D454DE9F9FFAE544F361DDCC4061ED8 /* UITableView.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UITableView.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UITableView.html; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E047D6280FA999808A9E4693DD8EB3F /* ReuseIdentifying.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ReuseIdentifying.html; path = docs/Protocols/ReuseIdentifying.html; sourceTree = "<group>"; };
+		A064613657B9416DEF5A133D67C2383F /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/js/jazzy.js; sourceTree = "<group>"; };
+		A11FCF89CBEB53C9EF5E57A216F0B698 /* UILabel.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UILabel.html; path = docs/Extensions/UILabel.html; sourceTree = "<group>"; };
+		A419111EA51524ED573E0BD51886FA6E /* UICollectionView.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UICollectionView.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UICollectionView.html; sourceTree = "<group>"; };
+		A791280EC09AA83C7772F886EB2386C7 /* Pods-Unicorns_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Unicorns_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A7EEFFB583A55EB7084F5FAD19A11122 /* Networking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		AAA4B9B99261BCB54CE424B8FC8827E8 /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/img/gh.png; sourceTree = "<group>"; };
+		B25D71CB65F88F4BB544844F3DF10EDB /* Log.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Log.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/Log.html; sourceTree = "<group>"; };
+		B5695DE05A63649A99D9E39D11C72BF4 /* UILabelExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		B6520AE48D09E49CB18B1019CC0B1CB1 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/index.html; sourceTree = "<group>"; };
+		B6592C71FCAC035A56C52F1FFBAFAB0A /* UIColor.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UIColor.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UIColor.html; sourceTree = "<group>"; };
+		B81B37D7F03098E9738D3D65439B122F /* UITextView.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UITextView.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UITextView.html; sourceTree = "<group>"; };
+		BB82C28A01544287DBFED491F0D990F1 /* KeychainService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		BFA15D37CAC15FF7FE19DA521A8A186B /* KeychainError.html */ = {isa = PBXFileReference; includeInIndex = 1; name = KeychainError.html; path = docs/Classes/KeychainService/KeychainError.html; sourceTree = "<group>"; };
+		C0295DA93574CF73E983E9334D60DB95 /* Unicorns-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Unicorns-dummy.m"; sourceTree = "<group>"; };
+		C0B6F8B32817FC67B1995222C57CFBF2 /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		C0F5C79B0D606337BE0DF58A38E11391 /* Unicorns.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Unicorns.modulemap; sourceTree = "<group>"; };
+		C3E5617B5855DE7F17876AB0FA945693 /* ViewModel.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ViewModel.html; path = docs/Classes/ImageCropViewController/ViewModel.html; sourceTree = "<group>"; };
+		C51A981CB7DCE77D0B2C5ED9C8052C33 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/search.json; sourceTree = "<group>"; };
+		C5553FABD03FCDACB8B8A9DE685899F8 /* UITextView.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UITextView.html; path = docs/Extensions/UITextView.html; sourceTree = "<group>"; };
+		CA06E44012671FB0AF596FDA2DB2555F /* UITabBarItem.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UITabBarItem.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/UITabBarItem.html; sourceTree = "<group>"; };
+		CB1C8BC7DE5F409D7B020A23A91903AC /* Pods-Unicorns_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Unicorns_Example.release.xcconfig"; sourceTree = "<group>"; };
+		CD8638306709F870ECB98F0771233C88 /* Pods_Unicorns_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Unicorns_Example.framework; path = "Pods-Unicorns_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD9EB53B2D0CF600DB8D3975F0104F86 /* KeychainService.html */ = {isa = PBXFileReference; includeInIndex = 1; name = KeychainService.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/KeychainService.html; sourceTree = "<group>"; };
+		CDB4527C7588DC4857527A01CDBA69E3 /* Int.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Int.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/Int.html; sourceTree = "<group>"; };
+		CEE412D19670102669C4B45B87C1636B /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/search.json; sourceTree = "<group>"; };
+		D0FE0BE3F91A0B9C6A305EC35E9BD21A /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		D18474928289517E134B3A378B48BE71 /* UISegmentControlExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UISegmentControlExtension.swift; sourceTree = "<group>"; };
+		D2664B53C62B6CA9221AE2C3F9EE06E7 /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Protocols.html; path = docs/Protocols.html; sourceTree = "<group>"; };
+		D7994B86D18EC147163658002A0A9733 /* RequestEndpoint.html */ = {isa = PBXFileReference; includeInIndex = 1; name = RequestEndpoint.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/Networking/RequestEndpoint.html; sourceTree = "<group>"; };
+		D82CE84E98145CA5EE2D2CEA55AFFF27 /* ImageCropRouter.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ImageCropRouter.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Protocols/ImageCropRouter.html; sourceTree = "<group>"; };
+		D8C8F4A9F45151D5E3F1DFE7182D574F /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/index.html; sourceTree = "<group>"; };
+		D9126EEAAC30901192DEE4DE9EE0C942 /* NetworkMethod.html */ = {isa = PBXFileReference; includeInIndex = 1; name = NetworkMethod.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/Networking/NetworkMethod.html; sourceTree = "<group>"; };
+		D9794920E56ADBD94E3F856B4C54A608 /* URLSession.html */ = {isa = PBXFileReference; includeInIndex = 1; name = URLSession.html; path = docs/Extensions/URLSession.html; sourceTree = "<group>"; };
+		DA7E28407644B44668D031DFA77C830E /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes.html; sourceTree = "<group>"; };
+		DAE27CDF04C02F3FDB4B075D16B76A55 /* Pods-Unicorns_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Unicorns_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DD4620BB134DA9F0EF34940E39ED3948 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		DFB284F249A26B9F86810EACFA70BC1C /* URLSessionProtocol.html */ = {isa = PBXFileReference; includeInIndex = 1; name = URLSessionProtocol.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Protocols/URLSessionProtocol.html; sourceTree = "<group>"; };
+		DFF407F6D6D9F986CC4F9BBE938D7456 /* URLSession.html */ = {isa = PBXFileReference; includeInIndex = 1; name = URLSession.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Extensions/URLSession.html; sourceTree = "<group>"; };
+		E519F367FDB7BF3C8C86A107BA6F4AC9 /* UIView.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UIView.html; path = docs/Extensions/UIView.html; sourceTree = "<group>"; };
+		E51DC228B8AA3B2FB82B1C12700DCBFE /* Result.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Result.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/Networking/Result.html; sourceTree = "<group>"; };
+		E5437589B32C2B371B8E80A0FF2B1141 /* ImageCropViewController.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ImageCropViewController.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/ImageCropViewController.html; sourceTree = "<group>"; };
+		E67D2C33404077343E2B67109955C845 /* ImageCropDelegate.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ImageCropDelegate.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Protocols/ImageCropDelegate.html; sourceTree = "<group>"; };
+		EA86845E3B57E3AEA4196EDF35439982 /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; name = badge.svg; path = docs/badge.svg; sourceTree = "<group>"; };
+		EDDCAC408E3833E4BD584E71165CCD61 /* UIColor.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UIColor.html; path = docs/Extensions/UIColor.html; sourceTree = "<group>"; };
+		EEC774AF830A8C47032604B8FFADE839 /* Unicorns.tgz */ = {isa = PBXFileReference; includeInIndex = 1; name = Unicorns.tgz; path = docs/docsets/Unicorns.tgz; sourceTree = "<group>"; };
+		F099C3C6B8AAAB3E52D5873148F64B57 /* CGSizeExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CGSizeExtension.swift; sourceTree = "<group>"; };
+		F0C6540D8C088C4460A60902E44E5E41 /* Pods-Unicorns_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Unicorns_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		F41A3F2F7E415B7E9D71C398F3F48E8C /* UITabBarItem.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UITabBarItem.html; path = docs/Extensions/UITabBarItem.html; sourceTree = "<group>"; };
+		F4AF1B332CB3FEF1553FB0E95775FA3C /* UIButton.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UIButton.html; path = docs/Extensions/UIButton.html; sourceTree = "<group>"; };
+		F4BC18D328269270CAA2F8BE1773F7C3 /* FloatTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FloatTextField.swift; sourceTree = "<group>"; };
+		F522FAB1718827CFC2DE464AE1511525 /* Key.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Key.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/KeychainService/Key.html; sourceTree = "<group>"; };
+		F668E33FDF9AB6EFE3989E474784702C /* KeychainService.html */ = {isa = PBXFileReference; includeInIndex = 1; name = KeychainService.html; path = docs/Classes/KeychainService.html; sourceTree = "<group>"; };
+		F72C6217AFD2160744C9B24956D599BC /* KeyedDecodingContainer.html */ = {isa = PBXFileReference; includeInIndex = 1; name = KeyedDecodingContainer.html; path = docs/Extensions/KeyedDecodingContainer.html; sourceTree = "<group>"; };
+		F73CFDA551EEE41A061FB27589C1205D /* RectType.html */ = {isa = PBXFileReference; includeInIndex = 1; name = RectType.html; path = docs/Classes/ImageCropViewController/RectType.html; sourceTree = "<group>"; };
+		F7D36C1A16F7A0ED3CDCC5D5DA85F92F /* Unicorns-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Unicorns-prefix.pch"; sourceTree = "<group>"; };
+		FADD9CF3A30F2A595C3B0ECFC70E4DFB /* UICollectionView.html */ = {isa = PBXFileReference; includeInIndex = 1; name = UICollectionView.html; path = docs/Extensions/UICollectionView.html; sourceTree = "<group>"; };
+		FBC4EE920077E06674075CF87C4511AD /* UITextFieldExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		FDF5AA85B3337AB6456F0FF7ADA97D5E /* ViewModel.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ViewModel.html; path = docs/docsets/Unicorns.docset/Contents/Resources/Documents/Classes/ImageCropViewController/ViewModel.html; sourceTree = "<group>"; };
+		FFA4CA636230900CE669C273A639D6C7 /* Int.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Int.html; path = docs/Extensions/Int.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2D69595A2F53E692FDEA4488FA8AE95D /* Frameworks */ = {
+		18CDF4A0C31C6206ED837498A5E31C57 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBFA83909070185068569ACB25AB1294 /* Foundation.framework in Frameworks */,
+				5AE007C5CC47942C2835514A04CA6922 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7A7A10B643E87F430DA44690BBDBA6AC /* Frameworks */ = {
+		2FAEF0BB3249457BCFA77624A7AB8904 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63377A52301FBC5844768E50597705FC /* Foundation.framework in Frameworks */,
+				A306AB06FF1EBA1E5E712CB341D37C61 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C124E8849B305A0EFD9E8ABDA211B33F /* Frameworks */ = {
+		76CFEA77F03F658486C426B7E7B953C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D78C5B638C0361B6620CB7D2500957D7 /* Foundation.framework in Frameworks */,
+				BA8A2B0453D9227BEDDB7DAB883A65FE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03F37F3171C1334CFA6988E50EE30D21 /* Support Files */ = {
+		093FAA3A6A576FD61C3E573A584AAC03 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				649621894FC1FFB9AE6AF128DCB6AC4A /* Unicorns.modulemap */,
-				AC147B4F362A702C29664040C7B4FE8B /* Unicorns.xcconfig */,
-				39B03F07B1103FC695E4592981DB9593 /* Unicorns-dummy.m */,
-				12EAECE6160519721EE00ED8E949A37E /* Unicorns-Info.plist */,
-				271944DA9E256D63EE181B1FB6941117 /* Unicorns-prefix.pch */,
-				DFF9929A23C9813220643301184DD241 /* Unicorns-umbrella.h */,
+				EFF656D2AD9293EB72CCE2006EBE161C /* Unicorns */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		0F1A16F1AEDBFA541F4B60F530FBD798 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0F5C79B0D606337BE0DF58A38E11391 /* Unicorns.modulemap */,
+				04AA38AE3A1A780BB31F2E2F446CE080 /* Unicorns.xcconfig */,
+				C0295DA93574CF73E983E9334D60DB95 /* Unicorns-dummy.m */,
+				7DD4008B01796C8A178F23A13A99DEE0 /* Unicorns-Info.plist */,
+				F7D36C1A16F7A0ED3CDCC5D5DA85F92F /* Unicorns-prefix.pch */,
+				5C42268D71B1DBC0CECB212D773A2F10 /* Unicorns-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/Unicorns";
 			sourceTree = "<group>";
 		};
-		093FAA3A6A576FD61C3E573A584AAC03 /* Development Pods */ = {
+		10B9C1AA76B035541D691A4F1F8DDCCE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A78C0FE37F40B09C06839E7951181B9E /* Unicorns */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		1FDF756BCFD1043EF100F4FC4EDB1522 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				3406C5AC9F9123F416C2170CCE1865FA /* CGSizeExtension.swift */,
-				6466B28E8555622EA01662E2E46BEE5A /* IntExtension.swift */,
-				F30A3A5A219C85E82E56BC75C1A4B322 /* KeyedDecodingContainerExtension.swift */,
-				498D74C12A4097165F470CFB6D624B97 /* StoryboardExtension.swift */,
-				97862FEC432FD2C375DC6E4A69B86B95 /* StringExtension.swift */,
-				BC53CCE3C5810CF88D9D6639E904EC1F /* UIButtonExtension.swift */,
-				58E1210F937DEE2907E171AF360DB4B4 /* UICollectionViewExtension.swift */,
-				93496A623990707C3EB3BEA8957692C2 /* UIColorExtension.swift */,
-				675AA63614E1FBA154EA98C050E745F8 /* UILabelExtension.swift */,
-				0D653FE55AB3ABD30A70BD9B10E4C97D /* UISegmentControlExtension.swift */,
-				C9BAA96805052D03F550E5B5711749DB /* UITabBarItemExtension.swift */,
-				21C80A57C29B8E4EAB00ED6BB0B22C1A /* UITableViewExtension.swift */,
-				F120BB34CFA71DB5974BC3FD16C24B25 /* UITextFieldExtension.swift */,
-				3682B1812A067E3AFDD6E6A109ED411A /* UITextViewExtension.swift */,
-				201CEA792B76F25DC5B933BFACEBA8F0 /* UIViewControllerExtension.swift */,
-				32426F22870D48A2221B8D7669C46BD4 /* UIViewExtension.swift */,
+				F099C3C6B8AAAB3E52D5873148F64B57 /* CGSizeExtension.swift */,
+				6146F2CCE5D330334EC451DA12EFB64A /* IntExtension.swift */,
+				17D12098A3DA8AE9D79B336E36B3CE88 /* KeyedDecodingContainerExtension.swift */,
+				62B6B1C340B501F88ECA6E71195A8EFD /* StoryboardExtension.swift */,
+				C0B6F8B32817FC67B1995222C57CFBF2 /* StringExtension.swift */,
+				3B3260A47D8ABCAF70D7EFA0DF3E2C47 /* UIButtonExtension.swift */,
+				DD4620BB134DA9F0EF34940E39ED3948 /* UICollectionViewExtension.swift */,
+				802AF9315E1EC6F0A975C26AD7841740 /* UIColorExtension.swift */,
+				B5695DE05A63649A99D9E39D11C72BF4 /* UILabelExtension.swift */,
+				D18474928289517E134B3A378B48BE71 /* UISegmentControlExtension.swift */,
+				40478287923A1EEE2B3F123DFAD20FB6 /* UITabBarItemExtension.swift */,
+				6676108C6A360A0179CEBEB36945D17F /* UITableViewExtension.swift */,
+				FBC4EE920077E06674075CF87C4511AD /* UITextFieldExtension.swift */,
+				246EA6DF5A6DFBCEBF50CEB32D690DFB /* UITextViewExtension.swift */,
+				68CC8B6AA968F4C64366F70694E49D7E /* UIViewControllerExtension.swift */,
+				60A143E78AFD462DC81836DABA7331FE /* UIViewExtension.swift */,
 			);
 			name = Extensions;
 			path = Unicorns/Classes/Extensions;
 			sourceTree = "<group>";
 		};
-		7783A848577D860775082C0DD94E8226 /* Pods-Unicorns_Tests */ = {
+		554D304E715C9A36D34FE84C729025DA /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				3092AB3B1BC4F668880BC1AFEA60C79E /* Pods-Unicorns_Tests.modulemap */,
-				EBE00CCD8E94D0D9618D0209E56CCA19 /* Pods-Unicorns_Tests-acknowledgements.markdown */,
-				161A30AD94916BE67031BB84CCD07252 /* Pods-Unicorns_Tests-acknowledgements.plist */,
-				BD269B59837B927E4F53103BB165C801 /* Pods-Unicorns_Tests-dummy.m */,
-				82F421E337194CBA350D8AF2E6DDBA85 /* Pods-Unicorns_Tests-Info.plist */,
-				BE203D3891B070169E232EC4D5DB2505 /* Pods-Unicorns_Tests-umbrella.h */,
-				D1A8F9A5C2C8730F566D5D92F131AF15 /* Pods-Unicorns_Tests.debug.xcconfig */,
-				89B9A4A4D0909C5A82756208CF4F68C9 /* Pods-Unicorns_Tests.release.xcconfig */,
+				BB82C28A01544287DBFED491F0D990F1 /* KeychainService.swift */,
+			);
+			name = Services;
+			path = Unicorns/Classes/Services;
+			sourceTree = "<group>";
+		};
+		719E968B4A1A06D67C61D0479BE8E68C /* ImageCropViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0760277AE38EC82446C0562739824DF2 /* ImageCropViewController.swift */,
+			);
+			name = ImageCropViewController;
+			path = ImageCropViewController;
+			sourceTree = "<group>";
+		};
+		7B1D03DA9FC1A01E68052D1510972C4F /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				66AB32D9FDDEA8479D53917E68919AF3 /* badge.svg */,
+				EA86845E3B57E3AEA4196EDF35439982 /* badge.svg */,
+				207C47378897F20B2C727B3F2D8527D9 /* carat.png */,
+				17EAA68D4D6320DFB55C018642136A7D /* carat.png */,
+				872773738F4ABF31195F268511A2BDEF /* Classes.html */,
+				DA7E28407644B44668D031DFA77C830E /* Classes.html */,
+				8D551DDC810525B3414D514D5E42CEEB /* dash.png */,
+				076F422A1CE1E7C7D3358B23CBC5F2A7 /* dash.png */,
+				795813BBBD2C75A3D0F6F875A3CBEEF4 /* docSet.dsidx */,
+				5EF2F9B0F3C1C9EBBCDC366C4A03D54F /* Extensions.html */,
+				8C2139F7E6399EFFE98C2BE0DE724D14 /* Extensions.html */,
+				9277D5DD07CE5A4FD98BEEDF91FBFBFA /* FloatTextField.html */,
+				7CE210381705FD16CC6E799B5D00F427 /* FloatTextField.html */,
+				AAA4B9B99261BCB54CE424B8FC8827E8 /* gh.png */,
+				2BEAC84C9105127C4B2239DD8EDA1B5B /* gh.png */,
+				21E600227778669BB8112E4D81065D56 /* highlight.css */,
+				0770870D4A226D1466CA9DC8A74EAC91 /* highlight.css */,
+				E67D2C33404077343E2B67109955C845 /* ImageCropDelegate.html */,
+				80C31DE268B7C917881610F25E159D59 /* ImageCropDelegate.html */,
+				D82CE84E98145CA5EE2D2CEA55AFFF27 /* ImageCropRouter.html */,
+				01B5AB443E431857BD28E1EECAB46F87 /* ImageCropRouter.html */,
+				E5437589B32C2B371B8E80A0FF2B1141 /* ImageCropViewController.html */,
+				6EE10AA7470B7613BE8C925D67133563 /* ImageCropViewController.html */,
+				B6520AE48D09E49CB18B1019CC0B1CB1 /* index.html */,
+				D8C8F4A9F45151D5E3F1DFE7182D574F /* index.html */,
+				6C4839E86E3E61034D7B6CA8F112D563 /* Info.plist */,
+				CDB4527C7588DC4857527A01CDBA69E3 /* Int.html */,
+				FFA4CA636230900CE669C273A639D6C7 /* Int.html */,
+				3EEE11D4DF7002332067F0C6AC636C26 /* jazzy.css */,
+				8EFA651C4E27C1CF13124038B04AE573 /* jazzy.css */,
+				A064613657B9416DEF5A133D67C2383F /* jazzy.js */,
+				22E6574E625D7630C1F68DB6DBB04B5F /* jazzy.js */,
+				83A1E2FF75C89747C1CDB622972C7130 /* jquery.min.js */,
+				6F6072AA5C0A4AF0FC41A03A7848AE06 /* jquery.min.js */,
+				F522FAB1718827CFC2DE464AE1511525 /* Key.html */,
+				292025A3298A445329B3A283CF4C0411 /* Key.html */,
+				7922875CAC76EBFE2EB8E9C74ACAB4A4 /* KeychainError.html */,
+				BFA15D37CAC15FF7FE19DA521A8A186B /* KeychainError.html */,
+				CD9EB53B2D0CF600DB8D3975F0104F86 /* KeychainService.html */,
+				F668E33FDF9AB6EFE3989E474784702C /* KeychainService.html */,
+				230C533EECA6A604700F36BCCE6A4C7F /* KeyedDecodingContainer.html */,
+				F72C6217AFD2160744C9B24956D599BC /* KeyedDecodingContainer.html */,
+				0257ACBAFF941C5CDEEEB321A5E0E6CE /* LICENSE */,
+				4EA7EC9C3D7E5FA004AF1B536398763C /* Log.html */,
+				B25D71CB65F88F4BB544844F3DF10EDB /* Log.html */,
+				013B5E0F2428D3729D1C1731ED72A156 /* NetworkError.html */,
+				05F3AEBC256E8BBD1EFDFBE2856C761F /* NetworkError.html */,
+				43554F6E8CB4ABF0C0423567315D24CF /* Networking.html */,
+				582E2F40E8EE514BF4303E99F5F70B5B /* Networking.html */,
+				D9126EEAAC30901192DEE4DE9EE0C942 /* NetworkMethod.html */,
+				156A687F5FBF656F3B5D02F15E3C7591 /* NetworkMethod.html */,
+				404765DDAB5BFF3DB70E47EF4ACFFE41 /* NSMutableData.html */,
+				4F3D2189041006E505F7087703793FC0 /* NSMutableData.html */,
+				D2664B53C62B6CA9221AE2C3F9EE06E7 /* Protocols.html */,
+				243CBD21227C936ED3FBA80C07082AA7 /* Protocols.html */,
+				7643266B162D2333250FBA0783363E0F /* README.md */,
+				6C0BB052FAB9E8069252DC41A6F89E3A /* RectType.html */,
+				F73CFDA551EEE41A061FB27589C1205D /* RectType.html */,
+				1CA3C964431BCB7AB492A3380FE48457 /* RequestEndpoint.html */,
+				D7994B86D18EC147163658002A0A9733 /* RequestEndpoint.html */,
+				2E6D89D5FB2020F3748F9EB8C70C5FB7 /* Response.html */,
+				2F5F2E57FB28B21085054A6DF6B9FFA4 /* Response.html */,
+				8B03BA1330DA7EFBA0BC07B4C8208F04 /* Result.html */,
+				E51DC228B8AA3B2FB82B1C12700DCBFE /* Result.html */,
+				2ADD9753AA0D4E21C7094B4E48C2F02A /* ReuseIdentifying.html */,
+				9E047D6280FA999808A9E4693DD8EB3F /* ReuseIdentifying.html */,
+				26C4AECD2CA95DDF293C5E81472513E2 /* RoundedButton.html */,
+				0016F19D8D3454BEAAF50FBC9CA2FCA5 /* RoundedButton.html */,
+				C51A981CB7DCE77D0B2C5ED9C8052C33 /* search.json */,
+				CEE412D19670102669C4B45B87C1636B /* search.json */,
+				48025593DFB2E673CD018A481CA6856F /* String.html */,
+				3E1F0C4DAD19434DA53CD62BE3178FCD /* String.html */,
+				838787F30856776C6C7F911AD4B3637D /* Typealiases.html */,
+				41D38C0FC150C3F8DD7EEFFCDAF23EB2 /* Typealiases.html */,
+				6FB24C19D5A9F77861FE7FFB99AB8207 /* UIButton.html */,
+				F4AF1B332CB3FEF1553FB0E95775FA3C /* UIButton.html */,
+				FADD9CF3A30F2A595C3B0ECFC70E4DFB /* UICollectionView.html */,
+				A419111EA51524ED573E0BD51886FA6E /* UICollectionView.html */,
+				EDDCAC408E3833E4BD584E71165CCD61 /* UIColor.html */,
+				B6592C71FCAC035A56C52F1FFBAFAB0A /* UIColor.html */,
+				A11FCF89CBEB53C9EF5E57A216F0B698 /* UILabel.html */,
+				48DB873C93692EA2F5E2D7A3EAE84B18 /* UILabel.html */,
+				47EC62D35E6B563EE3A38E507DDA5B03 /* UISegmentedControl.html */,
+				49504CF57EAA15D48E3948B2CA7250BE /* UISegmentedControl.html */,
+				F41A3F2F7E415B7E9D71C398F3F48E8C /* UITabBarItem.html */,
+				CA06E44012671FB0AF596FDA2DB2555F /* UITabBarItem.html */,
+				9D454DE9F9FFAE544F361DDCC4061ED8 /* UITableView.html */,
+				2429C18A8F044A89DE9C43B4F398CEAA /* UITableView.html */,
+				338D7C00A1A4001F27B81C8CAA06A436 /* UITextField.html */,
+				2617086A97A231751F70B433748D307E /* UITextField.html */,
+				B81B37D7F03098E9738D3D65439B122F /* UITextView.html */,
+				C5553FABD03FCDACB8B8A9DE685899F8 /* UITextView.html */,
+				E519F367FDB7BF3C8C86A107BA6F4AC9 /* UIView.html */,
+				302D870ED9E723DA4CF5E06A99F3C2B5 /* UIView.html */,
+				3B6D0B0B9AF7194AB333A85D05091DF5 /* UIViewController.html */,
+				57D852602BCF064DC2DFCDA136305452 /* UIViewController.html */,
+				704C266E2F93385EF1C7721474A8EFCB /* undocumented.json */,
+				9C3A49364946E40D498880A3BCCF33CF /* undocumented.json */,
+				67AAF4EF604A460580D1CDA1CB6E290A /* Unicorns.podspec */,
+				EEC774AF830A8C47032604B8FFADE839 /* Unicorns.tgz */,
+				D9794920E56ADBD94E3F856B4C54A608 /* URLSession.html */,
+				DFF407F6D6D9F986CC4F9BBE938D7456 /* URLSession.html */,
+				2F38E5746A643AD6C9BA88EA0F0C0157 /* URLSessionDataTaskProtocol.html */,
+				17B053C4F72679FA9FF59EC94C3145D6 /* URLSessionDataTaskProtocol.html */,
+				6338E86F2DD4F54F7C7176F9E76757FE /* URLSessionProtocol.html */,
+				DFB284F249A26B9F86810EACFA70BC1C /* URLSessionProtocol.html */,
+				C3E5617B5855DE7F17876AB0FA945693 /* ViewModel.html */,
+				FDF5AA85B3337AB6456F0FF7ADA97D5E /* ViewModel.html */,
+				244EB2A3F534848EE58211FE18D17333 /* XIBLocalizable.html */,
+				29867383573DB08D68664CE2237DBEE4 /* XIBLocalizable.html */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		8F9A89A8071E88A1057249DFBABC1D69 /* Pods-Unicorns_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2356C51B970E6C3B79445DF29DC54951 /* Pods-Unicorns_Tests.modulemap */,
+				A791280EC09AA83C7772F886EB2386C7 /* Pods-Unicorns_Tests-acknowledgements.markdown */,
+				471BAD9722528E217D8AB33D6C8281A5 /* Pods-Unicorns_Tests-acknowledgements.plist */,
+				1CCC6BB0F5BE382EB4C0D0DA7DB7DC7C /* Pods-Unicorns_Tests-dummy.m */,
+				3A5DF9AC5669005152E1BA22A2BF1E47 /* Pods-Unicorns_Tests-Info.plist */,
+				8E5FEE6D0E600117592E9E0C7702FC71 /* Pods-Unicorns_Tests-umbrella.h */,
+				0A49023D8F1542B5976A98BF4B73598D /* Pods-Unicorns_Tests.debug.xcconfig */,
+				DAE27CDF04C02F3FDB4B075D16B76A55 /* Pods-Unicorns_Tests.release.xcconfig */,
 			);
 			name = "Pods-Unicorns_Tests";
 			path = "Target Support Files/Pods-Unicorns_Tests";
 			sourceTree = "<group>";
 		};
-		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
+		A1A22AC8937469165CF110D995B96052 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		A55881A81AD3D4B9B7DE1218CDD7EEA4 /* Controls */ = {
-			isa = PBXGroup;
-			children = (
-				DABF25556B1ADA3C0FADC7D8BCAF7080 /* FloatTextField.swift */,
-				7717AA61B995F356889E6A4C71E52391 /* RoundedButton.swift */,
+				F4BC18D328269270CAA2F8BE1773F7C3 /* FloatTextField.swift */,
+				8C2FE0D11B209380E93CD29823433E0A /* RoundedButton.swift */,
 			);
 			name = Controls;
 			path = Unicorns/Classes/Controls;
 			sourceTree = "<group>";
 		};
-		A78C0FE37F40B09C06839E7951181B9E /* Unicorns */ = {
+		B31929BF3C78727569521A8AE41419EA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B8118ECB52ACE919E6CDF6B07417EA1C /* Controllers */,
-				A55881A81AD3D4B9B7DE1218CDD7EEA4 /* Controls */,
-				1FDF756BCFD1043EF100F4FC4EDB1522 /* Extensions */,
-				B32E9FFACB52CF396134327530D990E4 /* Helpers */,
-				D214B54E248FEBC691F52AF3145BC849 /* Pod */,
-				DFE925B1610BF681CE6DF8C4147A58E0 /* Protocols */,
-				E6DEC4A74664EF320A6223E75CA92E6A /* Services */,
-				03F37F3171C1334CFA6988E50EE30D21 /* Support Files */,
+				CD8638306709F870ECB98F0771233C88 /* Pods_Unicorns_Example.framework */,
+				7EED1ED2A4150C7D966AFC052C9D9217 /* Pods_Unicorns_Tests.framework */,
+				611EC5551E56EF23BA75BC6A0963C3AE /* Unicorns.framework */,
 			);
-			name = Unicorns;
-			path = ../..;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		B32E9FFACB52CF396134327530D990E4 /* Helpers */ = {
+		B5F57FDC37DC78154134F4843C2E421F /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				B149E5FCB9F95EC6938CB334F87C61F5 /* Log.swift */,
-				BE371327E481ED089A97DCE9754293FF /* Networking.swift */,
-				9991770E57A622C4B386E037B540F39F /* Validation.swift */,
+				1B26D0E5B7D9303859B229E223AFBA9B /* ReuseIdentifying.swift */,
 			);
-			name = Helpers;
-			path = Unicorns/Classes/Helpers;
+			name = Protocols;
+			path = Unicorns/Classes/Protocols;
 			sourceTree = "<group>";
 		};
-		B8118ECB52ACE919E6CDF6B07417EA1C /* Controllers */ = {
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C81713182A68CA9B93E2E5E37BA6B8DD /* FeatureDisabledViewController.swift */,
-				C8BBE70FCC395EA9835C8BEC1865A3E8 /* ImageCropViewController */,
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
 			);
-			name = Controllers;
-			path = Unicorns/Classes/Controllers;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		C8BBE70FCC395EA9835C8BEC1865A3E8 /* ImageCropViewController */ = {
+		CEB391CDB4A7CAF57E7D75EFEC9DCFB1 /* Pods-Unicorns_Example */ = {
 			isa = PBXGroup;
 			children = (
-				1EE54C7AD547A613DCD590AEE6E9B22E /* ImageCropViewController.swift */,
+				585C8D8B476226D246C6C4C00C666F8D /* Pods-Unicorns_Example.modulemap */,
+				30F8CF2BC13A903280BA7FCDFCB48EB9 /* Pods-Unicorns_Example-acknowledgements.markdown */,
+				8683ED069E6DDBF706BD653C37A1BEEB /* Pods-Unicorns_Example-acknowledgements.plist */,
+				0877506C8389F519870A6359734710F3 /* Pods-Unicorns_Example-dummy.m */,
+				4AEE56DA719F5D019F23FFA41C0A2D4B /* Pods-Unicorns_Example-frameworks.sh */,
+				686ED869D85843D6DA4FB5D85C0C3592 /* Pods-Unicorns_Example-Info.plist */,
+				8D1D2A37574F9A6D8DC3EF48596FE534 /* Pods-Unicorns_Example-umbrella.h */,
+				F0C6540D8C088C4460A60902E44E5E41 /* Pods-Unicorns_Example.debug.xcconfig */,
+				CB1C8BC7DE5F409D7B020A23A91903AC /* Pods-Unicorns_Example.release.xcconfig */,
 			);
-			path = ImageCropViewController;
+			name = "Pods-Unicorns_Example";
+			path = "Target Support Files/Pods-Unicorns_Example";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -385,7 +511,7 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				093FAA3A6A576FD61C3E573A584AAC03 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				F22138884A438A5776EF2D6DE9A7CE9E /* Products */,
+				B31929BF3C78727569521A8AE41419EA /* Products */,
 				F0037417C6197F8DF1B4D45ADE181A11 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -393,220 +519,133 @@
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D214B54E248FEBC691F52AF3145BC849 /* Pod */ = {
+		D682BB7F0E878562F38B37ED1FF552FD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				0EE33B853C8FE7F2573A38BAAAC17E64 /* badge.svg */,
-				AEEB8B3BA143FB7609424C2BBE391659 /* badge.svg */,
-				D7C343384AF9805592DDBCF27DE9A856 /* carat.png */,
-				C2D924F243565DE61E0AF251F90EFBD6 /* carat.png */,
-				925EFBACDD26BEF5D5D0F219DC539806 /* Classes.html */,
-				D7A113BA89763D943D8A34A9CBAC38A4 /* Classes.html */,
-				13A49289C3AC04DE71415DC55F3E9390 /* dash.png */,
-				7B78917CC81D6C65BB2E8EDE02D97D49 /* dash.png */,
-				E5B2247CB5A83692C66763754171AB87 /* docSet.dsidx */,
-				3BF2A1AB9ADCCE583B78439073C2CB1B /* Extensions.html */,
-				96D3604E4047D0556C594DD0E27DC996 /* Extensions.html */,
-				333A2B17425A0AA689EC226BEA25E208 /* FloatTextField.html */,
-				AA43E4C25EB600C3A58078601D76858B /* FloatTextField.html */,
-				C760810DF6196863BA4DE4CEB923707C /* gh.png */,
-				A4355E427205CD8963C93DAC0D10CD4B /* gh.png */,
-				AAC7D39CD80768F8958E3D7BDD1CDB21 /* highlight.css */,
-				5C4866821F828F6D0D2B2FC8DC64A036 /* highlight.css */,
-				FB3739C60CFF3D0F837914FF54B102FD /* ImageCropDelegate.html */,
-				F7A7577F58281862FF6A6C1549AB6DA0 /* ImageCropDelegate.html */,
-				D4D48B81D53AD0324A4011E3E8809728 /* ImageCropRouter.html */,
-				E020E24E6FE997BBDFFDF3144F50C872 /* ImageCropRouter.html */,
-				F31388F522E4938F8C6F0DB5C86CADEE /* ImageCropViewController.html */,
-				366795F554F961DCE7669D0D663BCDA1 /* ImageCropViewController.html */,
-				1F49B91C97880A4F9B265B0A3B9E2CFC /* index.html */,
-				60A48287ED0C74A6DB0994F42C1AFA58 /* index.html */,
-				860DFE8B50DC82E6FFA54A22C5C08A86 /* Info.plist */,
-				9681E5F2BA54A0751D547A6A9AFF8411 /* Int.html */,
-				D3C9366707A380655D44C88A0115058F /* Int.html */,
-				5A67EF1AACBCA15C7E2BE6E7BA8823D7 /* jazzy.css */,
-				72CEA6D0B692B4D4BB1549D327DCFF99 /* jazzy.css */,
-				E818BE7638E4E71097155A45DF5B2802 /* jazzy.js */,
-				E0BC4F6E953AC11F711809B92DC1D272 /* jazzy.js */,
-				EA94C38FA45C0EBA3CEE454D95DB7660 /* jquery.min.js */,
-				A1508727B71DC9078888AA612FA04063 /* jquery.min.js */,
-				F6421437C9554B28DB449B4493B23470 /* Key.html */,
-				BDC9623F4FD32EA455687768E134D215 /* Key.html */,
-				F8819C5EBFBC4A7BB54ADE9DBE961241 /* KeychainError.html */,
-				CE3A5F4D09588C4E491276E40FDEA975 /* KeychainError.html */,
-				1899F902088ED7BF8C2BE30DCC488105 /* KeychainService.html */,
-				C4096AFD90A1F465A6F8CD54B77A4059 /* KeychainService.html */,
-				EF13B0AE9BF5AE26E100CECDEF19D58C /* KeyedDecodingContainer.html */,
-				79A3BCB0BC473698194457B3C3095BB7 /* KeyedDecodingContainer.html */,
-				291362AD1BD99ADB2CCF1F79DC69786A /* LICENSE */,
-				B702AAC49A30D212469910BF3F944ED3 /* Log.html */,
-				593D6FAE04562BA3F713CB35A6403DF9 /* Log.html */,
-				141B9B2B11506413EBEDD988C4FC476F /* NetworkError.html */,
-				C1610E81C072762C52E83F308B154D6C /* NetworkError.html */,
-				55277BF8AE4FCD5AD8A7A8CA7FEA2145 /* Networking.html */,
-				3046C9534C3CDF0CD14590A9BE1C1DCF /* Networking.html */,
-				47809138A8F7948086E548449C708C45 /* NetworkMethod.html */,
-				E4EC5325D85888248E43B3AD300F7BF9 /* NetworkMethod.html */,
-				D099F43C10B819D232D2BA71F8E4EEC5 /* NSMutableData.html */,
-				DF07517119EED356E0F94031D1BD16CA /* NSMutableData.html */,
-				1A712EA720BC2039B76818AFBF1F3EB8 /* Protocols.html */,
-				ADD6DC0F7244E19E902314F886E45BD1 /* Protocols.html */,
-				6CF0FD7B3F8B32038CE6813CE3BB8A6B /* README.md */,
-				E0158F5F0920228ECB2E206E64E099AC /* RectType.html */,
-				8E6F00A67835A4FF32119F3CBD8950E3 /* RectType.html */,
-				84A5C3E54CF9EE019A76292627B47B35 /* RequestEndpoint.html */,
-				4E3EC2C6245BFE5545E901337D7FA84D /* RequestEndpoint.html */,
-				482FCB41632E8B3A79E0744ABDAEA7FE /* Response.html */,
-				C73DED9C9D4ED1015EA1ADF457B23A96 /* Response.html */,
-				A4028D1EF4972D1AAD47048A5FB7A6AB /* Result.html */,
-				8E5A103ABE1E79FB2299586976909B5B /* Result.html */,
-				51BB565F6A2A1489A3ACEC6D2E3398F4 /* ReuseIdentifying.html */,
-				9DEB7BD581EF48673AAE0A6E172EB028 /* ReuseIdentifying.html */,
-				B3D0940B935F930F2B7C37C47FAEBB8F /* RoundedButton.html */,
-				8CCE571D7019CFF0FA61F9E1622FF311 /* RoundedButton.html */,
-				540FE17B1D8FF818C21789566F1641B5 /* search.json */,
-				AD190727F42DF8949275D872FAC4E482 /* search.json */,
-				34158FB57404B137277AF2016EC1B062 /* String.html */,
-				39E574847956BBAA661F5C325A03C441 /* String.html */,
-				6FDC8A6EBD63B65024DD5677506D7C10 /* Typealiases.html */,
-				16864373BCD339F19C1FC2F65FB05D51 /* Typealiases.html */,
-				09541DEE9FF791E2A138D03A6591DC31 /* UIButton.html */,
-				BB519DF38B28394D04E732462F3F1089 /* UIButton.html */,
-				46FD58BDBF46643358E488B94E620734 /* UICollectionView.html */,
-				05B39F3A1F1DDCBAB07AE45C31C22F85 /* UICollectionView.html */,
-				657ED7C993E546FFC8E4809C4D7309F7 /* UIColor.html */,
-				6F16C07F1C57E45814D670002D636ACF /* UIColor.html */,
-				336FD6B17837521528285915B7483D80 /* UILabel.html */,
-				C66148139464C7111BA515376EA05547 /* UILabel.html */,
-				ECADD88C6947CE0D5C6EC9951F67BD94 /* UISegmentedControl.html */,
-				81C5E64470D6DD7F01BCE113B4821F44 /* UISegmentedControl.html */,
-				6F8FB65352E03228504809604983697E /* UITabBarItem.html */,
-				CDFCE495B716DA4E9EDBBA57E4B12AD1 /* UITabBarItem.html */,
-				1F2AFD72589A0FFFA27BBF8BBD205730 /* UITableView.html */,
-				73A3B62F06829BDB0E153567287F909E /* UITableView.html */,
-				E93BA31A2C969019C655D091217240D7 /* UITextField.html */,
-				46C4497468FE897199A5833682D514E2 /* UITextField.html */,
-				42DCC7F451A44A823DBB0E6CDD36E856 /* UITextView.html */,
-				3F5DF62F8E0A16F9757322A161B2ABD0 /* UITextView.html */,
-				6970D665D01DE4FD002FB6048802B01D /* UIView.html */,
-				FF1F8C30ACBECF41CAF5C97A90B379E0 /* UIView.html */,
-				CA2116A7768CF03522773E0BD53AD385 /* UIViewController.html */,
-				92182A4135F0A237C8BBA11F8A1652B0 /* UIViewController.html */,
-				3608375EC132184C00ECB5B7023E09B8 /* undocumented.json */,
-				FF22A960548F019DF00CA9B2E89F4E53 /* undocumented.json */,
-				78766AAB96526AA5AF1E695C0C37A65A /* Unicorns.podspec */,
-				EC633BAFE62351BED6E1D414296F0155 /* Unicorns.tgz */,
-				E2DAF5D415B1DD2FF9DC787794C8E358 /* URLSession.html */,
-				BDD83A2E715160A1E300B8B4BCB0F912 /* URLSession.html */,
-				72BBD051D5B476515D3ADB5B93314BC9 /* URLSessionDataTaskProtocol.html */,
-				B9A1D9384840EC33C3E512DFFE43C600 /* URLSessionDataTaskProtocol.html */,
-				54874EA8F44D4F7B2638FBD28E17709B /* URLSessionProtocol.html */,
-				65D1392D29A688FB9555B744F6E773BB /* URLSessionProtocol.html */,
-				B982C5B02305E6BC4F1C47C687EB375E /* ViewModel.html */,
-				8AF91BB7215154BF8DF3E64C924F57E4 /* ViewModel.html */,
-				BF92D8FFF0708BAF805C57489AE88223 /* XIBLocalizable.html */,
-				6A4AFB90AE46508C36733B5F0345A842 /* XIBLocalizable.html */,
+				198937850C1C5CBA53AB4CF09076ECBE /* Log.swift */,
+				A7EEFFB583A55EB7084F5FAD19A11122 /* Networking.swift */,
+				D0FE0BE3F91A0B9C6A305EC35E9BD21A /* Validation.swift */,
 			);
-			name = Pod;
+			name = Helpers;
+			path = Unicorns/Classes/Helpers;
 			sourceTree = "<group>";
 		};
-		DFE925B1610BF681CE6DF8C4147A58E0 /* Protocols */ = {
+		EFF656D2AD9293EB72CCE2006EBE161C /* Unicorns */ = {
 			isa = PBXGroup;
 			children = (
-				51435669195ADA2D73FB1F77CAABCC8F /* ReuseIdentifying.swift */,
+				F6788B0D5934599633CC0F8B0ADAA9B7 /* Controllers */,
+				A1A22AC8937469165CF110D995B96052 /* Controls */,
+				10B9C1AA76B035541D691A4F1F8DDCCE /* Extensions */,
+				D682BB7F0E878562F38B37ED1FF552FD /* Helpers */,
+				7B1D03DA9FC1A01E68052D1510972C4F /* Pod */,
+				B5F57FDC37DC78154134F4843C2E421F /* Protocols */,
+				554D304E715C9A36D34FE84C729025DA /* Services */,
+				0F1A16F1AEDBFA541F4B60F530FBD798 /* Support Files */,
 			);
-			name = Protocols;
-			path = Unicorns/Classes/Protocols;
-			sourceTree = "<group>";
-		};
-		E1B6305B2C605D774EF294E6C9B4BE0D /* Pods-Unicorns_Example */ = {
-			isa = PBXGroup;
-			children = (
-				FB0CFFEB05B1F3A30A69102A3658C6FF /* Pods-Unicorns_Example.modulemap */,
-				3D2E68BB260E2D953035C04B545E8611 /* Pods-Unicorns_Example-acknowledgements.markdown */,
-				E01EDBB41F4A09E7C9E365D4AFFE5860 /* Pods-Unicorns_Example-acknowledgements.plist */,
-				B5943B67916248FD23FA7717CF6F9686 /* Pods-Unicorns_Example-dummy.m */,
-				7A212CE730DA0D5C4912BF048920076C /* Pods-Unicorns_Example-frameworks.sh */,
-				9F824DAE0753E326FFA72AD32D71857F /* Pods-Unicorns_Example-Info.plist */,
-				EAE82CD45D6AA24750818677F050E78E /* Pods-Unicorns_Example-umbrella.h */,
-				8C89783C8A5637BB0382F581E3875623 /* Pods-Unicorns_Example.debug.xcconfig */,
-				0BC57A24F7E9F45973E7FEDC8679F20D /* Pods-Unicorns_Example.release.xcconfig */,
-			);
-			name = "Pods-Unicorns_Example";
-			path = "Target Support Files/Pods-Unicorns_Example";
-			sourceTree = "<group>";
-		};
-		E6DEC4A74664EF320A6223E75CA92E6A /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				3EE9A964EB59A2D68545DCAD9644A334 /* KeychainService.swift */,
-			);
-			name = Services;
-			path = Unicorns/Classes/Services;
+			name = Unicorns;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		F0037417C6197F8DF1B4D45ADE181A11 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E1B6305B2C605D774EF294E6C9B4BE0D /* Pods-Unicorns_Example */,
-				7783A848577D860775082C0DD94E8226 /* Pods-Unicorns_Tests */,
+				CEB391CDB4A7CAF57E7D75EFEC9DCFB1 /* Pods-Unicorns_Example */,
+				8F9A89A8071E88A1057249DFBABC1D69 /* Pods-Unicorns_Tests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		F22138884A438A5776EF2D6DE9A7CE9E /* Products */ = {
+		F6788B0D5934599633CC0F8B0ADAA9B7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D9CFD4FBA3CA85ADEF2707120C4B33C6 /* Pods_Unicorns_Example.framework */,
-				5916950F8D720EF47D170B9479D42AE6 /* Pods_Unicorns_Tests.framework */,
-				89A35B9F912A08F04757F9517F7A065E /* Unicorns.framework */,
+				59F3336BFFCA5932B343A8A73C367592 /* FeatureDisabledViewController.swift */,
+				719E968B4A1A06D67C61D0479BE8E68C /* ImageCropViewController */,
 			);
-			name = Products;
+			name = Controllers;
+			path = Unicorns/Classes/Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0CBD97254F16AC648D16AB7C69839B88 /* Headers */ = {
+		5F3F863039352DDE413ACB896C5C97CD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8F8E73CBA370A1049F83C5B0E3F2043 /* Unicorns-umbrella.h in Headers */,
+				D8939EE821E4A7DF717B5FBD3AECD20B /* Pods-Unicorns_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9BC209331FE131BCDAB3BF2956AB014 /* Headers */ = {
+		707848273721E5A3C719B80483274F63 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E898E6061FFB060A3F8882CF3178FD9C /* Pods-Unicorns_Tests-umbrella.h in Headers */,
+				84FE75A19C67C00312CAF7DAED3A4764 /* Pods-Unicorns_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F0417F29AF6E72AD0159BA2992FB5884 /* Headers */ = {
+		74B7B30C152C3DED6F649C2EAA9A4326 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81169534DDE9D7A832703418D80D8629 /* Pods-Unicorns_Example-umbrella.h in Headers */,
+				6DF050C6CBF3B50F772A01A1E1985E7B /* Unicorns-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1A827C9BA54E261BC7295C981101895E /* Unicorns */ = {
+		6CF2C4329420C00D288836C5C5F16A7A /* Pods-Unicorns_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C7CA8387DDC212F1CA49B1E4FEC102EA /* Build configuration list for PBXNativeTarget "Unicorns" */;
+			buildConfigurationList = 6C51334DF0813FB8E8E80DD5C1D3D263 /* Build configuration list for PBXNativeTarget "Pods-Unicorns_Tests" */;
 			buildPhases = (
-				0CBD97254F16AC648D16AB7C69839B88 /* Headers */,
-				73829ACB0BAC2A8EEC01243DD75B841A /* Sources */,
-				7A7A10B643E87F430DA44690BBDBA6AC /* Frameworks */,
-				92355F6CEA980C0C8255013C7BD70EF0 /* Resources */,
+				5F3F863039352DDE413ACB896C5C97CD /* Headers */,
+				442F7AB589B6060CE0BE073BFF956496 /* Sources */,
+				76CFEA77F03F658486C426B7E7B953C8 /* Frameworks */,
+				047BE783CFC3AC5A63DB2F7A29723EBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				472F7DF860AB1C19367DB2BAE43E485E /* PBXTargetDependency */,
+			);
+			name = "Pods-Unicorns_Tests";
+			productName = "Pods-Unicorns_Tests";
+			productReference = 7EED1ED2A4150C7D966AFC052C9D9217 /* Pods_Unicorns_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		83A01F885724D1A0FE261850E98AD48A /* Pods-Unicorns_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDA57FC9F577DF9F8A7292AEB9D157D8 /* Build configuration list for PBXNativeTarget "Pods-Unicorns_Example" */;
+			buildPhases = (
+				707848273721E5A3C719B80483274F63 /* Headers */,
+				C7958F058A35359A9408B1BBF777A027 /* Sources */,
+				18CDF4A0C31C6206ED837498A5E31C57 /* Frameworks */,
+				AA06A8D7E475BFFAF01C93C8DE4BA509 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				245974423148146223F838FECE4E61D1 /* PBXTargetDependency */,
+			);
+			name = "Pods-Unicorns_Example";
+			productName = "Pods-Unicorns_Example";
+			productReference = CD8638306709F870ECB98F0771233C88 /* Pods_Unicorns_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C4F687B01BA3F584DA5D9FB84FA28717 /* Unicorns */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12CECB3CCCB99C3AE841CE776A59AB42 /* Build configuration list for PBXNativeTarget "Unicorns" */;
+			buildPhases = (
+				74B7B30C152C3DED6F649C2EAA9A4326 /* Headers */,
+				B0EF8679BE36AE798CBE3075D52BD31B /* Sources */,
+				2FAEF0BB3249457BCFA77624A7AB8904 /* Frameworks */,
+				C0A7C19F841A2F816FB540F935E6506A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -614,45 +653,7 @@
 			);
 			name = Unicorns;
 			productName = Unicorns;
-			productReference = 89A35B9F912A08F04757F9517F7A065E /* Unicorns.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		3B1A981ECE143F639BED8F5D45E5A13D /* Pods-Unicorns_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 267641266D50B722330BA3EAB9628CC7 /* Build configuration list for PBXNativeTarget "Pods-Unicorns_Tests" */;
-			buildPhases = (
-				B9BC209331FE131BCDAB3BF2956AB014 /* Headers */,
-				A499345AC297508A30C9C62DCB27B878 /* Sources */,
-				2D69595A2F53E692FDEA4488FA8AE95D /* Frameworks */,
-				C36A77C15B57AEE1BF27C96C777E7980 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4768D7B95A0F6234031A00C9F35EEB95 /* PBXTargetDependency */,
-			);
-			name = "Pods-Unicorns_Tests";
-			productName = "Pods-Unicorns_Tests";
-			productReference = 5916950F8D720EF47D170B9479D42AE6 /* Pods_Unicorns_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		BD52D3882AC0C74BF87408BAC46E6685 /* Pods-Unicorns_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BAE0BF2ED98E339195497654E9A88BC2 /* Build configuration list for PBXNativeTarget "Pods-Unicorns_Example" */;
-			buildPhases = (
-				F0417F29AF6E72AD0159BA2992FB5884 /* Headers */,
-				947EEAAF4291E0EAECF7F8D3DDECD852 /* Sources */,
-				C124E8849B305A0EFD9E8ABDA211B33F /* Frameworks */,
-				A5E03AFC50363F2CE33942F74E957378 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FFAD4C313EE710EAE6F9BD1D6DC13BDB /* PBXTargetDependency */,
-			);
-			name = "Pods-Unicorns_Example";
-			productName = "Pods-Unicorns_Example";
-			productReference = D9CFD4FBA3CA85ADEF2707120C4B33C6 /* Pods_Unicorns_Example.framework */;
+			productReference = 611EC5551E56EF23BA75BC6A0963C3AE /* Unicorns.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -661,50 +662,44 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
-				TargetAttributes = {
-					1A827C9BA54E261BC7295C981101895E = {
-						LastSwiftMigration = 1020;
-					};
-				};
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = F22138884A438A5776EF2D6DE9A7CE9E /* Products */;
+			productRefGroup = B31929BF3C78727569521A8AE41419EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BD52D3882AC0C74BF87408BAC46E6685 /* Pods-Unicorns_Example */,
-				3B1A981ECE143F639BED8F5D45E5A13D /* Pods-Unicorns_Tests */,
-				1A827C9BA54E261BC7295C981101895E /* Unicorns */,
+				83A01F885724D1A0FE261850E98AD48A /* Pods-Unicorns_Example */,
+				6CF2C4329420C00D288836C5C5F16A7A /* Pods-Unicorns_Tests */,
+				C4F687B01BA3F584DA5D9FB84FA28717 /* Unicorns */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		92355F6CEA980C0C8255013C7BD70EF0 /* Resources */ = {
+		047BE783CFC3AC5A63DB2F7A29723EBD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5E03AFC50363F2CE33942F74E957378 /* Resources */ = {
+		AA06A8D7E475BFFAF01C93C8DE4BA509 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C36A77C15B57AEE1BF27C96C777E7980 /* Resources */ = {
+		C0A7C19F841A2F816FB540F935E6506A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -714,167 +709,74 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		73829ACB0BAC2A8EEC01243DD75B841A /* Sources */ = {
+		442F7AB589B6060CE0BE073BFF956496 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				639985C39FEDB353FEB70B2AB7284473 /* CGSizeExtension.swift in Sources */,
-				516C53B9331359B1DF5360BEE30BE008 /* FeatureDisabledViewController.swift in Sources */,
-				E4537FB5E64EF9840CF8468585194245 /* FloatTextField.swift in Sources */,
-				A21CE743D65A228D70CB7C20FC32E925 /* ImageCropViewController.swift in Sources */,
-				9422942C6DAD8688437E254DB6919DD9 /* IntExtension.swift in Sources */,
-				ABB70785F8BDA7470AB22030C6C4E738 /* KeychainService.swift in Sources */,
-				321A3BF8A7DA8B7641E1A4ADD623C236 /* KeyedDecodingContainerExtension.swift in Sources */,
-				25C38833935996676A7BDFB9C2EF7361 /* Log.swift in Sources */,
-				97D90BF93A292A293F951FE2EC8D3C19 /* Networking.swift in Sources */,
-				607B3AB6EAF60B10CC8A45298ECC896E /* ReuseIdentifying.swift in Sources */,
-				200A81E40E41203CB9577739BA5D542C /* RoundedButton.swift in Sources */,
-				FA5B8DF47243D9DA0D1735968C26096D /* StoryboardExtension.swift in Sources */,
-				5AC7BC5EADDF2DDB389C238A72D84B8A /* StringExtension.swift in Sources */,
-				76995B729D644334050A8E7AEA302233 /* UIButtonExtension.swift in Sources */,
-				F6FB0D049E64CB045C0744E4711A1DC8 /* UICollectionViewExtension.swift in Sources */,
-				361412B4CB5517C353D73E9B0FADA3D9 /* UIColorExtension.swift in Sources */,
-				3B9E9A536F35F2AF5C3ABB937614B449 /* UILabelExtension.swift in Sources */,
-				EA1F2127F81F49092E394986B8C44927 /* UISegmentControlExtension.swift in Sources */,
-				ADBCF9DD08E8316AEFF5A56107AACD23 /* UITabBarItemExtension.swift in Sources */,
-				27F31F948DB55581C6B226C496587FB2 /* UITableViewExtension.swift in Sources */,
-				8AD346F1D0272063E2E877B387CBA7A9 /* UITextFieldExtension.swift in Sources */,
-				370B7F85C0B22E859B512FE3E787804A /* UITextViewExtension.swift in Sources */,
-				D81EB1A05A32414B93293BB3FCAA2F32 /* UIViewControllerExtension.swift in Sources */,
-				EC0A92C76AA9DEF64BC1DEDCF4C319E4 /* UIViewExtension.swift in Sources */,
-				96CB500AC56B917900F7D005746E3E81 /* Unicorns-dummy.m in Sources */,
-				5995225DE17B859565776DAB770B62A2 /* Validation.swift in Sources */,
+				0EA6F4440267716A589C0F2ED7860F71 /* Pods-Unicorns_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		947EEAAF4291E0EAECF7F8D3DDECD852 /* Sources */ = {
+		B0EF8679BE36AE798CBE3075D52BD31B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B632AB5AE4D9AC47A77E398DBC911193 /* Pods-Unicorns_Example-dummy.m in Sources */,
+				DE384FC1A04C986BE80180E398593FC9 /* CGSizeExtension.swift in Sources */,
+				47F9F1E878E678C4838B5030D39A54A7 /* FeatureDisabledViewController.swift in Sources */,
+				FAA80B43CE36DE67A1EB4CF7DD2FE335 /* FloatTextField.swift in Sources */,
+				D3282DBA5E2A3525C3D4E8C74C4DF69E /* ImageCropViewController.swift in Sources */,
+				47F6B3B4CCE86B33AE2966A726D5E005 /* IntExtension.swift in Sources */,
+				15B0C69DD45C7BF17B4BA5ACF5B9387E /* KeychainService.swift in Sources */,
+				6441AC1F96FD739AA8AAC0DC9226900A /* KeyedDecodingContainerExtension.swift in Sources */,
+				9F85F149867951EE7967D929BBE10D4A /* Log.swift in Sources */,
+				31BC2853B2A3D5C2BE2E2ED133823CE6 /* Networking.swift in Sources */,
+				CBAD2AD8246BE1D5DE80751BA2AFA5A0 /* ReuseIdentifying.swift in Sources */,
+				3E90631D52083DE5C16642AAF51B5EAE /* RoundedButton.swift in Sources */,
+				CD7A4A6C69F501FFB4A59F5BFC7644F3 /* StoryboardExtension.swift in Sources */,
+				799E3CFB7D55895F76B1C0A6B15997CE /* StringExtension.swift in Sources */,
+				170B930DAA4D83DF09AF7069790C0B9F /* UIButtonExtension.swift in Sources */,
+				C6CA061C3D264ACC0FC5353CD99ADB27 /* UICollectionViewExtension.swift in Sources */,
+				D473BAB49EB3CC2881E75C0CD478D3E2 /* UIColorExtension.swift in Sources */,
+				9192CCE06D209E357CF7821A2334A4EC /* UILabelExtension.swift in Sources */,
+				5C0AEE55F771A618771DFFCABEBBC47E /* UISegmentControlExtension.swift in Sources */,
+				0B12E1B19FE72630E5AE13EAD580D6B6 /* UITabBarItemExtension.swift in Sources */,
+				28A89ACA585056671A05AA1A25438B5F /* UITableViewExtension.swift in Sources */,
+				2CF800671C29041D42F7C088D46E770B /* UITextFieldExtension.swift in Sources */,
+				A9F58365C1A7C9C452D887DB941FDD37 /* UITextViewExtension.swift in Sources */,
+				800B2BFEFFF86EA3032C9C055B50D669 /* UIViewControllerExtension.swift in Sources */,
+				F8F0B5C909AFA8BD62A3E05E5E03C1EB /* UIViewExtension.swift in Sources */,
+				C2CE42537546ADB0C8980F2EBA96BC2B /* Unicorns-dummy.m in Sources */,
+				37FDD5E0FF6DD03852EA6E2CB1EB5902 /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A499345AC297508A30C9C62DCB27B878 /* Sources */ = {
+		C7958F058A35359A9408B1BBF777A027 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA00F7ACE06955F393DF6C416E8F7135 /* Pods-Unicorns_Tests-dummy.m in Sources */,
+				C4471DA18B965E15B63E8EEF05824DE5 /* Pods-Unicorns_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4768D7B95A0F6234031A00C9F35EEB95 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-Unicorns_Example";
-			target = BD52D3882AC0C74BF87408BAC46E6685 /* Pods-Unicorns_Example */;
-			targetProxy = D188D07FF26BB37E63E97EDA45A59691 /* PBXContainerItemProxy */;
-		};
-		FFAD4C313EE710EAE6F9BD1D6DC13BDB /* PBXTargetDependency */ = {
+		245974423148146223F838FECE4E61D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Unicorns;
-			target = 1A827C9BA54E261BC7295C981101895E /* Unicorns */;
-			targetProxy = BB0329E212D7818D28D635D67D31AB9C /* PBXContainerItemProxy */;
+			target = C4F687B01BA3F584DA5D9FB84FA28717 /* Unicorns */;
+			targetProxy = 96C242E96F44B55152ADFE6E358A635E /* PBXContainerItemProxy */;
+		};
+		472F7DF860AB1C19367DB2BAE43E485E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Unicorns_Example";
+			target = 83A01F885724D1A0FE261850E98AD48A /* Pods-Unicorns_Example */;
+			targetProxy = C4360EB94535526DE2E604620D58BC08 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3048B0C5C704DFFF688DA57F5380ED58 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		386C4CE566187BCD3025023CFA07BD95 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1A8F9A5C2C8730F566D5D92F131AF15 /* Pods-Unicorns_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Unicorns_Tests/Pods-Unicorns_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Unicorns_Tests/Pods-Unicorns_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		5B0C8287D755FD95091CF35D87FB8B2D /* Debug */ = {
+		196DFA3E4A09A28224918543529A1885 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -933,14 +835,14 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		7795DE73B4F91F9F723563121F6B7388 /* Release */ = {
+		197905850FB6408045CB2C9265AF7188 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BC57A24F7E9F45973E7FEDC8679F20D /* Pods-Unicorns_Example.release.xcconfig */;
+			baseConfigurationReference = CB1C8BC7DE5F409D7B020A23A91903AC /* Pods-Unicorns_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -973,110 +875,9 @@
 			};
 			name = Release;
 		};
-		890502B5D184E35D5733A584C1629467 /* Debug */ = {
+		AE33CDF791FAF0E414567944C5CE89AE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C89783C8A5637BB0382F581E3875623 /* Pods-Unicorns_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Unicorns_Example/Pods-Unicorns_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Unicorns_Example/Pods-Unicorns_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		AB726033CA32F8A6F9ED7E98837A9252 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC147B4F362A702C29664040C7B4FE8B /* Unicorns.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Unicorns/Unicorns-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Unicorns/Unicorns-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Unicorns/Unicorns.modulemap";
-				PRODUCT_MODULE_NAME = Unicorns;
-				PRODUCT_NAME = Unicorns;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTS_UIKITFORMAC = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B3435028B563C5922871510AA8840EA7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC147B4F362A702C29664040C7B4FE8B /* Unicorns.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Unicorns/Unicorns-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Unicorns/Unicorns-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Unicorns/Unicorns.modulemap";
-				PRODUCT_MODULE_NAME = Unicorns;
-				PRODUCT_NAME = Unicorns;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTS_UIKITFORMAC = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		EB9AA9401B30A23738C521F856918305 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89B9A4A4D0909C5A82756208CF4F68C9 /* Pods-Unicorns_Tests.release.xcconfig */;
+			baseConfigurationReference = DAE27CDF04C02F3FDB4B075D16B76A55 /* Pods-Unicorns_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1109,14 +910,205 @@
 			};
 			name = Release;
 		};
+		B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		C00F3C1778806A4208A9DB833C2A4485 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04AA38AE3A1A780BB31F2E2F446CE080 /* Unicorns.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Unicorns/Unicorns-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Unicorns/Unicorns-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Unicorns/Unicorns.modulemap";
+				PRODUCT_MODULE_NAME = Unicorns;
+				PRODUCT_NAME = Unicorns;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E4432053A57DB47575875D6100AEF463 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0C6540D8C088C4460A60902E44E5E41 /* Pods-Unicorns_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Unicorns_Example/Pods-Unicorns_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Unicorns_Example/Pods-Unicorns_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EE40BF8012104937A931F51D38555D5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04AA38AE3A1A780BB31F2E2F446CE080 /* Unicorns.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Unicorns/Unicorns-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Unicorns/Unicorns-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Unicorns/Unicorns.modulemap";
+				PRODUCT_MODULE_NAME = Unicorns;
+				PRODUCT_NAME = Unicorns;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F1087A4BA5FD6FE2F7637BC6CACEFAEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A49023D8F1542B5976A98BF4B73598D /* Pods-Unicorns_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Unicorns_Tests/Pods-Unicorns_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Unicorns_Tests/Pods-Unicorns_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		267641266D50B722330BA3EAB9628CC7 /* Build configuration list for PBXNativeTarget "Pods-Unicorns_Tests" */ = {
+		12CECB3CCCB99C3AE841CE776A59AB42 /* Build configuration list for PBXNativeTarget "Unicorns" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				386C4CE566187BCD3025023CFA07BD95 /* Debug */,
-				EB9AA9401B30A23738C521F856918305 /* Release */,
+				EE40BF8012104937A931F51D38555D5A /* Debug */,
+				C00F3C1778806A4208A9DB833C2A4485 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1124,26 +1116,26 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B0C8287D755FD95091CF35D87FB8B2D /* Debug */,
-				3048B0C5C704DFFF688DA57F5380ED58 /* Release */,
+				196DFA3E4A09A28224918543529A1885 /* Debug */,
+				B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BAE0BF2ED98E339195497654E9A88BC2 /* Build configuration list for PBXNativeTarget "Pods-Unicorns_Example" */ = {
+		6C51334DF0813FB8E8E80DD5C1D3D263 /* Build configuration list for PBXNativeTarget "Pods-Unicorns_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				890502B5D184E35D5733A584C1629467 /* Debug */,
-				7795DE73B4F91F9F723563121F6B7388 /* Release */,
+				F1087A4BA5FD6FE2F7637BC6CACEFAEB /* Debug */,
+				AE33CDF791FAF0E414567944C5CE89AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C7CA8387DDC212F1CA49B1E4FEC102EA /* Build configuration list for PBXNativeTarget "Unicorns" */ = {
+		CDA57FC9F577DF9F8A7292AEB9D157D8 /* Build configuration list for PBXNativeTarget "Pods-Unicorns_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B3435028B563C5922871510AA8840EA7 /* Debug */,
-				AB726033CA32F8A6F9ED7E98837A9252 /* Release */,
+				E4432053A57DB47575875D6100AEF463 /* Debug */,
+				197905850FB6408045CB2C9265AF7188 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

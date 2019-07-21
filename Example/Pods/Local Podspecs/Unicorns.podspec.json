@@ -20,6 +20,6 @@
   },
   "source_files": "Unicorns/Classes/**/*",
   "pod_target_xcconfig": {
-    "SWIFT_VERSION": "4.2"
+    "SWIFT_VERSION": "5.0"
   }
 }

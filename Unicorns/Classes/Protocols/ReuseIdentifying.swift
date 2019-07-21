@@ -9,7 +9,7 @@ import UIKit
 // MARK: - Protocols
 
 ///Protocol used to set reuseIdentifier property with name of view
-public protocol ReuseIdentifying {
+public protocol ReuseIdentifying: class {
   static var reuseIdentifier: String { get }
 }
 
