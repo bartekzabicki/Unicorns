@@ -10,9 +10,9 @@ import UIKit
 extension UICollectionView {
   
   ///Register given cell with reuseIdentifier and nibName equal to cell's name
-  public func register<T:ReuseIdentifying>(reuseIdentifying: T.Type, bundle bundlaName: String? = nil) {
+  public func register<T:ReuseIdentifying>(reuseIdentifying: T.Type, bundle bundleName: String? = nil) {
     let bundle = bundleName != nil ? Bundle(identifier: bundleName!) : Bundle(for: T.self)
-    let nibName = UINib(nibName: T.reuseIdentifier, bundle)
+    let nibName = UINib(nibName: T.reuseIdentifier, bundle: bundle)
     register(nibName, forCellWithReuseIdentifier: T.reuseIdentifier)
   }
   
