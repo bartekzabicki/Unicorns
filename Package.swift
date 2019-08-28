@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "Unicorns",
-    platforms: [.iOS(.v10)],
+    platforms: [.iOS(.v10), .macOS(.v10_13)],
     products: [
         .library(
             name: "Unicorns",
