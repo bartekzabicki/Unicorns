@@ -166,19 +166,18 @@ import UIKit
   }
   
   public func restoreStartState() {
+    animatedCircleLayer?.removeFromSuperlayer()
+    staticArcLayer?.removeFromSuperlayer()
+    markLayer?.removeFromSuperlayer()
+    borderLayer = nil
+    animatedCircleLayer = nil
+    staticArcLayer = nil
     UIView.animate(withDuration: 0.7, delay: 0, options: .allowAnimatedContent, animations: {
-      self.animatedCircleLayer?.removeAllAnimations()
-      self.animatedCircleLayer?.removeFromSuperlayer()
-      self.staticArcLayer?.removeFromSuperlayer()
-      self.markLayer?.removeFromSuperlayer()
       self.borderLayer?.strokeColor = self.borderLayer?.strokeColor?.copy(alpha: 0)
       self.titleLabel?.alpha = 1
       self.isSelected = false
     }, completion: { _ in
       self.borderLayer?.removeFromSuperlayer()
-      self.borderLayer = nil
-      self.animatedCircleLayer = nil
-      self.staticArcLayer = nil
       self.isUserInteractionEnabled = true
     })
   }
@@ -288,6 +287,8 @@ import UIKit
                   endAngle: arcAngles[index + 1].asRadian(), clockwise: true)
     }
     
+    animatedCircleLayer?.removeFromSuperlayer()
+    animatedCircleLayer = nil
     animatedCircleLayer = CAShapeLayer()
     guard let animatedCircleLayer = animatedCircleLayer else { return }
     animatedCircleLayer.frame = bounds
