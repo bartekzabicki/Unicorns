@@ -130,6 +130,8 @@ import UIKit
                                         startValue: 0, endValue: 1)
     animatedCircleLayer.add(apathAnimation, forKey: "animatedAnimation")
     
+    markLayer?.removeFromSuperlayer()
+    markLayer = nil
     markLayer = CAShapeLayer()
     guard let markLayer = markLayer else { return }
     markLayer.frame = bounds
