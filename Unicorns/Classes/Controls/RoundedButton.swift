@@ -49,7 +49,7 @@ import UIKit
     get {
       return _borderColor
     } set {
-      maskLayer?.strokeColor = newValue?.cgColor
+      maskLayer.strokeColor = newValue?.cgColor
       setTitleColor(newValue, for: .normal)
       _borderColor = newValue
     }
@@ -57,7 +57,9 @@ import UIKit
   
   override public var isHighlighted: Bool {
     didSet {
-      backgroundColor = isHighlighted ? borderColor : innerBackgroundColor
+      UIView.animate(withDuration: 0.1) {
+        self.backgroundColor = self.isHighlighted ? self.borderColor : self.innerBackgroundColor
+      }
     }
   }
   
@@ -66,21 +68,45 @@ import UIKit
   }
   
   private var activityIndicator: UIActivityIndicatorView!
-  private var maskLayer: CAShapeLayer?
   private let kRotationAnimationKey = "rotationAnimation"
   private let kSpinningAnimationKey = "spinningAnimation"
-  private var animatedCircleLayer: CAShapeLayer?
-  private var staticArcLayer: CAShapeLayer?
   private var borderLayer: CAShapeLayer?
-  private var markLayer: CAShapeLayer?
-  private var response: Response?
-  private var responseCompletion: (() -> Void)?
+  private lazy var animatedCircleLayer: CAShapeLayer = {
+    var layer = CAShapeLayer()
+    layer.strokeColor = #colorLiteral(red: 0.4040000141, green: 0.4199999869, blue: 0.5839999914, alpha: 1)
+    layer.fillColor = nil
+    layer.lineWidth = 1
+    return layer
+  }()
+  private lazy var staticArcLayer: CAShapeLayer = {
+    var layer = CAShapeLayer()
+    layer.strokeColor = #colorLiteral(red: 0.4040000141, green: 0.4199999869, blue: 0.5839999914, alpha: 1)
+    layer.fillColor = nil
+    layer.lineWidth = 1
+    return layer
+  }()
+  private lazy var markLayer: CAShapeLayer = {
+    var layer = CAShapeLayer()
+    layer.lineWidth = 2
+    layer.fillColor = nil
+    return layer
+  }()
+  private lazy var maskLayer: CAShapeLayer = {
+    let layer = CAShapeLayer()
+    layer.strokeColor = borderColor?.cgColor
+    layer.fillColor = nil
+    layer.lineWidth = 1.0
+    layer.lineJoin = .bevel
+    return layer
+  }()
   private var arcRadius: CGFloat {
     return bounds.width < bounds.height ? bounds.width/2 : bounds.height/2
   }
   private var arcCenter: CGPoint {
     return CGPoint(x: bounds.width/2, y: bounds.height/2)
   }
+  private var response: Response?
+  private var responseCompletion: (() -> Void)?
   
   // MARK: - Initialization
   
@@ -110,6 +136,9 @@ import UIKit
   
   public override func layoutSubviews() {
     super.layoutSubviews()
+    animatedCircleLayer.frame = bounds
+    staticArcLayer.frame = bounds
+    markLayer.frame = bounds
     reloadBorderLayerPath()
   }
   
@@ -117,28 +146,25 @@ import UIKit
   
   ///Handle response and draw mark in the middle
   public func handleResponse(with response: Response, completion: (() -> Void)? = nil) {
-    guard let animatedCircleLayer = animatedCircleLayer, let staticArcLayer = staticArcLayer else {
+    guard !isEnabled else {
       self.response = response
       responseCompletion = completion
       return
     }
     animatedCircleLayer.strokeColor = response == .success ? successColor.cgColor : failureColor.cgColor
     staticArcLayer.strokeColor = response == .success ? successColor.cgColor : failureColor.cgColor
-    staticArcLayer.removeAnimation(forKey: kRotationAnimationKey)
-    animatedCircleLayer.removeAnimation(forKey: kSpinningAnimationKey)
-    let apathAnimation = basicAnimation(withKeyPath: "strokeEnd", delay: 0, duration: 0.4,
-                                        startValue: 0, endValue: 1)
-    animatedCircleLayer.add(apathAnimation, forKey: "animatedAnimation")
+    staticArcLayer.removeAllAnimations()
+    staticArcLayer.removeFromSuperlayer()
     
-    markLayer?.removeFromSuperlayer()
-    markLayer = nil
-    markLayer = CAShapeLayer()
-    guard let markLayer = markLayer else { return }
-    markLayer.frame = bounds
+    animatedCircleLayer.removeAllAnimations()
+    
+    let finalPathAnimation = basicAnimation(withKeyPath: "strokeEnd", delay: 0, duration: 0.4,
+                                        startValue: 0, endValue: 1)
+    animatedCircleLayer.add(finalPathAnimation, forKey: "circleAnimation")
+    
     markLayer.path = response == .success ? succesMarkPath() : failureMarkPath()
     markLayer.strokeColor = response == .success ? successColor.cgColor : failureColor.cgColor
-    markLayer.lineWidth = 2
-    markLayer.fillColor = nil
+    
     animatedCircleLayer.fillColor = response == .success ?
       successColor.withAlphaComponent(0.05).cgColor : failureColor.withAlphaComponent(0.05).cgColor
     
@@ -147,38 +173,30 @@ import UIKit
     let pathAnimation = basicAnimation(withKeyPath: "strokeEnd", delay: 0, duration: 0.3,
                                        startValue: 0, endValue: 1)
     markLayer.add(pathAnimation, forKey: "markAnimation")
-    
     DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-      guard response != .success else {
-        completion?() ?? self.responseCompletion?()
-        return
-      }
+      completion?() ?? self.responseCompletion?()
       self.restoreStartState()
     })
   }
   
   /// Starts animation, hides the title
   public func animate() {
-    isUserInteractionEnabled = false
-    isSelected = true
+    isEnabled = false
     animateBorder()
-    titleLabel?.alpha = 0
   }
   
   public func restoreStartState() {
-    animatedCircleLayer?.removeFromSuperlayer()
-    staticArcLayer?.removeFromSuperlayer()
-    markLayer?.removeFromSuperlayer()
-    borderLayer = nil
-    animatedCircleLayer = nil
-    staticArcLayer = nil
+    animatedCircleLayer.removeFromSuperlayer()
+    staticArcLayer.removeFromSuperlayer()
+    markLayer.removeFromSuperlayer()
+    animatedCircleLayer.fillColor = nil
+    staticArcLayer.strokeColor = borderColor?.cgColor
+    
     UIView.animate(withDuration: 0.7, delay: 0, options: .allowAnimatedContent, animations: {
       self.borderLayer?.strokeColor = self.borderLayer?.strokeColor?.copy(alpha: 0)
-      self.titleLabel?.alpha = 1
-      self.isSelected = false
     }, completion: { _ in
       self.borderLayer?.removeFromSuperlayer()
-      self.isUserInteractionEnabled = true
+      self.isEnabled = true
     })
   }
   
@@ -189,7 +207,7 @@ import UIKit
     tintColor = .clear
     setTitleColor(.white, for: .highlighted)
     setTitleColor(borderColor, for: .normal)
-    setTitleColor(.clear, for: .selected)
+    setTitleColor(.clear, for: .disabled)
     #if !TARGET_INTERFACE_BUILDER
     addTarget(self, action: #selector(touchUpInside), for: .touchUpInside)
     #endif
@@ -212,22 +230,15 @@ import UIKit
   
   ///Add border around the button with the color, which depends on that if button is highlighted or not
   private func addBorderLayer() {
-    
-    maskLayer = CAShapeLayer()
-    guard let maskLayer = maskLayer else { return }
     reloadBorderLayerPath()
-    maskLayer.strokeColor = borderColor?.cgColor
-    maskLayer.fillColor = nil
-    maskLayer.lineWidth = 1.0
-    maskLayer.lineJoin = .bevel
     layer.addSublayer(maskLayer)
   }
   
   private func reloadBorderLayerPath() {
     let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: .allCorners,
                             cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
-    maskLayer?.frame = bounds
-    maskLayer?.path = path.cgPath
+    maskLayer.frame = bounds
+    maskLayer.path = path.cgPath
   }
   
   private func createPath(withOrigin origin: CGPoint, size: CGSize, cornerRadius: CGFloat) -> UIBezierPath {
@@ -287,37 +298,21 @@ import UIKit
                   endAngle: arcAngles[index + 1].asRadian(), clockwise: true)
     }
     
-    animatedCircleLayer?.removeFromSuperlayer()
-    animatedCircleLayer = nil
-    animatedCircleLayer = CAShapeLayer()
-    guard let animatedCircleLayer = animatedCircleLayer else { return }
     animatedCircleLayer.frame = bounds
     animatedCircleLayer.path = path.cgPath
-    animatedCircleLayer.strokeColor = borderColor?.cgColor
     animatedCircleLayer.fillColor = nil
-    animatedCircleLayer.lineWidth = 1
+    animatedCircleLayer.strokeColor = borderColor?.cgColor
     
     //Static arc of 30 angle create illusion of not ending circle
     let staticArcPath = UIBezierPath()
     staticArcPath.addArc(withCenter: arcCenter, radius: arcRadius,
                          startAngle: 255.asRadian(), endAngle: 275.asRadian(), clockwise: true)
     
-    staticArcLayer = CAShapeLayer()
-    guard let staticArcLayer = staticArcLayer else { return }
     staticArcLayer.frame = bounds
     staticArcLayer.path = staticArcPath.cgPath
-    staticArcLayer.strokeColor = borderColor?.cgColor
-    staticArcLayer.fillColor = nil
-    staticArcLayer.lineWidth = 1
     
     layer.addSublayer(staticArcLayer)
     layer.addSublayer(animatedCircleLayer)
-    
-    //If button already have a response, it will draw a mark
-    guard response == nil else {
-      self.handleResponse(with: response!)
-      return
-    }
     
     addSpinningCircleAnimation(withDuration: duration)
   }
@@ -344,7 +339,7 @@ extension RoundedButton {
     spinningAnimation.repeatCount = Float.infinity
     spinningAnimation.isRemovedOnCompletion = false
     spinningAnimation.fillMode = .forwards
-    animatedCircleLayer?.add(spinningAnimation, forKey: kSpinningAnimationKey)
+    animatedCircleLayer.add(spinningAnimation, forKey: kSpinningAnimationKey)
     
     let rotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
     
@@ -354,7 +349,7 @@ extension RoundedButton {
     rotationAnimation.timingFunctions = [timingFunction]
     rotationAnimation.isRemovedOnCompletion = false
     rotationAnimation.repeatCount = Float.infinity
-    staticArcLayer?.add(rotationAnimation, forKey: kRotationAnimationKey)
+    staticArcLayer.add(rotationAnimation, forKey: kRotationAnimationKey)
   }
   
   private func succesMarkPath() -> CGPath {
