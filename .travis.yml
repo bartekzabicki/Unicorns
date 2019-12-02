@@ -9,6 +9,6 @@ language: swift
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/Unicorns.xcworkspace -scheme Unicorns-Example -sdk iphonesimulator12.2 ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/Unicorns.xcworkspace -scheme Unicorns-Example -sdk iphonesimulator13.2 ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint Unicorns.podspec --swift-version="5.0"
 osx_image: xcode11.2
